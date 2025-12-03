@@ -1,5 +1,7 @@
 HEAD 2.13 (nightly)
 
+  * BUG: 0193 Erneutes Öffnen der Liste mit Adressvorschlägen nach Auswahl eines Namens per Enter-Taste verhindern 
+
 2025-10-29 Version 2.12.0
 
   * CHG: 0192 Support für 32Bit-Windows, 32Bit-Linux und OpenBSD entfernt, Build-Script vereinfacht

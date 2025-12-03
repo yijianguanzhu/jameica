@@ -351,12 +351,16 @@ public class SearchInput extends AbstractInput
         if (event.keyCode == SWT.ESC)
           return;
         
+        // Bei Enter lösen wir auch nicht aus - das kriegen wir sonst doppelt
+        if (event.keyCode == 13)
+          return;
+        
         if (inSearch)
         {
           inSearch = false;
           return;
         }
-
+        
         String newText = text.getText();
         if (newText == null || newText.length() <= startAt)
           return; // Noch kein Suchbegriff - keine Suche
@@ -376,7 +380,10 @@ public class SearchInput extends AbstractInput
       public void handleEvent(Event event)
       {
         if (event.detail == SWT.TRAVERSE_RETURN)
+        {
+          event.keyCode = 0;
           listener.handleEvent(event);
+        }
       }
     });
 
