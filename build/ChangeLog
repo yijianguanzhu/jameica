@@ -1,5 +1,6 @@
 HEAD 2.13 (nightly)
 
+  * NEW: 0194 Umstellung der Javascript-Engine von Rhino auf Nashorn (https://github.com/openjdk/nashorn)
   * BUG: 0193 Erneutes Öffnen der Liste mit Adressvorschlägen nach Auswahl eines Namens per Enter-Taste verhindern 
 
 2025-10-29 Version 2.12.0

@@ -112,7 +112,7 @@ public class ScriptingService implements Bootable
     }
     if (this.engine == null)
     {
-      Logger.warn("java does not support scripting (RhinoScript)");
+      Logger.warn("java does not support scripting");
       return;
     }
     this.engine.put("events",this.events);
