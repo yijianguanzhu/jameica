@@ -137,10 +137,10 @@ public class ArchiveService implements Bootable
   }
   
   /**
-   * Liefert true, wenn der Archive-Service verfügbar ist, weil entweder lokal das Plugin
+   * Liefert true, wenn der Archive-Service verfÃ¼gbar ist, weil entweder lokal das Plugin
    * jameica.messaging installiert ist oder aber im LAN eine Instanz per Multicast-Lookup
    * gefunden wurde.
-   * @return true, wenn der Archive-Service verfügbar ist.
+   * @return true, wenn der Archive-Service verfÃ¼gbar ist.
    */
   public boolean isEnabled()
   {

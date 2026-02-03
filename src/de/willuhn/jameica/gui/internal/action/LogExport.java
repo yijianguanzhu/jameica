@@ -41,7 +41,7 @@ public class LogExport implements Action
     {
       DateFormat format = new SimpleDateFormat("yyyyMMdd");
       FileDialog dialog = new FileDialog(GUI.getShell(), SWT.SAVE);
-      dialog.setText(Application.getI18n().tr("Bitte w‰hlen Sie Verzeichnis und Datei aus, in dem die Log-Datei gespeichert werden soll."));
+      dialog.setText(Application.getI18n().tr("Bitte w√§hlen Sie Verzeichnis und Datei aus, in dem die Log-Datei gespeichert werden soll."));
       dialog.setFilterPath(System.getProperty("user.home"));
       dialog.setFileName("jameica-" + format.format(new Date()) + ".log");
       dialog.setOverwrite(true);

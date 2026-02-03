@@ -91,8 +91,8 @@ public class ApplicationCallbackSWT extends AbstractApplicationCallback
 			
     NewPWD p = new NewPWD(NewPWD.POSITION_CENTER);
   	String text = Application.getI18n().tr("Sie starten die Anwendung zum ersten Mal.\n\n" +
-                                           "Bitte vergeben Sie ein Master-Passwort zum Schutz Ihrer persönlichen Daten. " +
-                                           "Es wird anschließend bei jedem Start des Programms benötigt.");
+                                           "Bitte vergeben Sie ein Master-Passwort zum Schutz Ihrer persÃ¶nlichen Daten. " +
+                                           "Es wird anschlieÃŸend bei jedem Start des Programms benÃ¶tigt.");
   	text = Customizing.SETTINGS.getString("application.firststart.text",text);
   	
   	p.setText(text);
@@ -164,8 +164,8 @@ public class ApplicationCallbackSWT extends AbstractApplicationCallback
 	{
 		NewPasswordDialog p = new NewPasswordDialog(NewPasswordDialog.POSITION_CENTER);
 
-    String text = Application.getI18n().tr("Bitte geben Sie Ihr neues Master-Passwort zum Schutz Ihrer persönlichen Daten ein.\n" +
-                                           "Es wird anschließend bei jedem Start von Jameica benötigt.");
+    String text = Application.getI18n().tr("Bitte geben Sie Ihr neues Master-Passwort zum Schutz Ihrer persÃ¶nlichen Daten ein.\n" +
+                                           "Es wird anschlieÃŸend bei jedem Start von Jameica benÃ¶tigt.");
     text = Customizing.SETTINGS.getString("application.changepassword.text",text);
 		
 		p.setText(text);
@@ -365,7 +365,7 @@ public class ApplicationCallbackSWT extends AbstractApplicationCallback
           g.addText(text,true);
         
         if (storeAnswer)
-          g.addCheckbox(check,Application.getI18n().tr("Diese Frage künftig nicht mehr anzeigen"));
+          g.addCheckbox(check,Application.getI18n().tr("Diese Frage kÃ¼nftig nicht mehr anzeigen"));
         
         final de.willuhn.jameica.gui.parts.ButtonArea buttons = new de.willuhn.jameica.gui.parts.ButtonArea();
         buttons.addButton("   " + i18n.tr("Ja") + "   ", new Action() {

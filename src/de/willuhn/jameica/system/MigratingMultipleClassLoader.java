@@ -29,7 +29,7 @@ public class MigratingMultipleClassLoader extends MultipleClassLoader
     final String key = this.getMigrationKey(url);
     if (key != null)
     {
-      // Checken, ob die Migration für diese URL aktiviert ist
+      // Checken, ob die Migration fÃ¼r diese URL aktiviert ist
       final boolean enabled = Application.getConfig().getMigration(key);
       Logger.info("migration " + key + ": " + enabled);
       if (!url.toString().contains(key + "/" + (enabled ? "enabled" : "disabled")))
@@ -46,7 +46,7 @@ public class MigratingMultipleClassLoader extends MultipleClassLoader
   }
   
   /**
-   * Prüft, ob die URL Teil einer Migration ist und liefert den Migration-Key.
+   * PrÃ¼ft, ob die URL Teil einer Migration ist und liefert den Migration-Key.
    * @param url die URL.
    * @return der Migration-Key oder NULL.
    */

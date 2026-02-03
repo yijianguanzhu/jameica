@@ -61,7 +61,7 @@ public class ResolverResult
    * Liefert die Liste der nicht erfuellbaren Abhaengigkeiten.
    * Sobald in dieser Liste eine Abhaengigkeit enthalten ist, kann das Plugin
    * nicht installiert werden.
-   * @return die Liste der nicht erfuellbaren erfüllbar Abhaengigkeiten.
+   * @return die Liste der nicht erfuellbaren erfÃ¼llbar Abhaengigkeiten.
    */
   public List<Dependency> getMissing()
   {

@@ -94,10 +94,10 @@ public class OnlineUpdates extends AbstractBox
   {
     InfoPanel panel = new InfoPanel();
     panel.setIcon("dialog-question-large.png");
-    panel.setTitle(i18n.tr("Online-Updates für Plugins aktivieren?"));
-    panel.setText(i18n.tr("Soll Jameica regelmäßig nach Online-Updates zu den installierten Plugins suchen?\n" +
+    panel.setTitle(i18n.tr("Online-Updates fÃ¼r Plugins aktivieren?"));
+    panel.setText(i18n.tr("Soll Jameica regelmÃ¤ÃŸig nach Online-Updates zu den installierten Plugins suchen?\n" +
                           "Bei der Aktivierung werden ggf. Informationen zum SSL-Zertifikat des Server angezeigt."));
-    panel.setComment(i18n.tr("Sie können diese Einstellungen jederzeit in \"Datei»Einstellungen»Updates\" ändern."));
+    panel.setComment(i18n.tr("Sie kÃ¶nnen diese Einstellungen jederzeit in \"DateiÂ»EinstellungenÂ»Updates\" Ã¤ndern."));
 
     {
       Button button = new Button(i18n.tr("Online-Updates aktivieren"),new UpdateState(),Boolean.TRUE,false,"ok.png");

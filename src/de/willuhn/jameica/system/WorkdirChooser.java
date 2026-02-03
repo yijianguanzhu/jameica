@@ -13,7 +13,11 @@ package de.willuhn.jameica.system;
 import java.io.File;
 import java.io.InputStream;
 import java.util.List;
+import java.util.Locale;
 
+import de.willuhn.util.I18N;
+import de.willuhn.util.Settings;
+import org.apache.commons.lang.StringUtils;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
@@ -43,6 +47,7 @@ import de.willuhn.logging.Logger;
  */
 public class WorkdirChooser
 {
+  private static I18N I18N = null;
   private final static int WINDOW_WIDTH = 450;
  
   private Button apply     = null;
@@ -78,7 +83,7 @@ public class WorkdirChooser
     this.display = Display.getDefault();
     this.shell = new Shell(display,SWT.DIALOG_TRIM | SWT.APPLICATION_MODAL);
 
-    this.shell.setText("Benutzer-Ordner"); // I18n gibts hier noch nicht
+    this.shell.setText(i18n().tr("Benutzer-Ordner")); // I18n gibts hier noch nicht
     this.shell.setSize(WINDOW_WIDTH,SWT.DEFAULT);
     this.shell.setLayout(new GridLayout(3,false));
     this.shell.addShellListener(new ShellAdapter() {
@@ -93,7 +98,7 @@ public class WorkdirChooser
       GridData gd = new GridData(GridData.FILL_HORIZONTAL);
       gd.horizontalSpan = 3;
       Label text = new Label(this.shell,SWT.WRAP);
-      text.setText("Bitte w‰hlen Sie den Ordner, in dem die Benutzerdaten gespeichert werden sollen.");
+      text.setText(i18n().tr("Bitte w√§hlen Sie den Ordner, in dem die Benutzerdaten gespeichert werden sollen."));
       text.setLayoutData(gd);
     }
 
@@ -110,7 +115,7 @@ public class WorkdirChooser
       final String suggest = s;
 
       Label label = new Label(this.shell,SWT.NONE);
-      label.setText("Benutzer-Ordner");
+      label.setText(i18n().tr("Benutzer-Ordner"));
       label.setLayoutData(new GridData(GridData.BEGINNING));
 
       this.dir = new Combo(this.shell,SWT.DROP_DOWN);
@@ -126,8 +131,8 @@ public class WorkdirChooser
       });
       
       final DirectoryDialog dialog = new DirectoryDialog(shell);
-      dialog.setText("Benutzer-Ordner");
-      dialog.setMessage("Bitte w‰hlen Sie den Ordner, in dem die Benutzerdaten gespeichert werden sollen.");
+      dialog.setText(i18n().tr("Benutzer-Ordner"));
+      dialog.setMessage(i18n().tr("Bitte w√§hlen Sie den Ordner, in dem die Benutzerdaten gespeichert werden sollen."));
       dialog.setFilterPath(suggest);
 
       final Button button = new Button(this.shell,SWT.PUSH);
@@ -168,7 +173,7 @@ public class WorkdirChooser
       GridData gd = new GridData(GridData.FILL_HORIZONTAL);
       gd.horizontalSpan = 2;
       this.check = new Button(this.shell,SWT.CHECK);
-      this.check.setText("K¸nftig immer diesen Ordner verwenden");
+      this.check.setText(i18n().tr("K√ºnftig immer diesen Ordner verwenden"));
       this.check.setLayoutData(gd);
     }
     
@@ -187,7 +192,7 @@ public class WorkdirChooser
       apply.setEnabled(false);
       apply.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_END));
       apply.setImage(getImage("ok.png"));
-      apply.setText("‹bernehmen");
+      apply.setText(i18n().tr("√úbernehmen"));
       apply.addSelectionListener(new SelectionAdapter() {
         public void widgetSelected(SelectionEvent e)
         {
@@ -199,7 +204,7 @@ public class WorkdirChooser
       Button cancel = new Button(comp,SWT.PUSH);
       cancel.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_END));
       cancel.setImage(getImage("process-stop.png"));
-      cancel.setText("Abbrechen");
+      cancel.setText(i18n().tr("Abbrechen"));
       cancel.addSelectionListener(new SelectionAdapter() {
         public void widgetSelected(SelectionEvent e)
         {
@@ -269,7 +274,7 @@ public class WorkdirChooser
       
       if (dir == null || dir.trim().length() == 0)
       {
-        this.error.setText("Bitte w‰hlen Sie einen Ordner aus.");
+        this.error.setText(i18n().tr("Bitte w√§hlen Sie einen Ordner aus."));
         return null;
       }
 
@@ -281,27 +286,27 @@ public class WorkdirChooser
       {
         if (Platform.inProgramDir(file))
         {
-          this.error.setText("Bitte w‰hlen Sie einen Benutzer-Ordner, der sich\nauﬂerhalb des Programm-Verzeichnisses befindet.");
+          this.error.setText(i18n().tr("Bitte w√§hlen Sie einen Benutzer-Ordner, der sich au√üerhalb des Programm-Verzeichnisses befindet."));
           return null;
         }
       }
       catch (Exception e)
       {
         Logger.error("unable to check canonical path",e);
-        this.error.setText("Benutzer-Ordner nicht ausw‰hlbar: " + e.getMessage());
+        this.error.setText(i18n().tr("Benutzer-Ordner nicht ausw√§hlbar") + ": " + e.getMessage());
         return null;
       }
       
       
       if (file.exists() && !file.canWrite())
       {
-        this.error.setText("Sie besitzen keinen Schreibzugriff in diesem Ordner.");
+        this.error.setText(i18n().tr("Sie besitzen keinen Schreibzugriff in diesem Ordner."));
         return null;
       }
       
       if (!file.exists() && !file.getParentFile().canWrite())
       {
-        this.error.setText("Sie besitzen keinen Schreibzugriff in diesem Ordner.");
+        this.error.setText(i18n().tr("Sie besitzen keinen Schreibzugriff in diesem Ordner."));
         return null;
       }
       
@@ -368,5 +373,34 @@ public class WorkdirChooser
         Logger.error("unable to dispose display",t);
       }
     }
+  }
+
+  // I18N at program startup.
+  private I18N i18n() {
+    if ( I18N != null ) {
+      return I18N;
+    }
+    String dir = BootstrapSettings.getProperty( "dir", null );     // Prio 1: Das beim letzten Mal ausgewaehlte
+    if ( dir == null || dir.trim().isEmpty() )
+      dir = Application.getStartupParams().getWorkDir();        // Prio 2: Das explizit angegebene
+    if ( dir == null || dir.trim().isEmpty() )
+      dir = Application.getPlatform().getDefaultWorkdir();      // Prio 3: Das Default-Verzeichnis
+    if ( dir == null || dir.trim().isEmpty() )
+      dir = "";                                                 // Prio 4: gar kein Vorschlag
+    Logger.info( "The default working directory when the program startup " + dir );
+    Locale locale = null;
+    // It should not appear
+    if ( StringUtils.isBlank( dir ) ) {
+      locale = Locale.SIMPLIFIED_CHINESE;
+    }
+    else {
+      Settings settings = new Settings( null, dir + File.separator + "cfg", Config.class );
+      // Get the language settings in the config file
+      String language = settings.getString( "jameica.system.locale", "zh_CN" );
+      locale = Locale.of( language );
+    }
+    Logger.info( "The default language when the program startup " + locale.getLanguage() );
+    I18N = new I18N( "lang/system_messages", locale );
+    return I18N;
   }
 }

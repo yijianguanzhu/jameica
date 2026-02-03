@@ -112,7 +112,7 @@ public class FirstStart extends AbstractBox
     else
     {
       title = "Noch keine Plugins installiert";
-      text  = "Bitte klicken Sie auf \"Plugin installieren...\", um ein bereits heruntergeladenes Plugin hinzuzufügen.\n" +
+      text  = "Bitte klicken Sie auf \"Plugin installieren...\", um ein bereits heruntergeladenes Plugin hinzuzufÃ¼gen.\n" +
       		    "Oder klicken Sie auf \"Plugins online suchen...\", um ein Plugin online herunterzuladen";
     }
     panel.setTitle(i18n.tr(title));

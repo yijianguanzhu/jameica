@@ -143,7 +143,7 @@ public class PluginDetailPart extends InfoPanel
       update.setEnabled(manifest.isInstalled() || error != null); // Update auch bei Fehler erlauben
       this.addButton(update);
 
-      Button delete = new Button(i18n.tr("Plugin löschen..."),new PluginUnInstall(),this.manifest,false,"user-trash-full.png");
+      Button delete = new Button(i18n.tr("Plugin lÃ¶schen..."),new PluginUnInstall(),this.manifest,false,"user-trash-full.png");
       try
       {
         Application.getPluginLoader().canUnInstall(this.manifest);

@@ -876,7 +876,7 @@ public class TablePart extends AbstractTablePart
                     String msg = ae.getMessage();
                     if (msg == null || msg.length() == 0)
                     {
-                      msg = i18n.tr("Fehler beim Ändern des Wertes");
+                      msg = i18n.tr("Fehler beim Ã„ndern des Wertes");
                       Logger.error("error while changing value",ae);
                     }
                     Application.getMessagingFactory().sendMessage(new StatusBarMessage(msg,StatusBarMessage.TYPE_ERROR));
@@ -1169,7 +1169,7 @@ public class TablePart extends AbstractTablePart
 
   /**
    * Aktualisiert die Summenzeile.
-   * @deprecated Bitte künftig {@link AbstractTablePart#featureEvent(Feature.Event, Object)}
+   * @deprecated Bitte kÃ¼nftig {@link AbstractTablePart#featureEvent(Feature.Event, Object)}
    * mit dem Event {@link Feature.Event#REFRESH} verwenden.
    */
   @Deprecated
@@ -1199,7 +1199,7 @@ public class TablePart extends AbstractTablePart
   {
     int size = size();
     if (size != 1)
-      return i18n.tr("{0} Datensätze",Integer.toString(size));
+      return i18n.tr("{0} DatensÃ¤tze",Integer.toString(size));
     return i18n.tr("1 Datensatz");
   }
   
@@ -1330,7 +1330,7 @@ public class TablePart extends AbstractTablePart
     {
       // BUGZILLA 1267
       Logger.error("unable to sort table",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Sortierung nach dieser Spalte nicht möglich"), StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Sortierung nach dieser Spalte nicht mÃ¶glich"), StatusBarMessage.TYPE_ERROR));
     }
 
     col.setImage(direction ? down : up);

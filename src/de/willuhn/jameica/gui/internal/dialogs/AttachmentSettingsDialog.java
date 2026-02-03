@@ -57,7 +57,7 @@ public class AttachmentSettingsDialog extends AbstractDialog
   public AttachmentSettingsDialog(int position)
   {
     super(position);
-    this.setTitle(i18n.tr("Einstellungen für Dateianhänge"));
+    this.setTitle(i18n.tr("Einstellungen fÃ¼r DateianhÃ¤nge"));
     this.setSize(WINDOW_WIDTH,SWT.DEFAULT);
     
     final BeanService bs = Application.getBootLoader().getBootable(BeanService.class);
@@ -73,13 +73,13 @@ public class AttachmentSettingsDialog extends AbstractDialog
     SimpleContainer container = new SimpleContainer(parent,true);
     
     if (service.getProviders().size() > 1)
-      container.addText(i18n.tr("Dateianhänge werden in diesem Ordner gespeichert, wenn Sie die Speicherung in lokalen Dateien auswählen:"),true);
+      container.addText(i18n.tr("DateianhÃ¤nge werden in diesem Ordner gespeichert, wenn Sie die Speicherung in lokalen Dateien auswÃ¤hlen:"),true);
     else
-      container.addText(i18n.tr("Dateianhänge werden in diesem Ordner gespeichert:"),true);
+      container.addText(i18n.tr("DateianhÃ¤nge werden in diesem Ordner gespeichert:"),true);
     
     container.addText(this.storage.getBaseDir().getAbsolutePath(),true,Color.SUCCESS);
     container.addSeparator();
-    container.addText(i18n.tr("Sie können optional einen abweichenden Ordner für die Speicherung der Dateianhänge wählen."),true);
+    container.addText(i18n.tr("Sie kÃ¶nnen optional einen abweichenden Ordner fÃ¼r die Speicherung der DateianhÃ¤nge wÃ¤hlen."),true);
 
     container.addInput(this.getCheck());
     container.addInput(this.getDirectory());
@@ -90,7 +90,7 @@ public class AttachmentSettingsDialog extends AbstractDialog
     container.addInput(errors);
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Übernehmen"),new Action() {
+    buttons.addButton(i18n.tr("Ãœbernehmen"),new Action() {
       
       @Override
       public void handleAction(Object context) throws ApplicationException
@@ -132,8 +132,8 @@ public class AttachmentSettingsDialog extends AbstractDialog
   }
 
   /**
-   * Liefert die Auswahl für den abweichenden Benutzerordner.
-   * @return die Auswahl für den abweichenden Benutzerordner.
+   * Liefert die Auswahl fÃ¼r den abweichenden Benutzerordner.
+   * @return die Auswahl fÃ¼r den abweichenden Benutzerordner.
    */
   private DirectoryInput getDirectory()
   {
@@ -152,7 +152,7 @@ public class AttachmentSettingsDialog extends AbstractDialog
   }
   
   /**
-   * Listener für die Aktualisierung.
+   * Listener fÃ¼r die Aktualisierung.
    */
   private class MyListener implements Listener
   {

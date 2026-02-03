@@ -66,7 +66,7 @@ public class FileInput extends ButtonInput
         FileDialog dialog = new FileDialog(GUI.getShell(), save ? SWT.SAVE : SWT.OPEN);
         if (extensions != null && extensions.length > 0)
           dialog.setFilterExtensions(extensions);
-        dialog.setText(Application.getI18n().tr("Bitte w‰hlen Sie die Datei aus"));
+        dialog.setText(Application.getI18n().tr("Bitte w√§hlen Sie die Datei aus"));
 
         try
         {

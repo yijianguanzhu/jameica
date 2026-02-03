@@ -68,7 +68,7 @@ public class DecimalInput extends TextInput
         this.format.setParseBigDecimal(true);
     }
 
-    // BUGZILLA 1014 Der Code war vorher ähnlich in Hibiscus auch drin. Ich hoffe, der macht hier jetzt keine Probleme.
+    // BUGZILLA 1014 Der Code war vorher Ã¤hnlich in Hibiscus auch drin. Ich hoffe, der macht hier jetzt keine Probleme.
     this.addListener(new Listener() {
       public void handleEvent(Event event)
       {

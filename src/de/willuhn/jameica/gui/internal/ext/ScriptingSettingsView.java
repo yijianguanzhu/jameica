@@ -93,8 +93,8 @@ public class ScriptingSettingsView implements Extension
       Settings settings = (Settings) extendable;
       TabGroup tab = new TabGroup(settings.getTabFolder(),i18n.tr("Scripting"),true);
       tab.addText(i18n.tr("Die registrierten Script-Dateien werden beim Start von Jameica " +
-      		                "automatisch ausgeführt. Sie können Funktionen enthalten, die " +
-      		                "beim Eintreffen bestimmter Ereignisse von Plugins ausgeführt werden."),true);
+      		                "automatisch ausgefÃ¼hrt. Sie kÃ¶nnen Funktionen enthalten, die " +
+      		                "beim Eintreffen bestimmter Ereignisse von Plugins ausgefÃ¼hrt werden."),true);
       
       // Da wir keine echte View sind, haben wir auch kein unbind zum Aufraeumen.
       // Damit wir unsere GUI-Elemente aber trotzdem disposen koennen, registrieren
@@ -131,7 +131,7 @@ public class ScriptingSettingsView implements Extension
         }
       });
       buttons.addButton(remove);
-      buttons.addButton(i18n.tr("Script hinzufügen..."),new ActionAdd(),null,false,"document-new.png");
+      buttons.addButton(i18n.tr("Script hinzufÃ¼gen..."),new ActionAdd(),null,false,"document-new.png");
       tab.addButtonArea(buttons);
     }
     catch (Exception e)
@@ -210,7 +210,7 @@ public class ScriptingSettingsView implements Extension
      */
     public ItemAdd()
     {
-      super(i18n.tr("Script hinzufügen..."),new ActionAdd(),"document-new.png");
+      super(i18n.tr("Script hinzufÃ¼gen..."),new ActionAdd(),"document-new.png");
     }
   }
   
@@ -241,7 +241,7 @@ public class ScriptingSettingsView implements Extension
       FileDialog dialog = new FileDialog(GUI.getShell(), SWT.OPEN);
       dialog.setFilterExtensions(new String[]{"*.js"});
       dialog.setFilterPath(settings.getString("lastdir",System.getProperty("user.home")));
-      dialog.setText(i18n.tr("Bitte wählen Sie die Script-Datei aus"));
+      dialog.setText(i18n.tr("Bitte wÃ¤hlen Sie die Script-Datei aus"));
       String s = dialog.open();
       
       // Keine Datei ausgewaehlt
@@ -356,7 +356,7 @@ public class ScriptingSettingsView implements Extension
           catch (Exception e)
           {
             Logger.error("error while adding script " + o);
-            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Hinzufügen des Scripts fehlgeschlagen"),StatusBarMessage.TYPE_ERROR));
+            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("HinzufÃ¼gen des Scripts fehlgeschlagen"),StatusBarMessage.TYPE_ERROR));
           }
         }
       });

@@ -63,9 +63,9 @@ public class StartupParams
   public StartupParams(String[] args)
 	{
   	this.params       = args;
-		Option server 		= new Option("d","server",false,"Startet die Anwendung im Server-Mode ohne Benutzeroberfläche.");
-		Option client 		= new Option("c","client",false,"Startet die Anwendung im Client-Mode mit Benutzeroberfläche");
-		Option standalone = new Option("s","standalone",false,"Startet die Anwendung im Standalone-Mode mit Benutzeroberfläche (Default)");
+		Option server 		= new Option("d","server",false,"Startet die Anwendung im Server-Mode ohne BenutzeroberflÃ¤che.");
+		Option client 		= new Option("c","client",false,"Startet die Anwendung im Client-Mode mit BenutzeroberflÃ¤che");
+		Option standalone = new Option("s","standalone",false,"Startet die Anwendung im Standalone-Mode mit BenutzeroberflÃ¤che (Default)");
 
 		OptionGroup mode = new OptionGroup();
 		mode.setRequired(false);
@@ -83,11 +83,11 @@ public class StartupParams
 		options.addOption("p","password",true,"Optionale Angabe des Master-Passworts");
     options.addOption("w","passwordfile",true,"Optionale Angabe des Master-Passworts, welches sich in der angegebenen Datei befindet");
 		options.addOption("P", "passwordcommand", true, "Optional Angabe eines Befehls, der das Master-Passwort auf Stdout ausgibt");
-    options.addOption("o","force-password",false,"Angabe des Master-Passworts via Kommandozeile ignorieren (für MacOS nötig)");
+    options.addOption("o","force-password",false,"Angabe des Master-Passworts via Kommandozeile ignorieren (fÃ¼r MacOS nÃ¶tig)");
 
     options.addOption("n","noninteractive",false,"Koppelt Jameica im Server-Mode von der Konsole ab. " +
       "Es findet keine Benutzer-Interaktion mehr statt. Die Option wird nur ausgewertet, wenn Jameica " +
-      "im Server-Mode läuft.");
+      "im Server-Mode lÃ¤uft.");
 
     options.addOption("l","ignore-lock",false,"Ignoriert eine ggf. vorhandene Lock-Datei");
 
@@ -272,7 +272,7 @@ public class StartupParams
 	}
   
   /**
-   * Prüfe, ob Jameica im nichtinteraktiven Server-Mode
+   * PrÃ¼fe, ob Jameica im nichtinteraktiven Server-Mode
    * laeuft und damit keine direkte Interaktion mit dem Benutzer ueber
    * die Konsole moeglich ist.
    * @return liefert {@code true}, wenn sich die Anwendung im nicht-interaktiven Mode befindet.
@@ -283,7 +283,7 @@ public class StartupParams
   }
   
   /**
-   * Prüfe, ob eine ggf vorhandene Lock-Datei ignoriert werden soll.
+   * PrÃ¼fe, ob eine ggf vorhandene Lock-Datei ignoriert werden soll.
    * @return {@code true}, wenn die Lock-Datei ignoriert werden soll.
    */
   public boolean isIgnoreLockfile()

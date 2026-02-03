@@ -1,30 +1,30 @@
 HEAD 2.13 (nightly)
 
   * NEW: 0194 Umstellung der Javascript-Engine von Rhino auf Nashorn (https://github.com/openjdk/nashorn)
-  * BUG: 0193 Erneutes Öffnen der Liste mit Adressvorschlägen nach Auswahl eines Namens per Enter-Taste verhindern 
+  * BUG: 0193 Erneutes Ã–ffnen der Liste mit AdressvorschlÃ¤gen nach Auswahl eines Namens per Enter-Taste verhindern 
 
 2025-10-29 Version 2.12.0
 
-  * CHG: 0192 Support für 32Bit-Windows, 32Bit-Linux und OpenBSD entfernt, Build-Script vereinfacht
-  * NEW: 0191 Update auf SWT 4.37 für linux64, linux-arm64, win64, macos64, macos64-aarch64
+  * CHG: 0192 Support fÃ¼r 32Bit-Windows, 32Bit-Linux und OpenBSD entfernt, Build-Script vereinfacht
+  * NEW: 0191 Update auf SWT 4.37 fÃ¼r linux64, linux-arm64, win64, macos64, macos64-aarch64
   * BUG: 0190 Das horizontale Skalieren des Hintergrundbildes war falsch - wirkt sich erst in SWT 4.37 aus 
-  * BUG: 0189 Die Bilder für die Zoom-Stufen hatten nicht die selben Seitenverhältnisse wie das Original-Bild. Führt in SWT 4.37 zu einer SWTException
-  * NEW: 0188 lib/jakarta_ee/* hinzugefügt
-  * BUG: 0187 Lock-File nur noch löschen, wenn wir es selbst erzeugt haben - siehe https://homebanking-hilfe.de/forum/topic.php?t=27446
-  * NEW: 0186 Erster Code für H2-Migration (mehrere Versionen des H2-Treibers im Classpath, kann per "migration-h2=true/false" in de.willuhn.jameica.system.Config.properties umgeschaltet werden
+  * BUG: 0189 Die Bilder fÃ¼r die Zoom-Stufen hatten nicht die selben SeitenverhÃ¤ltnisse wie das Original-Bild. FÃ¼hrt in SWT 4.37 zu einer SWTException
+  * NEW: 0188 lib/jakarta_ee/* hinzugefÃ¼gt
+  * BUG: 0187 Lock-File nur noch lÃ¶schen, wenn wir es selbst erzeugt haben - siehe https://homebanking-hilfe.de/forum/topic.php?t=27446
+  * NEW: 0186 Erster Code fÃ¼r H2-Migration (mehrere Versionen des H2-Treibers im Classpath, kann per "migration-h2=true/false" in de.willuhn.jameica.system.Config.properties umgeschaltet werden
   
 2025-02-04 Version 2.10.5
   
   * NEW: 0185 Wir liefern jetzt sowohl MariaDB- als auch MySQL-Treiber mit
-  * NEW: 0184 Wenn Anwendung im Maximiert-Zustand beendet, dann Fenster-Größe nicht speichern. Beim Start auch dann Fenster-Größe setzen, wenn im Maximiert-Zustand gestartet wird
+  * NEW: 0184 Wenn Anwendung im Maximiert-Zustand beendet, dann Fenster-GrÃ¶ÃŸe nicht speichern. Beim Start auch dann Fenster-GrÃ¶ÃŸe setzen, wenn im Maximiert-Zustand gestartet wird
   * BUG: 0183 Pfad zur Jameica JAR-Datei in jameica-macos-aarch64.sh falsch 
-  * NEW: 0182 Update auf SWT 4.33 für linux64, linux-arm64, win64, macos64, macos64-aarch64 sowie Java 21 auf win64, macos64, macos64-aarch64 
+  * NEW: 0182 Update auf SWT 4.33 fÃ¼r linux64, linux-arm64, win64, macos64, macos64-aarch64 sowie Java 21 auf win64, macos64, macos64-aarch64 
   * NEW: 0181 Nur einen Hintergrund-Task in der GUI zur gleichen Zeit zulassen
   * BUG: 0180 Selectboxen wurden nicht farbig hervorgehoben, wenn sie als Pflichtfelder markiert waren
-  * BUG: 0179 CTRL+A und CTRL+C funktionierte nicht bei Tabellen, die kein Kontextmenü besitzen
-  * NEW: 0178 Drag'n'Drop-Support für Attachments
-  * NEW: 0177 Ordner für Dateianhänge kann jetzt auch wieder auf System-Default zurückgesetzt werden. Außerdem wird der aktuell verwendete Ordner angezeigt
-  * NEW: 0176 Auf der Startseite einen Hinweis anzeigen, wenn in der letzten Sitzung Fehler dazu führten, dass kein automatisches Backup erstellt werden konnte
+  * BUG: 0179 CTRL+A und CTRL+C funktionierte nicht bei Tabellen, die kein KontextmenÃ¼ besitzen
+  * NEW: 0178 Drag'n'Drop-Support fÃ¼r Attachments
+  * NEW: 0177 Ordner fÃ¼r DateianhÃ¤nge kann jetzt auch wieder auf System-Default zurÃ¼ckgesetzt werden. AuÃŸerdem wird der aktuell verwendete Ordner angezeigt
+  * NEW: 0176 Auf der Startseite einen Hinweis anzeigen, wenn in der letzten Sitzung Fehler dazu fÃ¼hrten, dass kein automatisches Backup erstellt werden konnte
   * BUG: 0175 Beim Restore aus dem Systray Fenster forciert in Vordergrund bringen
   * NEW: 0174 Wenn Minimieren in Systray aktiviert ist, dann auch beim Klick auf Schliessen-Kreuz im Fenster-Titel nicht beenden sondern in Systray minimieren
   * CHG: 0173 Umstellung des JDBC-Treibers von MySQL auf MariaDB
@@ -32,129 +32,129 @@ HEAD 2.13 (nightly)
 
 2023-04-14 Version 2.10.4
 
-  * NEW: 0171 Update auf SWT 4.27 für linux64, linux-arm64, win64, macos64, macos64-aarch64
+  * NEW: 0171 Update auf SWT 4.27 fÃ¼r linux64, linux-arm64, win64, macos64, macos64-aarch64
   * NEW: 0170 Hinweisbox, wenn Repositories von Drittanbietern aktiviert sind
   * NEW: 0169 Neue Option, um die Anwendung in das System-Tray zu minimieren
-  * NEW: 0168 Support für Java 15+ (Jameica liefert jetzt JavaScript Engine Rhino mit)
-  * NEW: 0167 Update auf SWT 4.26 für linux64, linux-arm64, win64, macos64, macos64-aarch64 sowie Update von JFace auf 3.28
+  * NEW: 0168 Support fÃ¼r Java 15+ (Jameica liefert jetzt JavaScript Engine Rhino mit)
+  * NEW: 0167 Update auf SWT 4.26 fÃ¼r linux64, linux-arm64, win64, macos64, macos64-aarch64 sowie Update von JFace auf 3.28
   * NEW: 0166 F5 als Shortcut zum Reload einer View
-  * NEW: 0165 An nahezu alle Dialoge können jetzt Dateien angehängt werden (mit dem Büroklammer-Symbol oben rechts)
+  * NEW: 0165 An nahezu alle Dialoge kÃ¶nnen jetzt Dateien angehÃ¤ngt werden (mit dem BÃ¼roklammer-Symbol oben rechts)
   * NEW: 0164 Update auf BouncyCastle 1.72. Bisherige Version ist von CVE-2020-15522 betroffen.
   * NEW: 0163 TXW2 gegen die zu JAXB Runtime passende, versionsgleiche Bibliothek austauschen
   * BUG: 0162 In Selectboxen nicht mehr auf FocusIn- und FocusOut-Events bei Listenern reagieren
 
 2023-01-25 Version 2.10.3
 
-  * NEW: 0161 Optionales Logo-Part für mehr Customizing-Möglichkeiten. Empfang der Statusbar-Messages direkt durch das Notification-Panel. Hat den Vorteil, dass man das Notification-Panel auch an anderer Stelle verwenden kann.
-  * NEW: 0160 Anzahl der Einträge in Auswahldialog der Jameica-Benutzerverzeichnisse auf 8 erhöht
-  * NEW: 0159 Titelleisten der Panel etwas höher darstellen
+  * NEW: 0161 Optionales Logo-Part fÃ¼r mehr Customizing-MÃ¶glichkeiten. Empfang der Statusbar-Messages direkt durch das Notification-Panel. Hat den Vorteil, dass man das Notification-Panel auch an anderer Stelle verwenden kann.
+  * NEW: 0160 Anzahl der EintrÃ¤ge in Auswahldialog der Jameica-Benutzerverzeichnisse auf 8 erhÃ¶ht
+  * NEW: 0159 Titelleisten der Panel etwas hÃ¶her darstellen
   * NEW: 0158 Seriennummern der Zertifikate in HEX-Schreibweise anzeigen
-  * NEW: 0157 Support für Subject-Alt-Name im Hostname-Verifier
+  * NEW: 0157 Support fÃ¼r Subject-Alt-Name im Hostname-Verifier
   * CHG: 0156 Repository-URL von JVerein auf die neue URL des Forks "OpenJVerein" umgestellt: https://openjverein.github.io/jameica-repository
   * BUG: 0155 Systemsprache en_GB/en_US korrekt in der Auswahlbox unter Datei->Einstellungen erkennen
-  * NEW: 0154 Neuer Customizing-Parameter "application.zoom.image=150/200/300", um in Wayland Icons mit höherer Auflösung auch dann zu verwenden, wenn -"Dswt.autoScale=false" gesetzt ist
-  * BUG: 0153 Bei CTRL+A in Tabellen unter Windows wurde anschließend das Refresh-Event nicht ausgelöst, um z.Bsp. die Summenzeile zu aktualisieren
+  * NEW: 0154 Neuer Customizing-Parameter "application.zoom.image=150/200/300", um in Wayland Icons mit hÃ¶herer AuflÃ¶sung auch dann zu verwenden, wenn -"Dswt.autoScale=false" gesetzt ist
+  * BUG: 0153 Bei CTRL+A in Tabellen unter Windows wurde anschlieÃŸend das Refresh-Event nicht ausgelÃ¶st, um z.Bsp. die Summenzeile zu aktualisieren
   
 2022-05-03 Version 2.10.2
 
   * NEW: 0152 JRE-Update auf 11.0.15
   * BUG: 0151 Macos AArch64 Pfade korrigiert
   * NEW: 0150 Kalender auf dunklen Themes farbig passend gestalten
-  * NEW: 0149 Support für Java 18 - Security-Manager nicht mehr im System registrieren. Java 18+ unterstützt keinen Security-Manager mehr
-  * NEW: 0148 Support für CTRL+A in Tabellen und Trees unter Windows zum Markieren aller Datensätze (funktionierte bisher nur unter Linux)
+  * NEW: 0149 Support fÃ¼r Java 18 - Security-Manager nicht mehr im System registrieren. Java 18+ unterstÃ¼tzt keinen Security-Manager mehr
+  * NEW: 0148 Support fÃ¼r CTRL+A in Tabellen und Trees unter Windows zum Markieren aller DatensÃ¤tze (funktionierte bisher nur unter Linux)
   * BUG: 0147 Scripting-Plugins bei der Wiederherstellung eines Backups korrekt anzeigen
-  * NEW: 0146 Trust-Manager-Implementierung nicht mehr anhand "java.vendor" auswählen sondern erst SunX509 versuchen. Wenn das fehlschlägt, dann Fallback auf IbmX509 
-  * NEW: 0145 Nachtrag zu #0144 - CMD-Taste statt STRG unter MacOS und Timeout für Logfenster von 30 auf 60 Sekunden erhöht
-  * NEW: 0144 STRG+A im Logfenster möglich sowie Button "Text kopieren"
+  * NEW: 0146 Trust-Manager-Implementierung nicht mehr anhand "java.vendor" auswÃ¤hlen sondern erst SunX509 versuchen. Wenn das fehlschlÃ¤gt, dann Fallback auf IbmX509 
+  * NEW: 0145 Nachtrag zu #0144 - CMD-Taste statt STRG unter MacOS und Timeout fÃ¼r Logfenster von 30 auf 60 Sekunden erhÃ¶ht
+  * NEW: 0144 STRG+A im Logfenster mÃ¶glich sowie Button "Text kopieren"
   * NEW: 0143 Referenz auf JAR-File in jameica-macosaarch64.sh falsch
 
 2021-11-19 Version 2.10.1
 
-  * NEW: 0142 Update auf SWT 4.20 für linux64, linux-arm64, win64, macos64
-  * NEW: 0141 Support für Macos-aarch64 (SWT 4.20)
-  * NEW: 0140 JRE-Update für Windows und Mac auf 11.0.13_8
+  * NEW: 0142 Update auf SWT 4.20 fÃ¼r linux64, linux-arm64, win64, macos64
+  * NEW: 0141 Support fÃ¼r Macos-aarch64 (SWT 4.20)
+  * NEW: 0140 JRE-Update fÃ¼r Windows und Mac auf 11.0.13_8
   * NEW: 0139 MySQL-Treiber auf 5.1.49 aktualisiert - siehe https://homebanking-hilfe.de/forum/topic.php?t=24614
-  * NEW: 0138 Update auf SWT 4.19M3 für macos64 - das Druckproblem https://bugs.eclipse.org/bugs/show_bug.cgi?id=569185 scheint dort behoben zu sein
-  * NEW: 0137 Update auf SWT 4.18 für linux64, linux-arm64, win64 und macos64
+  * NEW: 0138 Update auf SWT 4.19M3 fÃ¼r macos64 - das Druckproblem https://bugs.eclipse.org/bugs/show_bug.cgi?id=569185 scheint dort behoben zu sein
+  * NEW: 0137 Update auf SWT 4.18 fÃ¼r linux64, linux-arm64, win64 und macos64
 
 2020-11-27 Version 2.10
   
-  * NEW: 0136 Neue Launcher für Windows mit aktualisierter Versionsnummer
-  * NEW: 0135 JRE-Update für Windows und Mac auf 11.0.9.1_1
-  * NEW: 0134 Update auf SWT 4.17 für linux64, linux-arm64 (jetzt offiziell von Eclipse untestützt), win64 und macos64
-  * NEW: 0133 Parameter "-Dsun.security.smartcardio.library" zu jameica-macos64.sh hinzugefügt - für MacOS Big Sur nötig - siehe https://homebanking-hilfe.de/forum/topic.php?p=157884#real157884
+  * NEW: 0136 Neue Launcher fÃ¼r Windows mit aktualisierter Versionsnummer
+  * NEW: 0135 JRE-Update fÃ¼r Windows und Mac auf 11.0.9.1_1
+  * NEW: 0134 Update auf SWT 4.17 fÃ¼r linux64, linux-arm64 (jetzt offiziell von Eclipse untestÃ¼tzt), win64 und macos64
+  * NEW: 0133 Parameter "-Dsun.security.smartcardio.library" zu jameica-macos64.sh hinzugefÃ¼gt - fÃ¼r MacOS Big Sur nÃ¶tig - siehe https://homebanking-hilfe.de/forum/topic.php?p=157884#real157884
   * NEW: 0132 Fenster-Position auch im Maximiert-Zustand speichern - siehe https://homebanking-hilfe.de/forum/topic.php?p=157397#real157397
   * NEW: 0131 Sprache wieder per Datei->Einstellungen konfigurierbar
-  * NEW: 0130 Update auf SWT 4.14 für linux64, win64 und macos64 - für die 32Bit-Plattformen gibt es keine neueren SWT-Versionen mehr (mit dieser Version werden in GTK3 auch endlich die Theme-Farben auf dem Plasma-Desktop korrekt berücksichtigt)
+  * NEW: 0130 Update auf SWT 4.14 fÃ¼r linux64, win64 und macos64 - fÃ¼r die 32Bit-Plattformen gibt es keine neueren SWT-Versionen mehr (mit dieser Version werden in GTK3 auch endlich die Theme-Farben auf dem Plasma-Desktop korrekt berÃ¼cksichtigt)
   * BUG: 0129 Fehlender Scrollbalken in der Liste der Zertifikate unter Datei->Einstellungen 
   * NEW: 0128 Funktion zum Ein-/Ausblenden der Navigation
   * NEW: 0127 Neues Plugin-Repository https://hibiscus.tvbrowser.org aufgenommen
 
 2019-11-01 Version 2.8.6
 
-  * DEL: 0126 Support für 32Bit MacOS entfernt
-  * NEW: 0125 Unterstützung für Linux ARM64
+  * DEL: 0126 Support fÃ¼r 32Bit MacOS entfernt
+  * NEW: 0125 UnterstÃ¼tzung fÃ¼r Linux ARM64
   * NEW: 0124 Bei Win32, Win64 und MacOS64 ist jetzt eine embedded JRE mit enthalten
 
 2019-09-06 Version 2.8.5
 
-  * BUG: 0123 Fehler werfen, wenn ein Plugin zwar signiert ist, die zugehörige Plugin-Gruppe im Repository aber kein Zertifikat zur Validierung enthält
+  * BUG: 0123 Fehler werfen, wenn ein Plugin zwar signiert ist, die zugehÃ¶rige Plugin-Gruppe im Repository aber kein Zertifikat zur Validierung enthÃ¤lt
   * NEW: 0122 Shortcut "CTRL+Q" zum Beenden des Programms
   * NEW: 0121 Repository-URL von JVerein auf HTTPS umgestellt
-  * CHG: 0120 Aktualisiere Windows-Launcher mit Launch4J 3.12 und optionaler Suche in "%JAVA_HOME%" (nötig für OpenJDK, weil das nicht installiert sondern nur entpackt wird und damit nicht in der Windows-Registry registriert wird)
-  * CHG: 0119 Button-Beschriftung beim erneuten Installieren nochmal angepasst. "Aktualisieren..." wenn die verfügbare Version neuer ist, sonst "Erneut installieren..."
+  * CHG: 0120 Aktualisiere Windows-Launcher mit Launch4J 3.12 und optionaler Suche in "%JAVA_HOME%" (nÃ¶tig fÃ¼r OpenJDK, weil das nicht installiert sondern nur entpackt wird und damit nicht in der Windows-Registry registriert wird)
+  * CHG: 0119 Button-Beschriftung beim erneuten Installieren nochmal angepasst. "Aktualisieren..." wenn die verfÃ¼gbare Version neuer ist, sonst "Erneut installieren..."
   * NEW: 0118 Aktualisierte H2-Version h2-1.4.199
-  * BUG: 0117 Dialog "Über..." konnte u.U. wegen falschem XML-Escaping nicht angezeigt werden
-  * CHG: 0116 Button-Beschriftung beim erneuten Installieren eines bereits installierten Plugins geändert von "Aktualisieren..." zu "Erneut installieren..."
+  * BUG: 0117 Dialog "Ãœber..." konnte u.U. wegen falschem XML-Escaping nicht angezeigt werden
+  * CHG: 0116 Button-Beschriftung beim erneuten Installieren eines bereits installierten Plugins geÃ¤ndert von "Aktualisieren..." zu "Erneut installieren..."
   * NEW: 0115 Aktualisierte H2-Version h2-1.4.198
 
 2019-02-11 Version 2.8.4
 
-  * BUG: 0114 In der Liste der verfügbaren Plugins kam es zu einem Fehler, wenn in der Liste der Plugins Scripting-Plugins enthalten waren - Proxy.newProxyInstance hat scheinbar in Java das Verhalten geändert, wenn der Classloader NULL ist
+  * BUG: 0114 In der Liste der verfÃ¼gbaren Plugins kam es zu einem Fehler, wenn in der Liste der Plugins Scripting-Plugins enthalten waren - Proxy.newProxyInstance hat scheinbar in Java das Verhalten geÃ¤ndert, wenn der Classloader NULL ist
   
 2019-01-29 Version 2.8.3
 
-  * CHG: 0113 Popups verwenden jetzt als Fallback eigene Farben für Vorder- und Hintergrund, wenn keine Systemfarben vorgegeben sind oder Vorder- und Hintergrund identisch wären
+  * CHG: 0113 Popups verwenden jetzt als Fallback eigene Farben fÃ¼r Vorder- und Hintergrund, wenn keine Systemfarben vorgegeben sind oder Vorder- und Hintergrund identisch wÃ¤ren
   * CHG: 0112 Jameica verwendet jetzt unter Linux per Default GTK3 (siehe "SWT_GTK3=1" in jameica.sh)
-  * NEW: 0111 Update auf SWT 4.9 (in 4.10 gibt es keine 32Bit-Unterstützung mehr)
-  * NEW: 0110 Hostname für das beim ersten Start zu erstellende System-Zertifikat kann jetzt per Konfigurationsdatei vorgegeben werden (Parameter "jameica.hostname" in "de.willuhn.jameica.system.ApplicationCallback.properties") - siehe https://homebanking-hilfe.de/forum/topic.php?p=141994#real141994
+  * NEW: 0111 Update auf SWT 4.9 (in 4.10 gibt es keine 32Bit-UnterstÃ¼tzung mehr)
+  * NEW: 0110 Hostname fÃ¼r das beim ersten Start zu erstellende System-Zertifikat kann jetzt per Konfigurationsdatei vorgegeben werden (Parameter "jameica.hostname" in "de.willuhn.jameica.system.ApplicationCallback.properties") - siehe https://homebanking-hilfe.de/forum/topic.php?p=141994#real141994
   * CHG: 0109 JVM-Parameter "-Dswt.autoScale=quarter" bei den Windows-Launchern hinzugefuegt - siehe https://github.com/willuhn/jameica/commit/82d253c0e1aec918b98eb378027ebf2d2e5fb411
-  * BUG: 0108 Kleiner Darstellungsfehler: Beim mehrfachen Überfahren der Panelbuttons mit der Maus oben rechts wurde unter dem Button eine 1 Pixel schmale dunkle Linie angezeigt
+  * BUG: 0108 Kleiner Darstellungsfehler: Beim mehrfachen Ãœberfahren der Panelbuttons mit der Maus oben rechts wurde unter dem Button eine 1 Pixel schmale dunkle Linie angezeigt
   * BUG: 0107 Die Bibliothek "oro" fehlte im Ordner "lib/velocity". Dadurch kam es zu einer ClassNotFoundException in SynTAX beim Erstellen der IDEA-Auswertung
   * BUG: 0106 Zoom-Faktor bei HiDPI-Displays wurde beim Druck von Dokumenten via de.willuhn.jameica.gui.internal.action.Print nicht deaktiviert, sodass Dokumente zu gross gedruckt wurden
   * NEW: 0105 MySQL-Treiber von 5.1.41 auf 5.1.47 aktualisiert
   * CHG: 0104 Settings nur noch maximal 1 mal pro Sekunde neu laden
-  * NEW: 0103 Annotation "@Resource" unterstützt jetzt auch Services des Typs "Bootable".
-  * NEW: 0102 BUGZILLA 1867 - HTTP-Redirects (für Wechsel von HTTP auf HTTPS) berücksichtigen
+  * NEW: 0103 Annotation "@Resource" unterstÃ¼tzt jetzt auch Services des Typs "Bootable".
+  * NEW: 0102 BUGZILLA 1867 - HTTP-Redirects (fÃ¼r Wechsel von HTTP auf HTTPS) berÃ¼cksichtigen
 
 2018-09-17 Version 2.8.2
 
-  * NEW: 0101 Support für Java 11 (Umgebungsvariable "JDK_JAVA_OPTIONS='--add-modules=java.se.ee'" entfernt, Jameica liefert die nötigen JAR-Dateien in lib/java_ee jetzt selbst mit)
-  * BUG: 0100 Aktualisierte H2-Version h2-1.4.197. Version 1.4.193 konnte beim Update auf Hibiscus 2.8.4 u.U. den Fehler "Concurrent update in table "SYS_ID": another transaction has updated or deleted the same row [90131-193]" auslösen.
+  * NEW: 0101 Support fÃ¼r Java 11 (Umgebungsvariable "JDK_JAVA_OPTIONS='--add-modules=java.se.ee'" entfernt, Jameica liefert die nÃ¶tigen JAR-Dateien in lib/java_ee jetzt selbst mit)
+  * BUG: 0100 Aktualisierte H2-Version h2-1.4.197. Version 1.4.193 konnte beim Update auf Hibiscus 2.8.4 u.U. den Fehler "Concurrent update in table "SYS_ID": another transaction has updated or deleted the same row [90131-193]" auslÃ¶sen.
   
 2018-07-13 Version 2.8.1
 
-  * BUG: 0099 BUGZILLA 1856 - Änderung in Bug 1852 betraf zu viele Plugins, Interpretation der abhängigen Versionsnummern nochmal so angepasst, dass das neue Verhalten nur gilt, wenn das "+"/"-" in Klammern angegeben ist, ansonsten gilt wieder das vorherige Verhalten
-  * BUG: 0098 Button "Übernehmen" im Auswahlfenster für den Benutzerordner wurde nicht korrekt freigegeben
-  * BUG: 0097 Jameica-Fenster wurde bei Dualscreen-Setup unter bestimmten Bedingungen nicht auf dem tatsächlichen sondern auf dem primären Monitor wiederhergestellt 
-  * NEW: 0096 BUGZILLA 1852 - Definition von der Versionsnummern von abhängigen Plugins erweitert. Wenn z.Bsp. "1.1.2+" definiert ist, erlaubt das nur noch "1.1.2" - "1.1.(x>2)". Vorher war z.Bsp. auch "1.2" erlaubt
-  * BUG: 0095 Die Prüfung, ob sich der Benutzerordner innerhalb des Programmordners befindet, war zu streng (schlug auch an, wenn der Name des Benutzerordners mit dem Namen des Programmordners beginnt)
-  * BUG: 0094 Fortschrittsfenster mit Logausgaben wurde u.U. zu früh automatisch geschlossen, wenn mehrere Tasks direkt nacheinander ausgeführt werden
-  * BUG: 0093 Bei der Frage "Jameica scheint bereits zu laufen..." wurde ein zusätzliches leeres Fenster angezeigt (siehe 0079 und 0074)
-  * NEW: 0092 Default-Größe und Position des Hauptfensters optimiert
+  * BUG: 0099 BUGZILLA 1856 - Ã„nderung in Bug 1852 betraf zu viele Plugins, Interpretation der abhÃ¤ngigen Versionsnummern nochmal so angepasst, dass das neue Verhalten nur gilt, wenn das "+"/"-" in Klammern angegeben ist, ansonsten gilt wieder das vorherige Verhalten
+  * BUG: 0098 Button "Ãœbernehmen" im Auswahlfenster fÃ¼r den Benutzerordner wurde nicht korrekt freigegeben
+  * BUG: 0097 Jameica-Fenster wurde bei Dualscreen-Setup unter bestimmten Bedingungen nicht auf dem tatsÃ¤chlichen sondern auf dem primÃ¤ren Monitor wiederhergestellt 
+  * NEW: 0096 BUGZILLA 1852 - Definition von der Versionsnummern von abhÃ¤ngigen Plugins erweitert. Wenn z.Bsp. "1.1.2+" definiert ist, erlaubt das nur noch "1.1.2" - "1.1.(x>2)". Vorher war z.Bsp. auch "1.2" erlaubt
+  * BUG: 0095 Die PrÃ¼fung, ob sich der Benutzerordner innerhalb des Programmordners befindet, war zu streng (schlug auch an, wenn der Name des Benutzerordners mit dem Namen des Programmordners beginnt)
+  * BUG: 0094 Fortschrittsfenster mit Logausgaben wurde u.U. zu frÃ¼h automatisch geschlossen, wenn mehrere Tasks direkt nacheinander ausgefÃ¼hrt werden
+  * BUG: 0093 Bei der Frage "Jameica scheint bereits zu laufen..." wurde ein zusÃ¤tzliches leeres Fenster angezeigt (siehe 0079 und 0074)
+  * NEW: 0092 Default-GrÃ¶ÃŸe und Position des Hauptfensters optimiert
   
 2018-05-22 Version 2.8.0
 
-  * NEW: 0091 BUGZILLA 1731 - Besserer Support für HiDPI-Monitore
+  * NEW: 0091 BUGZILLA 1731 - Besserer Support fÃ¼r HiDPI-Monitore
   * DEL: 0090 Logo-Panel oben rechts entfernt - kostete nur Platz
   * NEW: 0089 Globale Suche nach oben rechts verlegt und mit Notification-Panel zusammengefasst
-  * NEW: 0088 Komplettes Redesign der Dialoge für Plugins, Updates, Verwaltung der Repositories, usw.
+  * NEW: 0088 Komplettes Redesign der Dialoge fÃ¼r Plugins, Updates, Verwaltung der Repositories, usw.
   * CHG: 0087 JVM-Parameter "-Xss" in jameicaserver.sh wieder entfernt. Siehe http://www.onlinebanking-forum.de/forum/topic.php?p=136651#real136651
-  * NEW: 0086 Beim Herunterladen mehrere abhängiger Plugins erst am Ende den Hinweis zum Neustart anzeigen
+  * NEW: 0086 Beim Herunterladen mehrere abhÃ¤ngiger Plugins erst am Ende den Hinweis zum Neustart anzeigen
   * NEW: 0085 Beim Installieren von Plugins per "Datei->Plugins online suchen..." nur dann nach Zielordner fragen, wenn mehrere zur Wahl stehen
   * NEW: 0084 Langen Text in Passwort-Dialog bei kleinen Displays scrollbar machen. Siehe http://www.onlinebanking-forum.de/forum/topic.php?t=21572&highlight=&page=last#last_post 
-  * NEW: 0083 Support für Java 9
-  * NEW: 0082 Überschreiben der Sortierung von Werten in abgeleiteten Klassen von "Column" erlauben
+  * NEW: 0083 Support fÃ¼r Java 9
+  * NEW: 0082 Ãœberschreiben der Sortierung von Werten in abgeleiteten Klassen von "Column" erlauben
   
 2017-07-11 Version 2.6.6
 
@@ -162,9 +162,9 @@ HEAD 2.13 (nightly)
   
 2017-06-30 Version 2.6.5
 
-  * BUG: 0080 Jameica bot Online-Updates fuer Plugins an, die die Jameica-Version gar nicht unterstützen (z.Bsp. Hibiscus 2.7.0-nightly)
+  * BUG: 0080 Jameica bot Online-Updates fuer Plugins an, die die Jameica-Version gar nicht unterstÃ¼tzen (z.Bsp. Hibiscus 2.7.0-nightly)
   * BUG: 0079 Anzeige eines leeren Fensters beim ersten Programmstart (siehe 0074)
-  * NEW: 0078 Support für automatische Mit-Installation abhängiger Plugins.
+  * NEW: 0078 Support fÃ¼r automatische Mit-Installation abhÃ¤ngiger Plugins.
   * NEW: 0077 Generische Funktion zum Kopieren von Text aus Tabellen und Trees als CSV in Zwischenablage
   * NEW: 0076 Direkt bei der Auswahl des Benutzerordners auf falschen Ordner (innerhalb des Programmordners) hinweisen
   * CHG: 0075 Neue Datasource-Version https://github.com/willuhn/datasource/commit/a6c3c2d9e8a476258142d4c1f6ccc79f0a28e4f9
@@ -172,18 +172,18 @@ HEAD 2.13 (nightly)
   * NEW: 0073 Letzten Fixierungsstatus des Task-Monitors merken
   * NEW: 0072 Icon zum Fixieren des Task-Monitors, damit sich dieser nicht automatisch nach 30 Sekunden ausblendet
   * NEW: 0071 Text-Farbe von Kommentaren aus Mittelwert von Vorder- und Hintergrund errechnen
-  * NEW: 0070 Neue SWT-Version 4.6.1 (ausser macOS 32Bit, dafür gibt es keine aktuellen SWT-Versionen mehr)
+  * NEW: 0070 Neue SWT-Version 4.6.1 (ausser macOS 32Bit, dafÃ¼r gibt es keine aktuellen SWT-Versionen mehr)
   * NEW: 0069 Summary-Funktion in TablePart auf Feature-Basis umgestellt.
-  * NEW: 0068 Support für Table-Features in Basis-Klasse "AbstractTablePart" verschoben, damit es auch von TreePart genutzt werden kann
-  * NEW: 0067 BUGZILLA 1766 - Bin-Ordner auch in "target/classes" unterstützen (Maven-Kompatibilität)
-  * NEW: 0066 BUGZILLA 1765 - Unterstützung für Tooltips in Input-Feldern
+  * NEW: 0068 Support fÃ¼r Table-Features in Basis-Klasse "AbstractTablePart" verschoben, damit es auch von TreePart genutzt werden kann
+  * NEW: 0067 BUGZILLA 1766 - Bin-Ordner auch in "target/classes" unterstÃ¼tzen (Maven-KompatibilitÃ¤t)
+  * NEW: 0066 BUGZILLA 1765 - UnterstÃ¼tzung fÃ¼r Tooltips in Input-Feldern
   * NEW: 0065 Neue Util-Version https://github.com/willuhn/util/commit/1180b2c82dcdd9e3a2414f60730461b2d6a1818c
-  * BUG: 0064 In PopupList Element nur noch übernehmen, wenn explizit angeklickt oder ENTER gedrückt. Siehe http://www.onlinebanking-forum.de/forum/topic.php?p=127022#real127022
+  * BUG: 0064 In PopupList Element nur noch Ã¼bernehmen, wenn explizit angeklickt oder ENTER gedrÃ¼ckt. Siehe http://www.onlinebanking-forum.de/forum/topic.php?p=127022#real127022
   * NEW: 0063 Neue Util-Version https://github.com/willuhn/util/commit/ac2a759cc439d1a833ef104ad02270e73d1b3fa8
   * BUG: 0062 Current Object wurde im Contextmenu eines Tree nicht korrekt gesetzt, wenn dessen State restored wurde
   * NEW: 0061 Aktualisierte englische Sprach-Bundles von Christian
-  * NEW: 0060 Label auch in DateInput zur Laufzeit änderbar
-  * NEW: 0059 Alle Start-Scripts auf 512MB umgestellt und EXE-Launcher für Windows neu generiert
+  * NEW: 0060 Label auch in DateInput zur Laufzeit Ã¤nderbar
+  * NEW: 0059 Alle Start-Scripts auf 512MB umgestellt und EXE-Launcher fÃ¼r Windows neu generiert
   
 2016-05-02 Version 2.6.4
 
@@ -193,20 +193,20 @@ HEAD 2.13 (nightly)
 2016-03-29 Version 2.6.3
 
   * NEW: 0056 BUGZILLA 1704 - Inline-Bearbeiten in Tabelle nur dann, wenn man mit der rechten Maustaste klickt
-  * NEW: 0055 Neues datasource-Paket mit Support für Generics
-  * NEW: 0054 Unterstützung für Zertifikatsketten bei Plugin-Repositories, Jameica-CA noch zu den Stammzertifikaten hinzugefügt -
-              wird für die Prüfung der gesamten Kette benötigt
+  * NEW: 0055 Neues datasource-Paket mit Support fÃ¼r Generics
+  * NEW: 0054 UnterstÃ¼tzung fÃ¼r Zertifikatsketten bei Plugin-Repositories, Jameica-CA noch zu den Stammzertifikaten hinzugefÃ¼gt -
+              wird fÃ¼r die PrÃ¼fung der gesamten Kette benÃ¶tigt
   * NEW: 0053 Neues Jameica-eigenes System-Zertifikat, mit dem kuenftig die Zertifikate der Plugin-Repositories signiert sein werden
   * NEW: 0052 Aktualisierte englische Sprach-Bundles von Christian
-  * CHG: 0051 scripting-updates.derrichter.de aus der Liste der Repositories gelöscht, schon seit langem nicht mehr verfügbar
+  * CHG: 0051 scripting-updates.derrichter.de aus der Liste der Repositories gelÃ¶scht, schon seit langem nicht mehr verfÃ¼gbar
   * BUG: 0050 In der Suchbox links nur auf Enter reagieren (Feld liess sich mit Tab-Taste nicht verlassen)
-  * BUG: 0049 BUGZILLA 1688 - Fehler-Handling bei Klick auf Zurück kürzte fälschlicherweise die History
+  * BUG: 0049 BUGZILLA 1688 - Fehler-Handling bei Klick auf ZurÃ¼ck kÃ¼rzte fÃ¤lschlicherweise die History
   * NEW: 0048 Aktualisierte englische Sprach-Bundles von Christian
   * BUG: 0047 BUGZILLA 1679 - Xmx256m auf Xmx512m erhoeht
   * BUG: 0046 BUGZILLA 1679 - textTable wurde nicht geleert, Memory Leak
   * NEW: 0045 BUGZILLA 1672 - Cursor springt nach Datumsauswahl
   * NEW: 0044 Abfrage "Plugin wurde vom Herausgeber nicht signiert." nicht mehr speicherbar (siehe Change 0043)
-  * NEW: 0043 Option "Diese Frage künftig nicht mehr anzeigen" konfigurierbar.
+  * NEW: 0043 Option "Diese Frage kÃ¼nftig nicht mehr anzeigen" konfigurierbar.
   * NEW: 0042 Aktualisiertes englisches Sprach-Bundle von Christian
   * NEW: 0041 Aktualisiertes englisches Sprach-Bundle von Christian und aktualisiertes Init-Script fuer CentOS
   * NEW: 0040 Support fuer Custom-Shell in AbstractDialog
@@ -216,40 +216,40 @@ HEAD 2.13 (nightly)
   * DEL: 0037 Automatisches Setzen des System-Property "javax.net.debug" komplett entfernt 
   * NEW: 0036 System-Property "javax.net.debug" im Loglevel TRACE nur dann setzen, wenn nicht bereits gesetzt
   * NEW: 0035 Message-Consumer per Manifest auch in Default-Queue registrierbar.
-  * NEW: 0034 BUGZILLA 1636 - Whitespaces beim Einfügen in Dezimalzahlen erlauben aber automatisch entfernen
-  * NEW: 0033 BUGZILLA 1580 - neue SWT-Version 4.4.2, welche das OSX-Problem mit der unsichtbaren ersten Zeile lösen soll
+  * NEW: 0034 BUGZILLA 1636 - Whitespaces beim EinfÃ¼gen in Dezimalzahlen erlauben aber automatisch entfernen
+  * NEW: 0033 BUGZILLA 1580 - neue SWT-Version 4.4.2, welche das OSX-Problem mit der unsichtbaren ersten Zeile lÃ¶sen soll
               (siehe auch https://bugs.eclipse.org/bugs/show_bug.cgi?id=446534)
   * NEW: 0032 BUGZILLA 1623 - Zeichen "&" in NotificationPanel escapen. Wird sonst als Unterstrich angezeigt
   * NEW: 0031 Pfadangaben der Scripts als relative Pfade speichern, falls moeglich (besser portierbar bei Roaming-Workdir)
   * NEW: 0030 Noch zu Pull-Request #6 - BUGZILLA 1618 - da fehlten noch ein paar JARs fuer die neue JFace-Version im Classpath
-  * NEW: 0029 Refactoring des CalendarDialogs, Option zum Wechsel auf heutiges Datum hinzugefügt
+  * NEW: 0029 Refactoring des CalendarDialogs, Option zum Wechsel auf heutiges Datum hinzugefÃ¼gt
   * BUG: 0028 BUGZILLA 1613 - NPE beim Klicken auf [x] in der Kalenderauswahl statt auf "Abbrechen"
   * NEW: 0027 Weiterer Sicherheitscheck bei der Wiederherstellung eines Backups
-  * CHG: 0026 Such-Reihenfolge der Java-Version bei OSX geändert (siehe Mail von Volker vom 31.12.2014)
+  * CHG: 0026 Such-Reihenfolge der Java-Version bei OSX geÃ¤ndert (siehe Mail von Volker vom 31.12.2014)
   * BUG: 0025 BUGZILLA 1607 - Moegliche Fehlerquelle "Comparison method violates its general contract!" beim Sortieren
   * NEW: 0024 Neue Datasource-Version https://github.com/willuhn/datasource/commit/2365a2185b6030121e5f9ce343e61f42f8586d8f
   * NEW: 0023 Hilfe-Box auf der linken Seite ausblenden, wenn die aktuelle View keine Hilfe mitbringt.
   
 2015-01-06 Version 2.6.2 (Build 440)
 
-  * BUG: 0022 Änderung 0020 verursachte den Fehler, dass im Dialog zum Hinzufügen eines neuen Repository die Eingabe nicht mehr
-              übernommen wurde. Andere Plugins, die den selben Dialog verwenden, waren ebenfalls betroffen.
+  * BUG: 0022 Ã„nderung 0020 verursachte den Fehler, dass im Dialog zum HinzufÃ¼gen eines neuen Repository die Eingabe nicht mehr
+              Ã¼bernommen wurde. Andere Plugins, die den selben Dialog verwenden, waren ebenfalls betroffen.
   * NEW: 0021 Neue Version des MySQL-Treibers 5.1.34
 
 2014-12-22 Version 2.6.2
 
-  * NEW: 0020 Eine Reihe UI-Tweaks für initiales Setup der Online-Updates
-  * NEW: 0019 BUGZILLA 1586 - Repositories werden jetzt nach 5 Zugriffsfehlern automatisch deaktiviert und können auch vom User manuell deaktiviert werden
-  * NEW: 0018 BUGZILLA 1577 - Skalierung aller Dialoge mit fester Höhe/Breite passend für die DPI-Zahl (HighDPI-Support)
+  * NEW: 0020 Eine Reihe UI-Tweaks fÃ¼r initiales Setup der Online-Updates
+  * NEW: 0019 BUGZILLA 1586 - Repositories werden jetzt nach 5 Zugriffsfehlern automatisch deaktiviert und kÃ¶nnen auch vom User manuell deaktiviert werden
+  * NEW: 0018 BUGZILLA 1577 - Skalierung aller Dialoge mit fester HÃ¶he/Breite passend fÃ¼r die DPI-Zahl (HighDPI-Support)
   * BUG: 0017 Da wurden ein paar Datei-Handles nicht korrekt geschlossen
   * NEW: 0016 BUGZILLA 1565 DPI-Zahl jetzt per Customizing konfigurierbar
   * NEW: 0015 Nach neuen Updates nur suchen, wenn auch wirklich Plugins installiert sind
   * MIN: 0014 BUGZILLA 1509 SSL-Zertifikate unter Datei->Einstellungen liessen sich nicht nach Datum sortieren
-  * NEW: 0013 Regelmässige Prüfung nach Updates per Default aktiv
-  * NEW: 0012 Bei deaktiviertem Backup-Support war auch kein Restore möglich 
+  * NEW: 0013 RegelmÃ¤ssige PrÃ¼fung nach Updates per Default aktiv
+  * NEW: 0012 Bei deaktiviertem Backup-Support war auch kein Restore mÃ¶glich 
   * NEW: 0011 System-Property "java.net.preferIPv4Stack" auch in SysPropertyService setzen
   * NEW: 0010 BUGZILLA 1479 - Shortcuts wurden unter Windows nicht angezeigt
-  * NEW: 0009 Support für Rekursion in BeanUtil.get()
+  * NEW: 0009 Support fÃ¼r Rekursion in BeanUtil.get()
   
 2014-01-09 Version 2.6.1
 
@@ -257,9 +257,9 @@ HEAD 2.13 (nightly)
   * CHG: 0007 Scripts erst initialisieren, wenn das GUI-Fenster da ist (per SystemMessage)
   * BUG: 0006 ungewollte Tab-Wechsel unter Datei->Einstellungen
   * CHG: 0005 Ins Log schreiben, warum ein Plugin nicht installiert werden kann
-  * BUG: 0004 Layout-Fix in der Darstellung der verfügbaren Updates (Button sollte unter und nicht neben der Liste der Updates angezeigt werden)
-  * BUG: 0003 BUGZILLA 1447 Foreign-Key-Properties in DBObject wurden in hasChanged(String) fälschlicherweise als geändert angesehen 
+  * BUG: 0004 Layout-Fix in der Darstellung der verfÃ¼gbaren Updates (Button sollte unter und nicht neben der Liste der Updates angezeigt werden)
+  * BUG: 0003 BUGZILLA 1447 Foreign-Key-Properties in DBObject wurden in hasChanged(String) fÃ¤lschlicherweise als geÃ¤ndert angesehen 
   * CHG: 0002 System-Property "java.net.useSystemProxies" nicht mehr per Default setzen
-  * CHG: 0001 System-Properties für PCSC aus jameica.sh wieder entfernt - siehe https://www.willuhn.de/blog/index.php?/archives/654-Hibiscus-Experimenteller-PCSC-Support!.html#c1958
+  * CHG: 0001 System-Properties fÃ¼r PCSC aus jameica.sh wieder entfernt - siehe https://www.willuhn.de/blog/index.php?/archives/654-Hibiscus-Experimenteller-PCSC-Support!.html#c1958
 
   

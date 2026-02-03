@@ -93,7 +93,7 @@ public class DateInput implements Input
       this.dialog.setDate(date);
 
     this.dialog.setTitle(Application.getI18n().tr("Datum"));
-    this.dialog.setText(Application.getI18n().tr("Bitte wählen Sie das Datum aus"));
+    this.dialog.setText(Application.getI18n().tr("Bitte wÃ¤hlen Sie das Datum aus"));
     this.input = new DialogInput(date == null ? null : this.format.format(date), this.dialog);
     this.input.setData(DATAKEY_TOOLTIP, String.format(Application.getI18n().tr("DateInput.tooltip")));
 
@@ -124,7 +124,7 @@ public class DateInput implements Input
   }
 
   /**
-   * Erlaubt das Ändern des Datums mittels Tastenkombination:<br>
+   * Erlaubt das Ã„ndern des Datums mittels Tastenkombination:<br>
    * ALT & BILD_HOCH: Tag +1<br>
    * ALT & BILD_RUNTER: Tag -1<br>
    * ALT & SHIFT & BILD_HOCH: Monat +1<br>
@@ -227,7 +227,7 @@ public class DateInput implements Input
     Optional<LocalDate> date = DateUtil.parseUserInput(inputText, this.dtFormatter);
 
     if(date.isEmpty()) {
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Ungültiges Datum: {0}",inputText),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("UngÃ¼ltiges Datum: {0}",inputText),StatusBarMessage.TYPE_ERROR));
       return Optional.empty();
     }
 
@@ -300,7 +300,7 @@ public class DateInput implements Input
       catch (Exception e)
       {
         Logger.error("invalid date " + value,e);
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Ungültiges Datum: {0}",value.toString()),StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("UngÃ¼ltiges Datum: {0}",value.toString()),StatusBarMessage.TYPE_ERROR));
       }
       return;
     }

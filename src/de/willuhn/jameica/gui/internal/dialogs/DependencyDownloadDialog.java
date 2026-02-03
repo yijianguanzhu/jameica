@@ -45,7 +45,7 @@ public class DependencyDownloadDialog extends AbstractDialog
   {
     super(position);
     this.data = data;
-    this.setTitle(i18n.tr("Zu installierende Abh‰ngigkeiten"));
+    this.setTitle(i18n.tr("Zu installierende Abh√§ngigkeiten"));
     this.setSize(460,300);
   }
 
@@ -63,7 +63,7 @@ public class DependencyDownloadDialog extends AbstractDialog
   protected void paint(Composite parent) throws Exception
   {
     SimpleContainer container = new SimpleContainer(parent,true);
-    container.addText(i18n.tr("Das Plugin benˆtigt noch weitere abh‰ngige Plugins, die noch nicht (oder nicht in der passenden Version) " +
+    container.addText(i18n.tr("Das Plugin ben√∂tigt noch weitere abh√§ngige Plugins, die noch nicht (oder nicht in der passenden Version) " +
     		                      "installiert sind. Sie werden automatisch ebenfalls mit heruntergeladen und installiert."),true);
     
     TablePart deps = new TablePart(this.data,null);
@@ -86,10 +86,10 @@ public class DependencyDownloadDialog extends AbstractDialog
     
     container.addPart(deps);
     
-    container.addText("\n" + i18n.tr("Sind Sie sicher, daﬂ Sie das Plugin und die genannten Abh‰ngigkeiten jetzt herunterladen und installieren mˆchten?"),true);
+    container.addText("\n" + i18n.tr("Sind Sie sicher, da√ü Sie das Plugin und die genannten Abh√§ngigkeiten jetzt herunterladen und installieren m√∂chten?"),true);
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton("   " + i18n.tr("Ja" + "   "),new Action() {
+    buttons.addButton(i18n.tr("Ja"),new Action() {
     
       public void handleAction(Object context) throws ApplicationException
       {

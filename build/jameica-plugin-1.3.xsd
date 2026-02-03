@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
   $Revision: 1.2 $
@@ -47,13 +47,13 @@
     <xsd:all>
       <xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
-          <xsd:documentation>Beschreibungstext für das Plugin</xsd:documentation>
+          <xsd:documentation>Beschreibungstext fÃ¼r das Plugin</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
 
       <xsd:element name="url" type="xsd:string" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
-          <xsd:documentation>URL für das Online-Update des Plugins. Derzeit noch ungenutzt</xsd:documentation>
+          <xsd:documentation>URL fÃ¼r das Online-Update des Plugins. Derzeit noch ungenutzt</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="homepage" type="xsd:string" minOccurs="0" maxOccurs="1">
@@ -121,12 +121,12 @@
   <!-- Element "requires" //-->
   <xsd:complexType name="requiresType">
     <xsd:annotation>
-      <xsd:documentation>Definition von Abhängigkeiten zu anderen Plugins.</xsd:documentation>
+      <xsd:documentation>Definition von AbhÃ¤ngigkeiten zu anderen Plugins.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence minOccurs="0" maxOccurs="unbounded">
       <xsd:element name="import" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation>Definition einer Abhängigkeit zu einem anderen Plugin</xsd:documentation>
+          <xsd:documentation>Definition einer AbhÃ¤ngigkeit zu einem anderen Plugin</xsd:documentation>
         </xsd:annotation>
         <xsd:complexType>
           <xsd:attribute name="plugin" type="xsd:string" use="required">
@@ -141,8 +141,8 @@
           <xsd:attribute name="version" type="xsd:string" use="optional">
             <xsd:annotation>
               <xsd:documentation>
-                Angabe der benötigten Versionsnummer. Z.Bsp. 1.6-, wenn das
-                Plugin in einer älteren Version als 1.6 vorliegen muss; 1.7+, wenn
+                Angabe der benÃ¶tigten Versionsnummer. Z.Bsp. 1.6-, wenn das
+                Plugin in einer Ã¤lteren Version als 1.6 vorliegen muss; 1.7+, wenn
                 es in Version 1.7 oder aktueller vorliegen muss; 1.8, wenn es
                 genau in Version 1.8 vorliegen muss.
               </xsd:documentation>
@@ -153,11 +153,11 @@
           <xsd:attribute name="required" type="xsd:boolean" use="optional">
             <xsd:annotation>
               <xsd:documentation>
-                Abhängigkeit muss nicht zwingend erfüllt ein. Kann genutzt
-                werden, wenn die Abhängigkeit nicht unbedingt vorhanden sein
+                AbhÃ¤ngigkeit muss nicht zwingend erfÃ¼llt ein. Kann genutzt
+                werden, wenn die AbhÃ¤ngigkeit nicht unbedingt vorhanden sein
                 muss. Wenn das Plugin jedoch installiert ist, soll es vorher
                 geladen werden. Default: true. Ohne Angabe des Attributes
-                handelt es sich also um eine obligatorische Abhängigkeit.
+                handelt es sich also um eine obligatorische AbhÃ¤ngigkeit.
               </xsd:documentation>
             </xsd:annotation>
           </xsd:attribute>
@@ -168,9 +168,9 @@
     <xsd:attribute name="jameica" type="xsd:string" use="optional">
       <xsd:annotation>
         <xsd:documentation>
-          Optionale Angabe der benötigten Jameica-Version. Hiermit kann
+          Optionale Angabe der benÃ¶tigten Jameica-Version. Hiermit kann
           festgelegt werden, ob das Plugin eine bestimmte Jameica-Version
-          voraussetzt. Mögliche Werte wie im Attribute version des Elements
+          voraussetzt. MÃ¶gliche Werte wie im Attribute version des Elements
           import.
         </xsd:documentation>
       </xsd:annotation>
@@ -183,7 +183,7 @@
       <xsd:documentation>
         Liste von Pfadangaben (Patterns) zu Class-Dateien und Jar-Files,
         die vom Classfinder analysiert werden sollen. Alle Klassen, die
-        vom Classfinder analysiert worden, können anschließend anhand der
+        vom Classfinder analysiert worden, kÃ¶nnen anschlieÃŸend anhand der
         Interfaces gesucht werden, die sie implementieren.
       </xsd:documentation>
     </xsd:annotation>
@@ -192,7 +192,7 @@
         <xsd:annotation>
           <xsd:documentation>
             Angabe einer einzelnen Pfad-Angabe. Z.Bsp.: meinplugin\.jar.
-            Da es sich um einen regulären Ausdruck handelt, müssen u.a. Punkte
+            Da es sich um einen regulÃ¤ren Ausdruck handelt, mÃ¼ssen u.a. Punkte
             mit einem Backslash escaped werden.
           </xsd:documentation>
         </xsd:annotation>
@@ -224,7 +224,7 @@
   <xsd:complexType name="servicesType">
     <xsd:annotation>
       <xsd:documentation>
-        Definition der Services des Plugins. Alles Services müssen das
+        Definition der Services des Plugins. Alles Services mÃ¼ssen das
         Interface de.willuhn.datasource.Service implementieren.
       </xsd:documentation>
     </xsd:annotation>
@@ -239,7 +239,7 @@
         <xsd:complexType>
           <xsd:attribute name="name" type="xsd:string" use="required">
             <xsd:annotation>
-              <xsd:documentation>Name des Services. Sollte keine Leerzeichen sondern höchstens Punkte enthalten</xsd:documentation>
+              <xsd:documentation>Name des Services. Sollte keine Leerzeichen sondern hÃ¶chstens Punkte enthalten</xsd:documentation>
             </xsd:annotation>
           </xsd:attribute>
           <xsd:attribute name="class" type="xsd:string" use="required">
@@ -247,7 +247,7 @@
               <xsd:documentation>
                 Name des Interfaces des Services. Wurden sowohl Interface
                 als auch Implementierung vom Classfinder analysiert, findet
-                Jameica automatisch die zugehörige Implementierung. Andernfalls
+                Jameica automatisch die zugehÃ¶rige Implementierung. Andernfalls
                 muss die implementierende Klasse explizit angegeben werden.
                 Die Klasse muss de.willuhn.datasource.Service implementieren.
               </xsd:documentation>
@@ -273,7 +273,7 @@
             <xsd:annotation>
               <xsd:documentation>
                Komma-separarierte Liste von Service-Namen innerhalb des selben
-               Plugins, von denen dieser Service abhängt. Diese Services
+               Plugins, von denen dieser Service abhÃ¤ngt. Diese Services
                werden dann automatisch vorher gestartet.
               </xsd:documentation>
             </xsd:annotation>
@@ -287,13 +287,13 @@
   <xsd:complexType name="extensionsType">
     <xsd:annotation>
       <xsd:documentation>
-        Liste von Extensions für andere Plugins. Mit Hilfe von
+        Liste von Extensions fÃ¼r andere Plugins. Mit Hilfe von
         Extensions kann ein Plugin ein anderes um Funktionen
         erweitern. Hierzu muss die Komponente, welche erweitert
         werden soll, das Interface de.willuhn.jameica.gui.extension.Extendable
         implementieren. Die Extension selbst muss 
         de.willuhn.jameica.gui.extension.Extension implementieren.
-        Für weitere Details siehe 
+        FÃ¼r weitere Details siehe 
         http://www.willuhn.de/projects/jameica/doc/javadoc/de/willuhn/jameica/gui/extension/package-summary.html
       </xsd:documentation>
     </xsd:annotation>
@@ -334,9 +334,9 @@
         Hier koennen Message-Consumer definiert werden, die automatisch beim
         Start registriert werden sollen. Wer das Manifest von Android-Apps
         kennt: Sind das gleiche wie Broadcast-Receiver.
-        Ausserdem können von hier aus auch direkt Messages verschickt werden,
-        ohne extra Java-Code dafür schreiben zu muessen. Das wird z.Bsp. von
-        Scripting-Plugins verwendet, damit die ihre JS-Dateien registrieren können.
+        Ausserdem kÃ¶nnen von hier aus auch direkt Messages verschickt werden,
+        ohne extra Java-Code dafÃ¼r schreiben zu muessen. Das wird z.Bsp. von
+        Scripting-Plugins verwendet, damit die ihre JS-Dateien registrieren kÃ¶nnen.
       </xsd:documentation>
     </xsd:annotation>
     <xsd:sequence minOccurs="0" maxOccurs="unbounded">
@@ -407,14 +407,14 @@
       <xsd:annotation>
         <xsd:documentation>
           Bezeichnung des Menu-Eintrages.
-          Für Menu-Separatoren kann ein Bindestrich (-) verwendet werden.
+          FÃ¼r Menu-Separatoren kann ein Bindestrich (-) verwendet werden.
         </xsd:documentation>
       </xsd:annotation>
     </xsd:attribute>
     <xsd:attribute name="id" type="xsd:string" use="optional">
       <xsd:annotation>
         <xsd:documentation>
-          Eindeutige ID innerhalb von Jameica. Für diese ID wird
+          Eindeutige ID innerhalb von Jameica. FÃ¼r diese ID wird
           automatisch ein Extendable erzeugt, damit der Menu-Eintrag
           bei Bedarf von anderen Plugins erweitert oder aktiviert/deaktiviert
           werden kann.
@@ -425,9 +425,9 @@
       <xsd:annotation>
         <xsd:documentation>
           Name der Klasse, die beim Klick auf den Menu-Eintrag
-          ausgeführt werden soll. Die Klasse muss
+          ausgefÃ¼hrt werden soll. Die Klasse muss
           de.willuhn.jameica.gui.Action implementieren.
-          Die Aktion wird nur ausgeführt, wenn das Menu-Element
+          Die Aktion wird nur ausgefÃ¼hrt, wenn das Menu-Element
           keine weiteren Kind-Elemente besitzt.
         </xsd:documentation>
       </xsd:annotation>
@@ -443,7 +443,7 @@
     <xsd:attribute name="shortcut" type="xsd:string" use="optional">
       <xsd:annotation>
         <xsd:documentation>
-          Legt eine optionale Tastenkombination für den Menu-Eintrag
+          Legt eine optionale Tastenkombination fÃ¼r den Menu-Eintrag
           fest. Z.Bsp. CTRL+B oder ALT+Z
         </xsd:documentation>
       </xsd:annotation>
@@ -480,7 +480,7 @@
     <xsd:attribute name="id" type="xsd:string" use="optional">
       <xsd:annotation>
         <xsd:documentation>
-          Eindeutige ID innerhalb von Jameica. Für diese ID wird
+          Eindeutige ID innerhalb von Jameica. FÃ¼r diese ID wird
           automatisch ein Extendable erzeugt, damit das Navigations-Element
           bei Bedarf von anderen Plugins erweitert oder aktiviert/deaktiviert
           werden kann.
@@ -491,9 +491,9 @@
       <xsd:annotation>
         <xsd:documentation>
           Name der Klasse, die beim Klick auf das Navigations-Element
-          ausgeführt werden soll. Die Klasse muss
+          ausgefÃ¼hrt werden soll. Die Klasse muss
           de.willuhn.jameica.gui.Action implementieren.
-          Die Aktion wird nur ausgeführt, wenn das Navigations-Element
+          Die Aktion wird nur ausgefÃ¼hrt, wenn das Navigations-Element
           keine weiteren Kind-Elemente besitzt.
         </xsd:documentation>
       </xsd:annotation>
@@ -509,7 +509,7 @@
     <xsd:attribute name="shortcut" type="xsd:string"  use="optional">
       <xsd:annotation>
         <xsd:documentation>
-          Legt eine optionale Tastenkombination für den Menu-Eintrag
+          Legt eine optionale Tastenkombination fÃ¼r den Menu-Eintrag
           fest. Z.Bsp. CTRL+B oder ALT+Z
         </xsd:documentation>
       </xsd:annotation>

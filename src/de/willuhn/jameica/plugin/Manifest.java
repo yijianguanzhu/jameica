@@ -320,10 +320,10 @@ public class Manifest implements Comparable
   }
   
   /**
-   * Liefert true, wenn die Homepage bei Updates geprüft werden soll.
-   * Updates des Plugins werden in dem Fall nur dann durchgeführt, wenn sie vom selben
+   * Liefert true, wenn die Homepage bei Updates geprÃ¼ft werden soll.
+   * Updates des Plugins werden in dem Fall nur dann durchgefÃ¼hrt, wenn sie vom selben
    * Server kommen, der auch als Homepage angegeben ist.
-   * @return true, wenn die Homepage bei Updates geprüft werden soll.
+   * @return true, wenn die Homepage bei Updates geprÃ¼ft werden soll.
    */
   public boolean validateHomepage()
   {
@@ -660,7 +660,7 @@ public class Manifest implements Comparable
     // 1. Benoetigte Jameica-Version.
     Dependency jd = this.getJameicaDependency();
     if (!jd.check())
-      throw new ApplicationException(Application.getI18n().tr("Plugin {0} benötigt Jameica {1}",this.getName(), jd.getVersion()));
+      throw new ApplicationException(Application.getI18n().tr("Plugin {0} benÃ¶tigt Jameica {1}",this.getName(), jd.getVersion()));
 
     if (Application.getPluginLoader().isObsolete(this.getName()))
       throw new ApplicationException(Application.getI18n().tr("Plugin ist jetzt Bestandteil von Jameica und muss daher nicht mehr installiert werden"));
@@ -673,7 +673,7 @@ public class Manifest implements Comparable
       for (Dependency d:deps)
       {
         if (!d.check())
-          throw new ApplicationException(Application.getI18n().tr("Plugin {0} benötigt {1}, welches aber nicht (oder in der falschen Version) installiert ist",this.getName(),d.getName()));
+          throw new ApplicationException(Application.getI18n().tr("Plugin {0} benÃ¶tigt {1}, welches aber nicht (oder in der falschen Version) installiert ist",this.getName(),d.getName()));
       }
     }
 

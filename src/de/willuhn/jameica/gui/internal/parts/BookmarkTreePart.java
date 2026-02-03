@@ -185,8 +185,8 @@ public class BookmarkTreePart extends TreePart
      */
     public BookmarkTreeMenu()
     {
-      addItem(new BookmarkMenuItem(Application.getI18n().tr("Öffnen"),action,"document-open.png"));
-      addItem(new BookmarkMenuItem(Application.getI18n().tr("Löschen..."),new BookmarkDelete() {
+      addItem(new BookmarkMenuItem(Application.getI18n().tr("Ã–ffnen"),action,"document-open.png"));
+      addItem(new BookmarkMenuItem(Application.getI18n().tr("LÃ¶schen..."),new BookmarkDelete() {
         public void handleAction(Object context) throws ApplicationException
         {
           try

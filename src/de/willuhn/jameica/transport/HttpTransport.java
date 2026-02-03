@@ -246,7 +246,7 @@ public class HttpTransport implements Transport
       String s2 = curr.getHost();
       if (!StringUtils.equalsIgnoreCase(s1,s2))
       {
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Umleitung von {0} auf {1} aus Sicherheitsgründen nicht erlaubt",s1,s2),StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Umleitung von {0} auf {1} aus SicherheitsgrÃ¼nden nicht erlaubt",s1,s2),StatusBarMessage.TYPE_ERROR));
         throw new SecurityException("got http redirect with change to another host, not permitted for security reasons [source: " + s1 + ", target: " + s2 + "]");
       }
       

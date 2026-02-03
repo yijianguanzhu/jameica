@@ -59,7 +59,7 @@ public class SystemRepositoryTrustMessageConsumer implements MessageConsumer
     }
     catch (Exception e)
     {
-      throw new ApplicationException(Application.getI18n().tr("Öffnen des System-Plugin-Repository fehlgeschlagen: {0}",e.getMessage()),e);
+      throw new ApplicationException(Application.getI18n().tr("Ã–ffnen des System-Plugin-Repository fehlgeschlagen: {0}",e.getMessage()),e);
     }
     finally
     {
@@ -78,8 +78,8 @@ public class SystemRepositoryTrustMessageConsumer implements MessageConsumer
       return;
     
     CertificateTrustDialog d = new CertificateTrustDialog(CertificateTrustDialog.POSITION_CENTER,msg.getCertificate());
-    d.setText(Application.getI18n().tr("Bitte prüfen Sie, ob das angezeigte Zertifikat mit dem Server-Zertifikat des\n" +
-                                       "Webservers www.willuhn.de übereinstimmt."));
+    d.setText(Application.getI18n().tr("Bitte prÃ¼fen Sie, ob das angezeigte Zertifikat mit dem Server-Zertifikat des\n" +
+                                       "Webservers www.willuhn.de Ã¼bereinstimmt."));
 
     // Wir muessen hier die Exception hier fangen und per Message zurueckreichen
     try

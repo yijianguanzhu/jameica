@@ -50,7 +50,7 @@ public class JameicaHostnameVerifier implements HostnameVerifier
     catch (SSLPeerUnverifiedException e)
     {
       Logger.error("error while reading certificates from session",e);
-      throw new JameicaException(Application.getI18n().tr("Server-Zertifikate können nicht ermittelt werden"));
+      throw new JameicaException(Application.getI18n().tr("Server-Zertifikate kÃ¶nnen nicht ermittelt werden"));
     }
 
     boolean match = false;
@@ -95,7 +95,7 @@ public class JameicaHostnameVerifier implements HostnameVerifier
     if (parent != null)
       return parent.verify(hostname, session);
     
-    throw new JameicaException(Application.getI18n().tr("Server-Zertifikat kann nicht geprüft werden"));
+    throw new JameicaException(Application.getI18n().tr("Server-Zertifikat kann nicht geprÃ¼ft werden"));
   }
 
 }

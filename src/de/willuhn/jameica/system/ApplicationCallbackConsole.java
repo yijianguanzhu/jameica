@@ -56,7 +56,7 @@ public class ApplicationCallbackConsole extends AbstractApplicationCallback
     if (Application.inNonInteractiveMode())
     {
       Logger.error(i18n.tr("Der Jameica-Server scheint bereits zu laufen, da das Lockfile {0} existiert.",lockfile));
-      Logger.error(i18n.tr("Bitte löschen Sie ggf. die Datei und versuchen es erneut."));
+      Logger.error(i18n.tr("Bitte lÃ¶schen Sie ggf. die Datei und versuchen es erneut."));
       return false;
     }
 
@@ -103,7 +103,7 @@ public class ApplicationCallbackConsole extends AbstractApplicationCallback
       // Wir sollen nach einem Usernamen fragen
       if (Application.inNonInteractiveMode())
       {
-        Logger.error(i18n.tr("Jameica läuft im nicht-interaktiven Modus und kein Benutzername via Kommandozeile übergeben"));
+        Logger.error(i18n.tr("Jameica lÃ¤uft im nicht-interaktiven Modus und kein Benutzername via Kommandozeile Ã¼bergeben"));
         throw new ApplicationException(i18n.tr("Username kann nicht abgefragt werden"));
       }
       flush();
@@ -135,14 +135,14 @@ public class ApplicationCallbackConsole extends AbstractApplicationCallback
 		// Eingabe ueberhaupt moeglich?
     if (Application.inNonInteractiveMode())
     {
-      Logger.error(i18n.tr("Jameica läuft im nicht-interaktiven Modus und kein Passwort via Kommandozeile übergeben"));
+      Logger.error(i18n.tr("Jameica lÃ¤uft im nicht-interaktiven Modus und kein Passwort via Kommandozeile Ã¼bergeben"));
       throw new ApplicationException(i18n.tr("Passwort kann nicht abgefragt werden"));
     }
 
     // Eingabe vornehmen
     flush();
     System.out.println("");
-    System.out.println(i18n.tr("Sie starten Jameica zum ersten Mal.\nBitte vergeben Sie ein Master-Passwort zum Schutz Ihrer persönlichen Daten:"));
+    System.out.println(i18n.tr("Sie starten Jameica zum ersten Mal.\nBitte vergeben Sie ein Master-Passwort zum Schutz Ihrer persÃ¶nlichen Daten:"));
     this.password = promptPassword();
 		return this.password;
 		//
@@ -217,7 +217,7 @@ public class ApplicationCallbackConsole extends AbstractApplicationCallback
     {
       if (Application.inNonInteractiveMode())
       {
-        Logger.error(i18n.tr("Jameica läuft im nicht-interaktiven Modus und kein Benutzername via Kommandozeile übergeben"));
+        Logger.error(i18n.tr("Jameica lÃ¤uft im nicht-interaktiven Modus und kein Benutzername via Kommandozeile Ã¼bergeben"));
         throw new ApplicationException(i18n.tr("Username kann nicht abgefragt werden"));
       }
       flush();
@@ -251,7 +251,7 @@ public class ApplicationCallbackConsole extends AbstractApplicationCallback
 
     if (Application.inNonInteractiveMode())
     {
-      Logger.error(i18n.tr("Jameica läuft im nicht-interaktiven Modus und kein Passwort via Kommandozeile übergeben"));
+      Logger.error(i18n.tr("Jameica lÃ¤uft im nicht-interaktiven Modus und kein Passwort via Kommandozeile Ã¼bergeben"));
       throw new ApplicationException(i18n.tr("Passwort kann nicht abgefragt werden"));
     }
 
@@ -281,12 +281,12 @@ public class ApplicationCallbackConsole extends AbstractApplicationCallback
 	{
     if (Application.inNonInteractiveMode())
     {
-      Logger.error(Application.getI18n().tr("Jameica läuft im nicht-interaktiven Modus und kein Passwort via Kommandozeile übergeben"));
+      Logger.error(Application.getI18n().tr("Jameica lÃ¤uft im nicht-interaktiven Modus und kein Passwort via Kommandozeile Ã¼bergeben"));
       throw new ApplicationException(Application.getI18n().tr("Passwort kann nicht abgefragt werden"));
     }
 
     flush();
-		System.out.print(Application.getI18n().tr("Bitte geben Sie Ihr neues Master-Passwort zum Schutz Ihrer persönlichen Daten ein.\nEs wird anschließend bei jedem Start von Jameica benötigt:"));
+		System.out.print(Application.getI18n().tr("Bitte geben Sie Ihr neues Master-Passwort zum Schutz Ihrer persÃ¶nlichen Daten ein.\nEs wird anschlieÃŸend bei jedem Start von Jameica benÃ¶tigt:"));
 		this.password = promptPassword();
 	}
 
@@ -380,8 +380,8 @@ public class ApplicationCallbackConsole extends AbstractApplicationCallback
     // Ne, dann mal schauen, obs an der Konsole abgefragt werden darf.
     if (Application.inNonInteractiveMode())
     {
-      Logger.error(Application.getI18n().tr("Jameica läuft im nicht-interaktiven Modus. Beantwortung der Frage \"{0}\" nicht möglich",question));
-      throw new ApplicationException(Application.getI18n().tr("Benutzer-Interaktion nicht möglich. Jameica läuft im nicht-interaktiven Modus"));
+      Logger.error(Application.getI18n().tr("Jameica lÃ¤uft im nicht-interaktiven Modus. Beantwortung der Frage \"{0}\" nicht mÃ¶glich",question));
+      throw new ApplicationException(Application.getI18n().tr("Benutzer-Interaktion nicht mÃ¶glich. Jameica lÃ¤uft im nicht-interaktiven Modus"));
     }
 
     flush();
@@ -431,7 +431,7 @@ public class ApplicationCallbackConsole extends AbstractApplicationCallback
     {
       // Im nicht-interaktiven Mode speichern wir das Zertifikat in einem Incoming-Verzeichnis
       File f = new File(Application.getConfig().getWorkDir(),"untrusted");
-      Logger.error(Application.getI18n().tr("Jameica läuft im nicht-interaktiven Modus. Vertrauensstellung des Zertifikats kann nicht abgefragt werden"));
+      Logger.error(Application.getI18n().tr("Jameica lÃ¤uft im nicht-interaktiven Modus. Vertrauensstellung des Zertifikats kann nicht abgefragt werden"));
       Logger.warn(Application.getI18n().tr("Speichere Zertifikat im Verzeichnis {0}",f.getAbsolutePath()));
 
       if (f.exists() && (!f.isDirectory() || !f.canWrite()))
@@ -497,16 +497,16 @@ public class ApplicationCallbackConsole extends AbstractApplicationCallback
     System.out.println(i18n.tr("Eigenschaften des Zertifikats"));
 
     System.out.println((i18n.tr("Ausgestellt von:      ") + cert.getIssuerDN().getName()));
-    System.out.println((i18n.tr("Ausgestellt für:      ") + cert.getSubjectDN().getName()));
-    System.out.println((i18n.tr("Gültig von:           ") + df.format(cert.getNotBefore())));
-    System.out.println((i18n.tr("Gültig bis:           ") + df.format(cert.getNotAfter())));
+    System.out.println((i18n.tr("Ausgestellt fÃ¼r:      ") + cert.getSubjectDN().getName()));
+    System.out.println((i18n.tr("GÃ¼ltig von:           ") + df.format(cert.getNotBefore())));
+    System.out.println((i18n.tr("GÃ¼ltig bis:           ") + df.format(cert.getNotAfter())));
     System.out.println((i18n.tr("Seriennummer:         ") + "0x" + cert.getSerialNumber().toString(16).toUpperCase()));
     System.out.println((i18n.tr("Typ:                  ") + cert.getType()));
     System.out.println((i18n.tr("SHA1-Fingerabdruck:   ") + myCert.getSHA1Fingerprint()));
     System.out.println((i18n.tr("SHA256-Fingerabdruck: ") + myCert.getSHA256Fingerprint()));
 
     System.out.println("----------------------------------------------------------------------");
-    System.out.println(i18n.tr("Das Zertifikat des Systems konnte nicht verifiziert werden. Möchten Sie diesem Zertifikat vertrauen? [J/N]"));
+    System.out.println(i18n.tr("Das Zertifikat des Systems konnte nicht verifiziert werden. MÃ¶chten Sie diesem Zertifikat vertrauen? [J/N]"));
 
     InputStreamReader isr = new InputStreamReader(System.in);
     BufferedReader keyboard = new BufferedReader(isr);
@@ -589,7 +589,7 @@ public class ApplicationCallbackConsole extends AbstractApplicationCallback
     {
       Logger.warn(text);
       Logger.warn("Jameica laeuft im Nicht-Interaktiven Modus. Frage kann daher nicht beantwortet werden");
-      throw new ApplicationException(Application.getI18n().tr("Benutzer-Interaktion nicht möglich. Jameica läuft im nicht-interaktiven Modus"));
+      throw new ApplicationException(Application.getI18n().tr("Benutzer-Interaktion nicht mÃ¶glich. Jameica lÃ¤uft im nicht-interaktiven Modus"));
     }
 
     notifyUser(text + "\n[Y/N]");
@@ -643,8 +643,8 @@ public class ApplicationCallbackConsole extends AbstractApplicationCallback
 
     if (Application.inNonInteractiveMode())
     {
-      Logger.warn("Jameica laeuft im Nicht-Interaktiven Modus. Eingabe von Benutzername und Passwort nicht möglich");
-      throw new ApplicationException(Application.getI18n().tr("Benutzer-Interaktion nicht möglich. Jameica läuft im nicht-interaktiven Modus"));
+      Logger.warn("Jameica laeuft im Nicht-Interaktiven Modus. Eingabe von Benutzername und Passwort nicht mÃ¶glich");
+      throw new ApplicationException(Application.getI18n().tr("Benutzer-Interaktion nicht mÃ¶glich. Jameica lÃ¤uft im nicht-interaktiven Modus"));
     }
 
     String notify = Application.getI18n().tr("Bitten geben Sie Benutzername und Passwort ein");

@@ -33,7 +33,7 @@ import de.willuhn.util.ApplicationException;
 import de.willuhn.util.I18N;
 
 /**
- * Action zum Hinzufügen von neuen Attachments.
+ * Action zum HinzufÃ¼gen von neuen Attachments.
  */
 public class AttachmentAdd implements Action
 {
@@ -51,10 +51,10 @@ public class AttachmentAdd implements Action
     try
     {
       //////////////////////////////////////////////////////////////////////////
-      // Storage-Backend wählen
+      // Storage-Backend wÃ¤hlen
       final List<StorageProvider> providers = this.service.getProviders();
       if (providers == null || providers.isEmpty())
-        throw new ApplicationException(i18n.tr("Keine Speicherorte für Dateianhänge verfügbar"));
+        throw new ApplicationException(i18n.tr("Keine Speicherorte fÃ¼r DateianhÃ¤nge verfÃ¼gbar"));
 
       StorageProvider provider = null;
       if (providers.size() > 1)
@@ -80,9 +80,9 @@ public class AttachmentAdd implements Action
       }
       else
       {
-        // Zu importierende Dateien wählen
+        // Zu importierende Dateien wÃ¤hlen
         FileDialog d = new FileDialog(GUI.getShell(),SWT.MULTI);
-        d.setText(i18n.tr("Bitte wählen Sie ein oder mehrere hinzuzufügende Dateien aus."));
+        d.setText(i18n.tr("Bitte wÃ¤hlen Sie ein oder mehrere hinzuzufÃ¼gende Dateien aus."));
         d.setFilterPath(settings.getString("lastdir", System.getProperty("user.home")));
         if (d.open() == null)
           throw new OperationCanceledException();
@@ -95,7 +95,7 @@ public class AttachmentAdd implements Action
       
       if (files == null || files.length == 0)
       {
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Keine Dateien ausgewählt"),StatusBarMessage.TYPE_INFO));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Keine Dateien ausgewÃ¤hlt"),StatusBarMessage.TYPE_INFO));
         return;
       }
       //
@@ -126,10 +126,10 @@ public class AttachmentAdd implements Action
         }
         
         // Checken, ob wir eine gleichnamige Datei bereits haben. Falls ja, fragen wir den User, ob sie
-        // überschrieben werden soll
+        // Ã¼berschrieben werden soll
         final Attachment a = existing.stream().filter(i -> Objects.equals(i.getFilename(),f.getName())).findFirst().orElse(null);
         
-        if (a != null && !Application.getCallback().askUser(i18n.tr("Datei \"{0}\" existiert bereits. Überschreiben?"),new String[]{f.getName()},true))
+        if (a != null && !Application.getCallback().askUser(i18n.tr("Datei \"{0}\" existiert bereits. Ãœberschreiben?"),new String[]{f.getName()},true))
           continue;
         
         try
@@ -157,11 +157,11 @@ public class AttachmentAdd implements Action
       if (added + updated + fail > 0)
       {
         if (fail > 0)
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Hinzugefügte Dateien: {0}, aktualisiert: {1}, fehlerhaft: {2}",Integer.toString(added),Integer.toString(updated),Integer.toString(fail)),StatusBarMessage.TYPE_INFO));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("HinzugefÃ¼gte Dateien: {0}, aktualisiert: {1}, fehlerhaft: {2}",Integer.toString(added),Integer.toString(updated),Integer.toString(fail)),StatusBarMessage.TYPE_INFO));
         else if (added > 0 && updated == 0)
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Hinzugefügte Dateien: {0}",Integer.toString(added)),StatusBarMessage.TYPE_SUCCESS));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("HinzugefÃ¼gte Dateien: {0}",Integer.toString(added)),StatusBarMessage.TYPE_SUCCESS));
         else
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Hinzugefügte Dateien: {0}, aktualisiert: {1}",Integer.toString(added),Integer.toString(updated)),StatusBarMessage.TYPE_SUCCESS));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("HinzugefÃ¼gte Dateien: {0}, aktualisiert: {1}",Integer.toString(added),Integer.toString(updated)),StatusBarMessage.TYPE_SUCCESS));
       }
     }
     catch (ApplicationException ae)
@@ -174,7 +174,7 @@ public class AttachmentAdd implements Action
     catch (Exception e)
     {
       Logger.error("unable to add attachment",e);
-      throw new ApplicationException(i18n.tr("Hinzufügen der Dateianhänge fehlgeschlagen"));
+      throw new ApplicationException(i18n.tr("HinzufÃ¼gen der DateianhÃ¤nge fehlgeschlagen"));
     }
   }
   

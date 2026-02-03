@@ -38,7 +38,7 @@ public class About extends AbstractDialog
   public About(int position)
   {
     super(position,false);
-    this.setTitle(i18n.tr("‹ber ..."));
+    this.setTitle(i18n.tr("√úber ..."));
     this.setPanelText(i18n.tr("Jameica {0}",Application.getManifest().getVersion().toString()));
   }
 
@@ -54,21 +54,21 @@ public class About extends AbstractDialog
     
     FormTextPart text = new FormTextPart();
     text.setText("<form>" +
-      "<p><b>Jameica Application Platform</b></p>" +
-      "<p>Lizenz: GPL [<a href=\"http://www.gnu.org/copyleft/gpl.html\">www.gnu.org/copyleft/gpl.html</a>]<br/>" +
+      "<p><b>"+i18n.tr("Jameica Application Platform")+"</b></p>" +
+      "<p>"+i18n.tr("Lizenz")+": GPL [<a href=\"http://www.gnu.org/copyleft/gpl.html\">www.gnu.org/copyleft/gpl.html</a>]<br/>" +
       "Copyright by Olaf Willuhn [<a href=\"mailto:info@jameica.org\">info@jameica.org</a>]<br/>" +
       "<a href=\"http://www.jameica.org\">www.jameica.org</a></p>" +
-      "<p>Version: " + Application.getManifest().getVersion() + "<br/>" +
-      "SWT-Version: " + SWT.getVersion() + " / " + SWT.getPlatform() + "<br/>" +
-      "Java-Version: " + System.getProperty("java.version") + " / " + System.getProperty("os.name") + " " + System.getProperty("os.arch") + "<br/>" +
-      "[Datum " + Application.getBuildDate() + "]</p>" +
-      "<p>Benutzerverzeichnis: " + StringEscapeUtils.escapeXml(Application.getConfig().getWorkDir()) + "</p>" +
+      "<p>"+i18n.tr("Version")+": " + Application.getManifest().getVersion() + "<br/>" +
+      i18n.tr("SWT-Version")+": " + SWT.getVersion() + " / " + SWT.getPlatform() + "<br/>" +
+      i18n.tr("Java-Version")+": " + System.getProperty("java.version") + " / " + System.getProperty("os.name") + " " + System.getProperty("os.arch") + "<br/>" +
+      "["+i18n.tr("Datum")+" " + Application.getBuildDate() + "]</p>" +
+      "<p>"+i18n.tr("Benutzerverzeichnis")+": " + StringEscapeUtils.escapeXml(Application.getConfig().getWorkDir()) + "</p>" +
       "</form>");
 
     container.addPart(text);
 
     ButtonArea buttons = container.createButtonArea(1);
-    buttons.addButton(i18n.tr("Schlieﬂen"),new Action() {
+    buttons.addButton(i18n.tr("Schlie√üen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         close();

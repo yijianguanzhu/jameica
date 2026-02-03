@@ -33,7 +33,7 @@ import de.willuhn.logging.Logger;
 import de.willuhn.util.I18N;
 
 /**
- * Storage-Provider, der die Speicherung per Jameica Messaging übernimmt.
+ * Storage-Provider, der die Speicherung per Jameica Messaging Ã¼bernimmt.
  */
 @Lifecycle(Type.CONTEXT)
 public class StorageProviderMessagingService implements StorageProvider
@@ -152,7 +152,7 @@ public class StorageProviderMessagingService implements StorageProvider
   {
     final String uuid = a.getUuid();
 
-    // Ein Überschreiben gibt es nicht. Wir erstellen die Datei daher neu und löschen danach die alte
+    // Ein Ãœberschreiben gibt es nicht. Wir erstellen die Datei daher neu und lÃ¶schen danach die alte
     this.create(a,is);
     
     final QueryMessage m = new QueryMessage(uuid,null);
@@ -187,7 +187,7 @@ public class StorageProviderMessagingService implements StorageProvider
   }
   
   /**
-   * Liefert den Messaging-Channel für den Context.
+   * Liefert den Messaging-Channel fÃ¼r den Context.
    * @param ctx der Context.
    * @return der Messaging-Channel.
    */

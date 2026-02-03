@@ -5,11 +5,11 @@
 
 	<li>
 		In der Statusleiste am unteren Rand der Anwendung werden Ihnen
-		nützliche Informationen über die gerade ausgeführten Anweisungen angezeigt.
+		nÃ¼tzliche Informationen Ã¼ber die gerade ausgefÃ¼hrten Anweisungen angezeigt.
 	</li>
 	<li>
 		Klicken Sie in den rechten Bereich der Statusleiste, um eine Liste der letzten
-		System-Meldungen zu öffnen oder auf das Datum, um einen kleinen Kalender
+		System-Meldungen zu Ã¶ffnen oder auf das Datum, um einen kleinen Kalender
 		anzuzeigen.
 	</li>
 </form>

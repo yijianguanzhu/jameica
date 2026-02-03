@@ -80,8 +80,8 @@ public class Attachment implements Serializable
   }
   
   /**
-   * Liefert den Identifier für den Storage-Provider, in dem das Attachment gespeichert ist.
-   * @return storage der Identifier für den Storage-Provider, in dem das Attachment gespeichert ist.
+   * Liefert den Identifier fÃ¼r den Storage-Provider, in dem das Attachment gespeichert ist.
+   * @return storage der Identifier fÃ¼r den Storage-Provider, in dem das Attachment gespeichert ist.
    */
   public String getStorageId()
   {
@@ -89,8 +89,8 @@ public class Attachment implements Serializable
   }
   
   /**
-   * Speichert den Identifier für den Storage-Provider, in dem das Attachment gespeichert ist.
-   * @param storage der Identifier für den Storage-Provider, in dem das Attachment gespeichert ist.
+   * Speichert den Identifier fÃ¼r den Storage-Provider, in dem das Attachment gespeichert ist.
+   * @param storage der Identifier fÃ¼r den Storage-Provider, in dem das Attachment gespeichert ist.
    */
   public void setStorageId(String storage)
   {

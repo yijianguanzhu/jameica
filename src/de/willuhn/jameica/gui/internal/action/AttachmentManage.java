@@ -45,7 +45,7 @@ public class AttachmentManage implements Action
     catch (Exception e)
     {
       Logger.error("unable to determine current attachment context",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Die Dateianh‰nge konnten nicht ermittelt werden"),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Die Dateianh√§nge konnten nicht ermittelt werden"),StatusBarMessage.TYPE_ERROR));
     }
     
   }

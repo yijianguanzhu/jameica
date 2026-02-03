@@ -59,7 +59,7 @@ public abstract class AbstractAppointment implements Appointment
   }
   
   /**
-   * Liefert den zeitlichen Offset für den Alarm. Standard-Wert ist 900 (15 Minuten vorher).
+   * Liefert den zeitlichen Offset fÃ¼r den Alarm. Standard-Wert ist 900 (15 Minuten vorher).
    * Ueberschreibe die Methode, um andere Werte zu liefern.
    * Hinweis: Die Methode waere natuerlich schoener im Interface "Appointment"
    * aufgehoben. Dann waere aber die Rueckwaertskompatibilitaet zu anderen Plugins

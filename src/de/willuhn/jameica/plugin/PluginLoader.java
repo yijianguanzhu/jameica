@@ -123,10 +123,10 @@ public final class PluginLoader
             {
               Logger.error("unable to auto-uninstall obsolete plugin, notifying user",e);
               I18N i18n = Application.getI18n();
-              BootMessage msg = new BootMessage(i18n.tr("Das Plugin \"{0}\" wird nicht mehr benötigt.",m.getName()));
+              BootMessage msg = new BootMessage(i18n.tr("Das Plugin \"{0}\" wird nicht mehr benÃ¶tigt.",m.getName()));
               msg.setTitle(i18n.tr("Plugin deinstallieren"));
               msg.setIcon("user-trash-full.png");
-              msg.setComment(i18n.tr("Das Plugin \"{0}\" wird nicht mehr benötigt da es jetzt bereits in Jameica enthalten ist. Bitte deinstallieren Sie es.",m.getName()));
+              msg.setComment(i18n.tr("Das Plugin \"{0}\" wird nicht mehr benÃ¶tigt da es jetzt bereits in Jameica enthalten ist. Bitte deinstallieren Sie es.",m.getName()));
               msg.addButton(new Button(i18n.tr("Plugin deinstallieren..."),new PluginUnInstall(),m));
               Application.getMessagingFactory().getMessagingQueue("jameica.boot").queueMessage(msg); // muessen wir queuen, weil der Consumer noch nicht da ist
             }
@@ -167,7 +167,7 @@ public final class PluginLoader
             BootMessage msg = new BootMessage(i18n.tr("Das Plugin \"{0}\" wurde doppelt installiert.",m.getName()));
             msg.setTitle(i18n.tr("Plugin doppelt installiert"));
             msg.setIcon("dialog-warning-large.png");
-            msg.setComment(i18n.tr("Bitte löschen Sie den Ordner {0}",toDelete));
+            msg.setComment(i18n.tr("Bitte lÃ¶schen Sie den Ordner {0}",toDelete));
             Application.getMessagingFactory().getMessagingQueue("jameica.boot").queueMessage(msg); // muessen wir queuen, weil der Consumer noch nicht da ist
             continue;
           }
@@ -294,7 +294,7 @@ public final class PluginLoader
     // Checken, ob die Abhaengigkeit zu Jameica erfuellt ist
     Dependency jameica = manifest.getJameicaDependency();
     if (!jameica.check())
-      throw new ApplicationException(Application.getI18n().tr("Plugin {0} ist abhängig von {1}, welches jedoch nicht in dieser Version installiert ist",new String[] { manifest.getName(), jameica.toString() }));
+      throw new ApplicationException(Application.getI18n().tr("Plugin {0} ist abhÃ¤ngig von {1}, welches jedoch nicht in dieser Version installiert ist",new String[] { manifest.getName(), jameica.toString() }));
 
     // Wir checken noch, ob ggf. eine Abhaengigkeit nicht erfuellt ist.
     Dependency[] deps = manifest.getDependencies();
@@ -305,7 +305,7 @@ public final class PluginLoader
       {
         Logger.info("  resolving " + (deps[i].isRequired() ? "required" : "optional") + " dependency " + deps[i]);
         if (!deps[i].check())
-          throw new ApplicationException(Application.getI18n().tr("Plugin {0} ist abhängig von Plugin {1}, welches jedoch nicht installiert ist",new String[] { manifest.getName(), deps[i].toString() }));
+          throw new ApplicationException(Application.getI18n().tr("Plugin {0} ist abhÃ¤ngig von Plugin {1}, welches jedoch nicht installiert ist",new String[] { manifest.getName(), deps[i].toString() }));
       }
     }
 
@@ -333,7 +333,7 @@ public final class PluginLoader
 
     String pluginClass = manifest.getPluginClass();
     if (pluginClass == null || pluginClass.length() == 0)
-      throw new ApplicationException(Application.getI18n().tr("Plugin {0} enthält keine gültige Plugin-Klasse (Attribut class in plugin.xml",manifest.getName()));
+      throw new ApplicationException(Application.getI18n().tr("Plugin {0} enthÃ¤lt keine gÃ¼ltige Plugin-Klasse (Attribut class in plugin.xml",manifest.getName()));
 
     Plugin plugin = manifest.getPluginInstance();
     String versionKey = null;
@@ -383,13 +383,13 @@ public final class PluginLoader
       {
         Logger.info("detected update from version " + oldVersion + " to " + newVersion + ", starting update");
         // hui, sogar eine neuere Version. Also starten wir dessen Update
-        Application.getCallback().getStartupMonitor().setStatusText("updating plugin " + manifest.getName());
+        Application.getCallback().getStartupMonitor().setStatusText(Application.getI18n().tr("updating plugin ") + manifest.getName());
         plugin.update(oldVersion);
         Application.getCallback().getStartupMonitor().addPercentComplete(10);
       }
     }
 
-    Application.getCallback().getStartupMonitor().setStatusText("initializing plugin " + manifest.getName());
+    Application.getCallback().getStartupMonitor().setStatusText(Application.getI18n().tr("initializing plugin ") + manifest.getName());
 
     plugin.init();
     Application.getServiceFactory().init(manifest);
@@ -401,7 +401,7 @@ public final class PluginLoader
     // Und jetzt muessen wir noch ggf. vorhandene Extensions registrieren
     Logger.info("register plugin extensions");
 
-    Application.getCallback().getStartupMonitor().setStatusText("register plugin extensions");
+    Application.getCallback().getStartupMonitor().setStatusText(Application.getI18n().tr("register plugin extensions"));
     ExtensionDescriptor[] ext = manifest.getExtensions();
     if (ext != null && ext.length > 0)
     {
@@ -673,7 +673,7 @@ public final class PluginLoader
     I18N i18n = Application.getI18n();
     
     if (mf == null)
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie das zu deinstallierende Plugin aus"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie das zu deinstallierende Plugin aus"));
 
     try
     {
@@ -700,7 +700,7 @@ public final class PluginLoader
           {
             String name = dep.getName();
             if (dep.isRequired() && name != null && name.equals(mf.getName()))
-              throw new ApplicationException(i18n.tr("Plugin {0} benötigt {1}",name,mf.getName()));
+              throw new ApplicationException(i18n.tr("Plugin {0} benÃ¶tigt {1}",name,mf.getName()));
           }
         }
       }
@@ -899,7 +899,7 @@ public final class PluginLoader
     catch (IOException e)
     {
       Logger.error("unable to create delete marker " + deleteMarker,e);
-      throw new ApplicationException(Application.getI18n().tr("Löschen des Plugins {0} fehlgeschlagen: {1}",manifest.getName(),e.getMessage()));
+      throw new ApplicationException(Application.getI18n().tr("LÃ¶schen des Plugins {0} fehlgeschlagen: {1}",manifest.getName(),e.getMessage()));
     }
   }
   

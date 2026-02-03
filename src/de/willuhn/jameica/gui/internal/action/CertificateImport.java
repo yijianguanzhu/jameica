@@ -41,7 +41,7 @@ public class CertificateImport implements Action
   public void handleAction(Object context) throws ApplicationException
   {
     FileDialog d = new FileDialog(GUI.getShell(),SWT.OPEN);
-    d.setText(Application.getI18n().tr("Bitte w‰hlen Sie das zu importierende Zertifikat aus"));
+    d.setText(Application.getI18n().tr("Bitte w√§hlen Sie das zu importierende Zertifikat aus"));
     d.setFilterPath(settings.getString("lastdir", System.getProperty("user.home")));
     d.setFilterExtensions(new String[]{"*.pem;*.crt;*.cer"});
     String s = d.open();

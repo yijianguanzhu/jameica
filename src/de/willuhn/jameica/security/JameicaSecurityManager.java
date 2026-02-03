@@ -151,7 +151,7 @@ public class JameicaSecurityManager extends SecurityManager
     }
     catch (Exception e)
     {
-      throw new SecurityException(Application.getI18n().tr("Prüfen der Schreib-Berechtigung auf {0} fehlgeschlagen",path),e);
+      throw new SecurityException(Application.getI18n().tr("PrÃ¼fen der Schreib-Berechtigung auf {0} fehlgeschlagen",path),e);
     }
     finally
     {

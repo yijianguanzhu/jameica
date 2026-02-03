@@ -36,7 +36,7 @@ import de.willuhn.jameica.system.Application;
 import de.willuhn.util.ApplicationException;
 
 /**
- * Verwaltet die Attachments für einen Dialog.
+ * Verwaltet die Attachments fÃ¼r einen Dialog.
  */
 public class AttachmentManageDialog extends AbstractDialog
 {
@@ -49,7 +49,7 @@ public class AttachmentManageDialog extends AbstractDialog
   public AttachmentManageDialog(int position)
   {
     super(position);
-    this.setTitle(Application.getI18n().tr("Dateianhänge"));
+    this.setTitle(Application.getI18n().tr("DateianhÃ¤nge"));
     this.setSize(WINDOW_WIDTH,WINDOW_HEIGHT);
   }
   
@@ -60,7 +60,7 @@ public class AttachmentManageDialog extends AbstractDialog
    protected void paint(Composite parent) throws Exception
   {
     SimpleContainer container = new SimpleContainer(parent,true);
-    container.addText(Application.getI18n().tr("Klicken Sie doppelt auf einen Dateianhang, um diesen zu öffnen oder mit der rechten Maustaste, um das Kontextmenü zu öffnen."),true);
+    container.addText(Application.getI18n().tr("Klicken Sie doppelt auf einen Dateianhang, um diesen zu Ã¶ffnen oder mit der rechten Maustaste, um das KontextmenÃ¼ zu Ã¶ffnen."),true);
     
     final TablePart table = new AttachmentListPart();
     table.paint(container.getComposite());
@@ -100,7 +100,7 @@ public class AttachmentManageDialog extends AbstractDialog
         if(event.data == null)
         {
           event.detail = DND.DROP_NONE;
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler bem Hinzufügen der Datei(en)"),StatusBarMessage.TYPE_ERROR));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler bem HinzufÃ¼gen der Datei(en)"),StatusBarMessage.TYPE_ERROR));
           return;
         }
         try
@@ -109,7 +109,7 @@ public class AttachmentManageDialog extends AbstractDialog
         } 
         catch (ApplicationException e)
         {
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler bem Hinzufügen der Datei(en)"),StatusBarMessage.TYPE_ERROR));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler bem HinzufÃ¼gen der Datei(en)"),StatusBarMessage.TYPE_ERROR));
         }
       }
 
@@ -129,7 +129,7 @@ public class AttachmentManageDialog extends AbstractDialog
     final Button save = new Button(Application.getI18n().tr("Speichern..."),e -> new AttachmentSave().handleAction(table.getSelection()),null,false,"document-save.png");
     save.setEnabled(false);
 
-    final Button delete = new Button(Application.getI18n().tr("Löschen..."),e -> new AttachmentDelete().handleAction(table.getSelection()),null,false,"user-trash-full.png");
+    final Button delete = new Button(Application.getI18n().tr("LÃ¶schen..."),e -> new AttachmentDelete().handleAction(table.getSelection()),null,false,"user-trash-full.png");
     delete.setEnabled(false);
 
     table.addSelectionListener(new Listener()
@@ -152,11 +152,11 @@ public class AttachmentManageDialog extends AbstractDialog
     });
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(Application.getI18n().tr("Dateien hinzufügen..."),new AttachmentAdd(),null,false,"list-add.png");
+    buttons.addButton(Application.getI18n().tr("Dateien hinzufÃ¼gen..."),new AttachmentAdd(),null,false,"list-add.png");
     buttons.addButton(save);
     buttons.addButton(delete);
     buttons.addButton(Application.getI18n().tr("Einstellungen"), new AttachmentSettings(),null,false,"document-properties.png");
-    buttons.addButton(Application.getI18n().tr("Schließen"),x -> close(),null,true,"window-close.png");
+    buttons.addButton(Application.getI18n().tr("SchlieÃŸen"),x -> close(),null,true,"window-close.png");
     
     container.addButtonArea(buttons);
     getShell().setMinimumSize(getShell().computeSize(WINDOW_WIDTH,WINDOW_HEIGHT));

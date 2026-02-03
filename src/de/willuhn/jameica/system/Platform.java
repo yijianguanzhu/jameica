@@ -126,7 +126,7 @@ public class Platform
 
       this.workdir = new File(dir).getCanonicalFile();
       
-      // Wenn direkt der Homebereich ausgew‰hlt wurde, korrigieren wir automatisch auf den Default-Ordner
+      // Wenn direkt der Homebereich ausgew√§hlt wurde, korrigieren wir automatisch auf den Default-Ordner
       final File home = new File(System.getProperty("user.home")).getCanonicalFile();
       if (home != null && home.equals(this.workdir))
       {
@@ -142,12 +142,12 @@ public class Platform
       try
       {
         if (inProgramDir(this.workdir))
-          throw new ApplicationException("Bitte w‰hlen Sie einen Benutzerordner, der sich auﬂerhalb des Programm-Verzeichnisses befindet.");
+          throw new ApplicationException("Bitte w√§hlen Sie einen Benutzerordner, der sich au√üerhalb des Programm-Verzeichnisses befindet.");
       }
       catch (IOException ioe)
       {
         Logger.error("unable to check canonical path",ioe);
-        throw new ApplicationException("Benutzerordner nicht ausw‰hlbar: " + ioe.getMessage());
+        throw new ApplicationException("Benutzerordner nicht ausw√§hlbar: " + ioe.getMessage());
       }
       
       if (!this.workdir.exists())
@@ -170,7 +170,7 @@ public class Platform
     {
       Logger.warn("resetting \"ask\" flag in .jameica.properties");
       BootstrapSettings.setAskWorkdir(true);
-      throw new ApplicationException("Bitte versuchen Sie, Jameica erneut zu starten und w‰hlen Sie einen anderen Benutzerordner.",e);
+      throw new ApplicationException("Bitte versuchen Sie, Jameica erneut zu starten und w√§hlen Sie einen anderen Benutzerordner.",e);
     }
   }
   

@@ -95,7 +95,7 @@ public abstract class AbstractCertificateDialog extends AbstractDialog
     this.cnSubject   = this.createLink(i18n.tr("Common Name (CN)"));
     this.oSubject    = this.createLabel(i18n.tr("Organisation (O)"));
     
-    this.validity    = this.createLabel(i18n.tr("Gültigkeit"));
+    this.validity    = this.createLabel(i18n.tr("GÃ¼ltigkeit"));
     this.serial      = this.createLabel(i18n.tr("Seriennummer"));
     this.fingerprint = new TextAreaInput("");
     this.fingerprint.setEnabled(false);
@@ -241,7 +241,7 @@ public abstract class AbstractCertificateDialog extends AbstractDialog
     }
     catch (CertificateNotYetValidException notyet)
     {
-      this.validity.setComment(Application.getI18n().tr("Noch nicht gültig"));
+      this.validity.setComment(Application.getI18n().tr("Noch nicht gÃ¼ltig"));
       this.validity.setColor(Color.ERROR);
     }
     //
@@ -271,7 +271,7 @@ public abstract class AbstractCertificateDialog extends AbstractDialog
 
     /////////////////////////////////////////////////////////////////////////////
     // Subject
-    group.addHeadline(Application.getI18n().tr("Ausgestellt für"));
+    group.addHeadline(Application.getI18n().tr("Ausgestellt fÃ¼r"));
     group.addInput(this.cnSubject);
     group.addInput(this.oSubject);
     group.addInput(this.altNames);
@@ -287,7 +287,7 @@ public abstract class AbstractCertificateDialog extends AbstractDialog
 
     /////////////////////////////////////////////////////////////////////////////
     // Fingerprint
-    group.addHeadline(Application.getI18n().tr("Fingerabdrücke"));
+    group.addHeadline(Application.getI18n().tr("FingerabdrÃ¼cke"));
     group.addPart(this.fingerprint);
     /////////////////////////////////////////////////////////////////////////////
 

@@ -54,7 +54,7 @@ public class RepositoryAdd implements Action
     }
     catch (MalformedURLException e)
     {
-      throw new ApplicationException(i18n.tr("Ungültige URL: {0}",url));
+      throw new ApplicationException(i18n.tr("UngÃ¼ltige URL: {0}",url));
     }
     catch (ApplicationException ae)
     {
@@ -63,7 +63,7 @@ public class RepositoryAdd implements Action
     catch (Exception e)
     {
       Logger.error("error while adding url " + context,e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Hinzufügen der Repository-URL"),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim HinzufÃ¼gen der Repository-URL"),StatusBarMessage.TYPE_ERROR));
     }
   }
 

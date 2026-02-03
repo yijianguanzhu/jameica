@@ -31,7 +31,7 @@ public class ChangePassword implements Action
   	try
   	{
   		Application.getSSLFactory().changePassword();
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Master-Passwort erfolgreich geändert."),StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Master-Passwort erfolgreich geÃ¤ndert."),StatusBarMessage.TYPE_SUCCESS));
   	}
   	catch (OperationCanceledException oe)
   	{
@@ -40,7 +40,7 @@ public class ChangePassword implements Action
   	catch (Exception e)
   	{
   		Logger.error("error while changing master password",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Ändern des Master-Passwortes."),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Ã„ndern des Master-Passwortes."),StatusBarMessage.TYPE_ERROR));
   	}
   }
 }

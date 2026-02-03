@@ -86,7 +86,7 @@ public class BookmarkSearchDialog extends AbstractDialog
     this.search.getControl().addKeyListener(new DelayedAdapter());
     this.search.focus();
 
-    final Button apply = new Button(Application.getI18n().tr("Öffnen"),new Action() {
+    final Button apply = new Button(Application.getI18n().tr("Ã–ffnen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         Object sel = tree.getSelection();
@@ -99,7 +99,7 @@ public class BookmarkSearchDialog extends AbstractDialog
     },null,true,"ok.png");
     apply.setEnabled(false);
     
-    final Button delete = new Button(Application.getI18n().tr("Löschen..."),new Action() {
+    final Button delete = new Button(Application.getI18n().tr("LÃ¶schen..."),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         Object sel = tree.getSelection();

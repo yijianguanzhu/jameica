@@ -61,8 +61,8 @@ public class BackupInfos extends AbstractBox
   }
   
   /**
-   * Liefert eine Liste der Fehler, die während der letzten Sitzung auftraten.
-   * @return die Liste der Fehler. Nie NULL sondern höchstens eine leere Liste.
+   * Liefert eine Liste der Fehler, die wÃ¤hrend der letzten Sitzung auftraten.
+   * @return die Liste der Fehler. Nie NULL sondern hÃ¶chstens eine leere Liste.
    */
   private List<String> getErrors()
   {
@@ -122,11 +122,11 @@ public class BackupInfos extends AbstractBox
         return comp;
       }
     };
-    panel.setTitle(i18n.tr(i18n.tr("Hinweis zum letzten Backup")));
+    panel.setTitle(i18n.tr("Hinweis zum letzten Backup"));
     panel.setIcon("dialog-information-large.png");
 
-    panel.setText(i18n.tr("Während der letzten Programmsitzung traten die folgenden Fehler auf, welche die automatische Erstellung des Backups beim Programmende verhinderten."));
-    panel.setComment(i18n.tr("Prüfen Sie ggf. die Logdatei auf vorhandene Fehlermeldungen."));
+    panel.setText(i18n.tr("WÃ¤hrend der letzten Programmsitzung traten die folgenden Fehler auf, welche die automatische Erstellung des Backups beim Programmende verhinderten."));
+    panel.setComment(i18n.tr("PrÃ¼fen Sie ggf. die Logdatei auf vorhandene Fehlermeldungen."));
     panel.setUrl("https://www.willuhn.de/wiki/doku.php?id=support:fehlermelden");
     panel.paint(parent);
   }

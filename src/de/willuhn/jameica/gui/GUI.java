@@ -337,7 +337,7 @@ public class GUI implements ApplicationController
     catch (Exception e)
     {
       Logger.error("unable to load GUI",e);
-      throw new ApplicationException(Application.getI18n().tr("Fehler beim Starten der Benutzeroberfläche"));
+      throw new ApplicationException(Application.getI18n().tr("Fehler beim Starten der BenutzeroberflÃ¤che"));
     }
   }
 
@@ -782,7 +782,7 @@ public class GUI implements ApplicationController
           
           // Ansonsten zeigen wir die Fehlerseite
           Logger.error("error while loading view " + view.getClass().getName(),t);
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Öffnen des Dialogs"),StatusBarMessage.TYPE_ERROR));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Ã–ffnen des Dialogs"),StatusBarMessage.TYPE_ERROR));
           // Wir setzen das skipHistory Flag, damit die Fehlerseite selbst nicht
           // in der History landet
           gui.skipHistory = true;
@@ -841,7 +841,7 @@ public class GUI implements ApplicationController
       {
         try
         {
-          r = new InputStreamReader(is,"ISO-8859-1");
+          r = new InputStreamReader(is,"UTF-8");
         }
         catch (Exception e)
         {
@@ -1093,7 +1093,7 @@ public class GUI implements ApplicationController
     if (this.task != null)
     {
       Logger.error("there's already running a background task");
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Es wird bereits eine Hintergrund-Aufgabe ausgeführt"),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Es wird bereits eine Hintergrund-Aufgabe ausgefÃ¼hrt"),StatusBarMessage.TYPE_ERROR));
       return;
     }
     

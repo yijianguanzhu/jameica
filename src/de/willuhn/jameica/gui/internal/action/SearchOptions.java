@@ -44,7 +44,7 @@ public class SearchOptions implements Action
     catch (Exception ex)
     {
       Logger.error("error while opening options dialog",ex);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Öffnen der Optionen"), StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Ã–ffnen der Optionen"), StatusBarMessage.TYPE_ERROR));
     }
   }
 

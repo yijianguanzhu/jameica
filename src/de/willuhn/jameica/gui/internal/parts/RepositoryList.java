@@ -219,7 +219,7 @@ public class RepositoryList extends TablePart
           catch (Exception e)
           {
             Logger.error("unable to add url",e);
-            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Hinzufügen der URL"),StatusBarMessage.TYPE_ERROR));
+            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim HinzufÃ¼gen der URL"),StatusBarMessage.TYPE_ERROR));
           }
         }
       });
@@ -270,7 +270,7 @@ public class RepositoryList extends TablePart
           catch (Exception e)
           {
             Logger.error("unable to add url",e);
-            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Hinzufügen der URL"),StatusBarMessage.TYPE_ERROR));
+            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim HinzufÃ¼gen der URL"),StatusBarMessage.TYPE_ERROR));
           }
         }
       });

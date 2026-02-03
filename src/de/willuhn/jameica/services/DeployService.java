@@ -174,16 +174,16 @@ public class DeployService implements Bootable
     try
     {
       if (plugin == null)
-        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die ZIP-Datei mit dem zu aktualisierenden Plugin"));
+        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die ZIP-Datei mit dem zu aktualisierenden Plugin"));
       
       if (current == null)
-        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie das zu aktualisierende Plugin"));
+        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie das zu aktualisierende Plugin"));
 
       Manifest mf = plugin.getManifest();
 
       // Checken, ob das wirklich das gleiche Plugin ist
       if (!current.getName().equals(mf.getName()))
-        throw new ApplicationException(i18n.tr("Die ZIP-Datei enth‰lt nicht das zu aktualisierende Plugin"));
+        throw new ApplicationException(i18n.tr("Die ZIP-Datei enth√§lt nicht das zu aktualisierende Plugin"));
 
       // Checken, ob das neue prinzipiell installiert werden kann.
       mf.canDeploy(false);
@@ -265,7 +265,7 @@ public class DeployService implements Bootable
     try
     {
       if (plugin == null)
-        throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie das zu installierende Plugin"));
+        throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie das zu installierende Plugin"));
       
       if (source == null)
       {
@@ -284,7 +284,7 @@ public class DeployService implements Bootable
       File target = new File(pluginDir,plugin.getName());
       if (target.exists())
       {
-        monitor.setStatusText(i18n.tr("Lˆsche vorherige Version..."));
+        monitor.setStatusText(i18n.tr("L√∂sche vorherige Version..."));
         Logger.info("deleting previous version in " + target);
         
         // Wenn hier eine Marker-Datei liegt, fehlte der Neustart dazwischen
@@ -296,7 +296,7 @@ public class DeployService implements Bootable
         
         // Wenn das nicht klappt, fehlte der Neustart dazwischen, der hier aufraeumt
         if (!FileUtil.deleteRecursive(target))
-          throw new ApplicationException(i18n.tr("Der Ordner {0} konnte nicht gelˆscht werden.",target.getAbsolutePath()));
+          throw new ApplicationException(i18n.tr("Der Ordner {0} konnte nicht gel√∂scht werden.",target.getAbsolutePath()));
       }
 
       // Entpacken

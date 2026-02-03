@@ -46,12 +46,12 @@ public class PluginUpdate implements Action
     I18N i18n = Application.getI18n();
     
     if (!(context instanceof Manifest))
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie das zu aktualisierende Plugin aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie das zu aktualisierende Plugin aus"));
     
     final Manifest installed = (Manifest) context;
     
     FileDialog d = new FileDialog(GUI.getShell(),SWT.OPEN);
-    d.setText(i18n.tr("Bitte w‰hlen Sie die ZIP-Datei mit der neuen Version des Plugins aus."));
+    d.setText(i18n.tr("Bitte w√§hlen Sie die ZIP-Datei mit der neuen Version des Plugins aus."));
     d.setFilterExtensions(new String[]{"*.zip"});
     d.setFilterPath(settings.getString("lastdir",System.getProperty("user.home")));
     

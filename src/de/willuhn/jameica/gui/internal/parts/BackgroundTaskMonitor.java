@@ -46,7 +46,7 @@ public class BackgroundTaskMonitor extends ProgressBar
   /**
    * Datums-Format dd.MM.yyyy HH:mm:ss.
    */
-  private final static DateFormat DF  = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+  private final static DateFormat DF  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
   private final static AtomicBoolean DEFAULT_LOCKED = new AtomicBoolean(false);
   private final static AtomicLong USAGES = new AtomicLong(0);

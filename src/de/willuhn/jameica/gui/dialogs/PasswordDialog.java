@@ -37,7 +37,7 @@ import de.willuhn.util.ApplicationException;
  *
  * <p>Hinweis: Diese Klasse hat einen internen Zaehler, der die Anzahl
  * der fehlgeschlagenen Aufrufe von {@link #checkPassword(String)}
- * zaehlt und nach {@link #MAX_RETRIES} Versuchen den Dialog schlieﬂt.
+ * zaehlt und nach {@link #MAX_RETRIES} Versuchen den Dialog schlie√üt.
  */
 public class PasswordDialog extends AbstractDialog
 {

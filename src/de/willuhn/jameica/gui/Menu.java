@@ -182,7 +182,7 @@ public class Menu
             catch (Exception e)
             {
               Logger.error("unable to handle menu action",e);
-              Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Ausführen des Menu-Eintrags"),StatusBarMessage.TYPE_ERROR));
+              Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim AusfÃ¼hren des Menu-Eintrags"),StatusBarMessage.TYPE_ERROR));
             }
           }
         });

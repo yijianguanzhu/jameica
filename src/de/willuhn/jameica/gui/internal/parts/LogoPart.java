@@ -24,7 +24,7 @@ import de.willuhn.jameica.gui.util.SWTUtil;
 import de.willuhn.jameica.system.Customizing;
 
 /**
- * Optionale anpassbarer Bereich oben in der Anwendung für ein Logo.
+ * Optionale anpassbarer Bereich oben in der Anwendung fÃ¼r ein Logo.
  */
 public class LogoPart implements Part, Extendable
 {
@@ -69,8 +69,8 @@ public class LogoPart implements Part, Extendable
   }
   
   /**
-   * Liefert das Composite für den Gestaltungsfreiraum.
-   * @return das Composite für den Gestaltungsfreiraum.
+   * Liefert das Composite fÃ¼r den Gestaltungsfreiraum.
+   * @return das Composite fÃ¼r den Gestaltungsfreiraum.
    */
   public Composite getSpace()
   {

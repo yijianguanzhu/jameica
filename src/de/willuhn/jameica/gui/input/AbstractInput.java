@@ -170,7 +170,7 @@ public abstract class AbstractInput implements Input
   }
   
   /**
-   * Übernimmt das eigentliche Hinzufügen des Listeners zum Widget.
+   * Ãœbernimmt das eigentliche HinzufÃ¼gen des Listeners zum Widget.
    * @param w das Widget.
    * @param l der Listener.
    */

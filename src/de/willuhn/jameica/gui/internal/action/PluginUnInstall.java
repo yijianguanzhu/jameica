@@ -38,7 +38,7 @@ public class PluginUnInstall implements Action
   public void handleAction(Object context) throws ApplicationException
   {
     if (context == null)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie das zu deinstallierende Plugin aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie das zu deinstallierende Plugin aus"));
     
     Manifest mf = null;
     if (context instanceof Manifest)
@@ -47,7 +47,7 @@ public class PluginUnInstall implements Action
       mf = ((Plugin) context).getManifest();
 
     if (mf == null)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie das zu deinstallierende Plugin aus"));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie das zu deinstallierende Plugin aus"));
 
     // Bevor wir den Dialog anzeigen, checken wir, ob eine Deinstallation ueberhaupt moeglich ist
     Application.getPluginLoader().canUnInstall(mf);

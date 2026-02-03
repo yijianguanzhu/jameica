@@ -42,7 +42,7 @@ import de.willuhn.util.I18N;
  */
 public class AttachmentListPart extends TablePart
 {
-  private final DateFormat df = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+  private final DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");
   private final I18N i18n = Application.getI18n();
 
   /**
@@ -113,7 +113,7 @@ public class AttachmentListPart extends TablePart
   }
   
   /**
-   * Wird benachrichtigt, wenn ein Attachment hinzugefügt wurde.
+   * Wird benachrichtigt, wenn ein Attachment hinzugefÃ¼gt wurde.
    */
   private class OnAdd implements MessageConsumer
   {
@@ -225,7 +225,7 @@ public class AttachmentListPart extends TablePart
   }
 
   /**
-   * Wird benachrichtigt, wenn ein Attachment gelöscht wurde.
+   * Wird benachrichtigt, wenn ein Attachment gelÃ¶scht wurde.
    */
   private class OnDel implements MessageConsumer
   {

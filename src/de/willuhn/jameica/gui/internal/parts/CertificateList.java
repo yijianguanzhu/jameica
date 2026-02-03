@@ -76,12 +76,12 @@ public class CertificateList extends TablePart
   {
     super(init(trustManager),new Open());
     
-    addColumn(Application.getI18n().tr("Ausgestellt für"),"name");
+    addColumn(Application.getI18n().tr("Ausgestellt fÃ¼r"),"name");
     addColumn(Application.getI18n().tr("Organisation"),"organization");
     addColumn(Application.getI18n().tr("OU"),"ou");
     addColumn(Application.getI18n().tr("Aussteller"),"issuer");
-    addColumn(Application.getI18n().tr("Gültig von"),"datefrom",new DateFormatter());
-    addColumn(Application.getI18n().tr("Gültig bis"),"dateto",new DateFormatter());
+    addColumn(Application.getI18n().tr("GÃ¼ltig von"),"datefrom",new DateFormatter());
+    addColumn(Application.getI18n().tr("GÃ¼ltig bis"),"dateto",new DateFormatter());
     addColumn(Application.getI18n().tr("Seriennummer"),"serial");
     this.setMulti(false);
     this.removeFeature(FeatureSummary.class);
@@ -109,17 +109,17 @@ public class CertificateList extends TablePart
     });
     
     ContextMenu menu = new ContextMenu();
-    menu.addItem(new CheckedContextMenuItem(Application.getI18n().tr("Öffnen..."),new Open(),"document-open.png"));
-    menu.addItem(new CheckedContextMenuItem(Application.getI18n().tr("Löschen..."), new Action()
+    menu.addItem(new CheckedContextMenuItem(Application.getI18n().tr("Ã–ffnen..."),new Open(),"document-open.png"));
+    menu.addItem(new CheckedContextMenuItem(Application.getI18n().tr("LÃ¶schen..."), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {
         if (context == null || !(context instanceof CertObject))
-          throw new ApplicationException(Application.getI18n().tr("Bitte wählen Sie das zu löschende Zertifikat aus"));
+          throw new ApplicationException(Application.getI18n().tr("Bitte wÃ¤hlen Sie das zu lÃ¶schende Zertifikat aus"));
         
         final X509Certificate c = ((CertObject)context).cert;
         CertificateTrustDialog d = new CertificateTrustDialog(CertificateTrustDialog.POSITION_CENTER,c);
-        d.setText(Application.getI18n().tr("Sind Sie sicher, dass Sie dieses Zertifikat aus dem Stammspeicher löschen wollen?"));
+        d.setText(Application.getI18n().tr("Sind Sie sicher, dass Sie dieses Zertifikat aus dem Stammspeicher lÃ¶schen wollen?"));
         try
         {
           Boolean b = (Boolean) d.open();
@@ -139,7 +139,7 @@ public class CertificateList extends TablePart
         catch (Exception e)
         {
           Logger.error("error while deleting certificate",e);
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Löschen des Zertifikats."),StatusBarMessage.TYPE_ERROR));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim LÃ¶schen des Zertifikats."),StatusBarMessage.TYPE_ERROR));
         }
       }
     },"user-trash-full.png")
@@ -176,7 +176,7 @@ public class CertificateList extends TablePart
           String s2 = myCert.getSubject().getAttribute(Principal.ORGANIZATIONAL_UNIT);
 
           FileDialog fd = new FileDialog(GUI.getShell(),SWT.SAVE);
-          fd.setText(Application.getI18n().tr("Bitte geben Sie das Verzeichnis an, in dem Sie das Zertifikat speichern möchten"));
+          fd.setText(Application.getI18n().tr("Bitte geben Sie das Verzeichnis an, in dem Sie das Zertifikat speichern mÃ¶chten"));
           if (s2 != null && s2.length() > 0)
             fd.setFileName(s + "-" + s2 + ".crt");
           else
@@ -189,8 +189,8 @@ public class CertificateList extends TablePart
           if (f.exists())
           {
             YesNoDialog d = new YesNoDialog(YesNoDialog.POSITION_CENTER);
-            d.setTitle(Application.getI18n().tr("Überschreiben?"));
-            d.setText(Application.getI18n().tr("Datei existiert bereits. Überschreiben?"));
+            d.setTitle(Application.getI18n().tr("Ãœberschreiben?"));
+            d.setText(Application.getI18n().tr("Datei existiert bereits. Ãœberschreiben?"));
             Boolean b = (Boolean) d.open();
             if (!b.booleanValue())
               return;

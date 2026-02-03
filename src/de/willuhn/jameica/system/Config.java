@@ -119,7 +119,7 @@ public final class Config
   public void setRmiPort(int port) throws ApplicationException
 	{
     if (port < 1 || port > 65535)
-      throw new ApplicationException(Application.getI18n().tr("TCP-Portnummer für Netzwerkbetrieb außerhalb des gültigen Bereichs von {0} bis {1}", new String[]{""+1,""+65535}));
+      throw new ApplicationException(Application.getI18n().tr("TCP-Portnummer fÃ¼r Netzwerkbetrieb auÃŸerhalb des gÃ¼ltigen Bereichs von {0} bis {1}", new String[]{""+1,""+65535}));
 
     ServerSocket s = null;
     try
@@ -220,7 +220,7 @@ public final class Config
     }
 
     if (port < 1 || port > 65535)
-      throw new ApplicationException(Application.getI18n().tr("TCP-Portnummer für Proxy außerhalb des gültigen Bereichs von {0} bis {1}", new String[]{""+1,""+65535}));
+      throw new ApplicationException(Application.getI18n().tr("TCP-Portnummer fÃ¼r Proxy auÃŸerhalb des gÃ¼ltigen Bereichs von {0} bis {1}", new String[]{""+1,""+65535}));
 
     settings.setAttribute("jameica.system.proxy.port",port);
   }
@@ -271,7 +271,7 @@ public final class Config
     }
 
     if (port < 1 || port > 65535)
-      throw new ApplicationException(Application.getI18n().tr("TCP-Portnummer für HTTPS-Proxy außerhalb des gültigen Bereichs von {0} bis {1}", new String[]{""+1,""+65535}));
+      throw new ApplicationException(Application.getI18n().tr("TCP-Portnummer fÃ¼r HTTPS-Proxy auÃŸerhalb des gÃ¼ltigen Bereichs von {0} bis {1}", new String[]{""+1,""+65535}));
 
     settings.setAttribute("jameica.system.proxy.https.port",port);
   }
@@ -366,7 +366,7 @@ public final class Config
       catch (Exception e)
       {
         Logger.warn("no resource bundle found for locale " + l);
-        l = Locale.GERMANY;
+        l = Locale.SIMPLIFIED_CHINESE;
         Logger.warn("fallback to system locale " + l);
       }
       
@@ -757,7 +757,7 @@ public final class Config
     }
     
     if (!f.isDirectory() || !f.exists())
-      throw new ApplicationException(Application.getI18n().tr("Bitte geben Sie ein gültiges Verzeichnis an"));
+      throw new ApplicationException(Application.getI18n().tr("Bitte geben Sie ein gÃ¼ltiges Verzeichnis an"));
     
     if (!f.canWrite())
       throw new ApplicationException(Application.getI18n().tr("Sie besitzen keine Schreibrechte in diesem Verzeichnis"));

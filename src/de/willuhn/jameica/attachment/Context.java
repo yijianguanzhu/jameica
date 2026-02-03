@@ -45,8 +45,8 @@ public class Context implements Serializable
   }
   
   /**
-   * Liefert den Namen der Klasse des Objektes, an dem das Attachment h‰ngt.
-   * @return className Name der Klasse des Objektes, an dem das Attachment h‰ngt.
+   * Liefert den Namen der Klasse des Objektes, an dem das Attachment h√§ngt.
+   * @return className Name der Klasse des Objektes, an dem das Attachment h√§ngt.
    */
   public String getClassName()
   {
@@ -54,8 +54,8 @@ public class Context implements Serializable
   }
   
   /**
-   * Speichert den Namen der Klasse des Objektes, an dem das Attachment h‰ngt.
-   * @param className Name der Klasse des Objektes, an dem das Attachment h‰ngt.
+   * Speichert den Namen der Klasse des Objektes, an dem das Attachment h√§ngt.
+   * @param className Name der Klasse des Objektes, an dem das Attachment h√§ngt.
    */
   public void setClassName(String className)
   {
@@ -63,8 +63,8 @@ public class Context implements Serializable
   }
   
   /**
-   * Liefert die ID des Objektes, an dem das Attachment h‰ngt.
-   * @return id ID des Objektes, an dem das Attachment h‰ngt.
+   * Liefert die ID des Objektes, an dem das Attachment h√§ngt.
+   * @return id ID des Objektes, an dem das Attachment h√§ngt.
    */
   public String getId()
   {
@@ -72,8 +72,8 @@ public class Context implements Serializable
   }
   
   /**
-   * Speichert die ID des Objektes, an dem das Attachment h‰ngt.
-   * @param id ID des Objektes, an dem das Attachment h‰ngt.
+   * Speichert die ID des Objektes, an dem das Attachment h√§ngt.
+   * @param id ID des Objektes, an dem das Attachment h√§ngt.
    */
   public void setId(String id)
   {

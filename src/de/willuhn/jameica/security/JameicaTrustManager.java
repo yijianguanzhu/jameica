@@ -255,13 +255,13 @@ public class JameicaTrustManager implements X509TrustManager
         catch (CertificateExpiredException exp)
         {
           Logger.warn("certificate expired: " + validFrom + " - " + validTo);
-          if (Application.getCallback().askUser(Application.getI18n().tr("Zertifikat abgelaufen. Trotzdem vertrauen?\nGültigkeit: {0} - {1}",new String[]{validFrom,validTo})))
+          if (Application.getCallback().askUser(Application.getI18n().tr("Zertifikat abgelaufen. Trotzdem vertrauen?\nGÃ¼ltigkeit: {0} - {1}",new String[]{validFrom,validTo})))
             return; // Abgelaufen, aber der User ist damit einverstanden
         }
         catch (CertificateNotYetValidException not)
         {
           Logger.warn("certificate not yet valid: " + validFrom + " - " + validTo);
-          if (Application.getCallback().askUser(Application.getI18n().tr("Zertifikat noch nicht gültig. Trotzdem vertrauen?\nGültigkeit: {0} - {1}",new String[]{validFrom,validTo})))
+          if (Application.getCallback().askUser(Application.getI18n().tr("Zertifikat noch nicht gÃ¼ltig. Trotzdem vertrauen?\nGÃ¼ltigkeit: {0} - {1}",new String[]{validFrom,validTo})))
             return; // Noch nicht gueltig, aber der User ist damit einverstanden
         }
       }
@@ -283,7 +283,7 @@ public class JameicaTrustManager implements X509TrustManager
     catch (Exception e)
     {
       Logger.error("error while checking trust",e);
-      throw new CertificateException(Application.getI18n().tr("Fehler beim Prüfen des Zertifikats"));
+      throw new CertificateException(Application.getI18n().tr("Fehler beim PrÃ¼fen des Zertifikats"));
     }
   }
 

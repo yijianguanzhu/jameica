@@ -130,7 +130,7 @@ public class PluginData
     catch (Exception e)
     {
       Logger.error("invalid manifest url",e);
-      throw new ApplicationException(Application.getI18n().tr("Ungültige Download-URL in Plugin-Definition: {0}",e.getMessage()));
+      throw new ApplicationException(Application.getI18n().tr("UngÃ¼ltige Download-URL in Plugin-Definition: {0}",e.getMessage()));
     }
   }
 
@@ -148,7 +148,7 @@ public class PluginData
     catch (Exception e)
     {
       Logger.error("invalid signature url",e);
-      throw new ApplicationException(Application.getI18n().tr("Ungültige Signatur-URL in Plugin-Definition: {0}",e.getMessage()));
+      throw new ApplicationException(Application.getI18n().tr("UngÃ¼ltige Signatur-URL in Plugin-Definition: {0}",e.getMessage()));
     }
   }
 

@@ -34,7 +34,7 @@ public class PluginInput extends SelectInput
   {
     super(Application.getPluginLoader().getInstalledPlugins(), preselected);
     this.setName(Application.getI18n().tr("Plugin"));
-    this.setPleaseChoose(Application.getI18n().tr("Bitte w‰hlen..."));
+    this.setPleaseChoose(Application.getI18n().tr("Bitte w√§hlen..."));
   }
 
   /**

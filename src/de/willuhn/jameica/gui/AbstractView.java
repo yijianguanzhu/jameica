@@ -117,9 +117,9 @@ public abstract class AbstractView
   }
   
   /**
-   * Liefert true, wenn an die View Attachments gehängt werden können.
+   * Liefert true, wenn an die View Attachments gehÃ¤ngt werden kÃ¶nnen.
    * Kann ueberschrieben werden, wenn nicht gewuenscht.
-   * @return true, wenn an die View Attachments angehängt werden können. Default ist true.
+   * @return true, wenn an die View Attachments angehÃ¤ngt werden kÃ¶nnen. Default ist true.
    */
   public boolean canAttach()
   {

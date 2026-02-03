@@ -4,11 +4,11 @@
 	</p>
 	
 	<p>
-	  Klicken Sie auf den gewünschten Termin, um die Detailansicht zu öffnen.
+	  Klicken Sie auf den gewÃ¼nschten Termin, um die Detailansicht zu Ã¶ffnen.
 	</p>
 	
 	<p>
-		<b>Tipp:</b> Klicken Sie oben rechts auf das Schraubenschlüssel-Symbol,
-		um die anzuzeigenden Kalender auszuwählen.
+		<b>Tipp:</b> Klicken Sie oben rechts auf das SchraubenschlÃ¼ssel-Symbol,
+		um die anzuzeigenden Kalender auszuwÃ¤hlen.
 	</p>
 </form>

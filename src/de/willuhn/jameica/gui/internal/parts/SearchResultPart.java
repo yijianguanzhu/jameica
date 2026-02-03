@@ -64,7 +64,7 @@ public class SearchResultPart extends TreePart
         catch (RemoteException re)
         {
           Logger.error("unable to open result",re);
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Öffnen des Suchergebnisses"),StatusBarMessage.TYPE_ERROR));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Ã–ffnen des Suchergebnisses"),StatusBarMessage.TYPE_ERROR));
         }
       }
     

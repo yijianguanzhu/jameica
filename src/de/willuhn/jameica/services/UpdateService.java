@@ -275,7 +275,7 @@ public class UpdateService implements Bootable
         {
           if (monitor != null)
           {
-            monitor.log(i18n.tr("Prüfe {0}",url.toString()));
+            monitor.log(i18n.tr("PrÃ¼fe {0}",url.toString()));
             monitor.addPercentComplete(10);
           }
           Repository repo = service.open(url);
@@ -306,7 +306,7 @@ public class UpdateService implements Bootable
             }
             catch (Exception e)
             {
-              if (monitor != null) monitor.log("  " + i18n.tr("Fehler beim Prüfen des Plugins {0}: {1}",new String[]{plugin.getName(),e.getMessage()}));
+              if (monitor != null) monitor.log("  " + i18n.tr("Fehler beim PrÃ¼fen des Plugins {0}: {1}",new String[]{plugin.getName(),e.getMessage()}));
               Logger.error("error while checking plugin " + plugin.getName(),e);
             }
           }
@@ -327,7 +327,7 @@ public class UpdateService implements Bootable
         }
         catch (Exception e)
         {
-          if (monitor != null) monitor.log(i18n.tr("Fehler beim Prüfen des Repository: {0}",e.getMessage()));
+          if (monitor != null) monitor.log(i18n.tr("Fehler beim PrÃ¼fen des Repository: {0}",e.getMessage()));
           Logger.error("error while checking repository " + url,e);
         }
       }
@@ -413,20 +413,20 @@ public class UpdateService implements Bootable
             try
             {
               PluginData pd = status.plugin;
-              Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Lade Update für Plugin {0}",pd.getName()),StatusBarMessage.TYPE_SUCCESS));
+              Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Lade Update fÃ¼r Plugin {0}",pd.getName()),StatusBarMessage.TYPE_SUCCESS));
               Repository repo = pd.getPluginGroup().getRepository();
               repo.download(pd,false);
               status.update();
               names.append(pd.getName());
               names.append("\n");
-              Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Update für Plugin {0} installiert",pd.getName()),StatusBarMessage.TYPE_SUCCESS));
+              Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Update fÃ¼r Plugin {0} installiert",pd.getName()),StatusBarMessage.TYPE_SUCCESS));
             }
             catch (Exception e)
             {
               Logger.error("unable to download plugin",e);
             }
           }
-          TextMessage qm = new TextMessage(i18n.tr("Updates installiert"),i18n.tr("Für folgende Plugins wurden Updates installiert:\n\n{0}\nBitte starten Sie Jameica neu.",names.toString()));
+          TextMessage qm = new TextMessage(i18n.tr("Updates installiert"),i18n.tr("FÃ¼r folgende Plugins wurden Updates installiert:\n\n{0}\nBitte starten Sie Jameica neu.",names.toString()));
           Application.getMessagingFactory().getMessagingQueue("jameica.popup").sendMessage(qm);
         }
         else
@@ -461,7 +461,7 @@ public class UpdateService implements Bootable
           // Popup nur anzeigen, wenn seit dem letzten Check neue Updates dazugekommen sind
           if (count > 0)
           {
-            TextMessage qm = new TextMessage(i18n.tr("Neue Updates verfügbar"),i18n.tr("Für folgende Plugins sind Updates verfügbar:\n\n{0}",names.toString()));
+            TextMessage qm = new TextMessage(i18n.tr("Neue Updates verfÃ¼gbar"),i18n.tr("FÃ¼r folgende Plugins sind Updates verfÃ¼gbar:\n\n{0}",names.toString()));
             Application.getMessagingFactory().getMessagingQueue("jameica.popup").sendMessage(qm);
           }
         }

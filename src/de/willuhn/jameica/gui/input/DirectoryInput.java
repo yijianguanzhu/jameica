@@ -45,7 +45,7 @@ public class DirectoryInput extends ButtonInput
       {
         Logger.debug("starting dir dialog");
         DirectoryDialog dialog = new DirectoryDialog(GUI.getShell());
-        dialog.setText(Application.getI18n().tr("Bitte w‰hlen Sie ein Verzeichnis aus"));
+        dialog.setText(Application.getI18n().tr("Bitte w√§hlen Sie ein Verzeichnis aus"));
         dialog.setFilterPath(value);
         setValue(dialog.open());
         text.forceFocus(); // das muessen wir machen, damit die Listener ausgeloest werden

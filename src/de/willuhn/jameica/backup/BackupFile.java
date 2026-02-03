@@ -85,11 +85,11 @@ public class BackupFile implements GenericObject
       zip = new ZipFile(this.file);
       ZipEntry entry = zip.getEntry("cfg/de.willuhn.jameica.plugin.PluginLoader.properties");
       if (entry == null)
-        throw new ApplicationException(Application.getI18n().tr("Backup enthält keine Plugin-Daten"));
+        throw new ApplicationException(Application.getI18n().tr("Backup enthÃ¤lt keine Plugin-Daten"));
       
       is = zip.getInputStream(entry);
       if (is == null)
-        throw new ApplicationException(Application.getI18n().tr("Ungültiges Backup-Format"));
+        throw new ApplicationException(Application.getI18n().tr("UngÃ¼ltiges Backup-Format"));
 
       this.props = new Properties();
       this.props.load(is);

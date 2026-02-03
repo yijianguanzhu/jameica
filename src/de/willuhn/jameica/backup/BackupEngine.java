@@ -97,11 +97,11 @@ public class BackupEngine
   public static synchronized void markForRestore(BackupFile backup) throws ApplicationException
   {
     if (backup == null)
-      throw new ApplicationException(Application.getI18n().tr("Bitte wählen Sie das wiederherzustellende Backup aus"));
+      throw new ApplicationException(Application.getI18n().tr("Bitte wÃ¤hlen Sie das wiederherzustellende Backup aus"));
     
     File file = backup.getFile();
     if (!file.isFile() || !file.canRead())
-      throw new ApplicationException(Application.getI18n().tr("Datei nicht lesbar. Stellen Sie bitte sicher, dass Sie Schreibrechte für sie besitzen."));
+      throw new ApplicationException(Application.getI18n().tr("Datei nicht lesbar. Stellen Sie bitte sicher, dass Sie Schreibrechte fÃ¼r sie besitzen."));
     
     Logger.warn("activating backup for restore: " + file.getAbsolutePath());
     File marker = new File(Application.getConfig().getWorkDir(),MARKER);
@@ -115,7 +115,7 @@ public class BackupEngine
     catch (Exception e)
     {
       Logger.error("unable to store marker file",e);
-      throw new ApplicationException(Application.getI18n().tr("Fehler beim Aktivieren der Backup-Datei. Prüfen Sie bitte das System-Log"));
+      throw new ApplicationException(Application.getI18n().tr("Fehler beim Aktivieren der Backup-Datei. PrÃ¼fen Sie bitte das System-Log"));
     }
     finally
     {
@@ -128,7 +128,7 @@ public class BackupEngine
         catch (Exception e)
         {
           Logger.error("unable to close marker file",e);
-          throw new ApplicationException(Application.getI18n().tr("Fehler beim Aktivieren der Backup-Datei. Prüfen Sie bitte das System-Log"));
+          throw new ApplicationException(Application.getI18n().tr("Fehler beim Aktivieren der Backup-Datei. PrÃ¼fen Sie bitte das System-Log"));
         }
       }
     }
@@ -230,7 +230,7 @@ public class BackupEngine
       for (File dir:content)
       {
         if (backupFile.startsWith(dir.getCanonicalPath()))
-          throw new ApplicationException(Application.getI18n().tr("Wiederherzustellendes Backup befindet sich in einem Ordner, der beim Restore gelöscht werden würde. Wiederherstellung abgebrochen."));
+          throw new ApplicationException(Application.getI18n().tr("Wiederherzustellendes Backup befindet sich in einem Ordner, der beim Restore gelÃ¶scht werden wÃ¼rde. Wiederherstellung abgebrochen."));
       }
       
       // So, jetzt loeschen wir aber wirklich

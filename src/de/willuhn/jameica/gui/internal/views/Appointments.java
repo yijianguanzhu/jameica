@@ -53,7 +53,7 @@ public class Appointments extends AbstractView
     this.calendar = new ReminderCalendarPart(); // hier sind schon die Jameica-Termine drin
     this.calendar.setCurrentDate(currentDate);
 
-    GUI.getView().addPanelButton(new PanelButton("document-properties.png",configure,i18n.tr("Anzuzeigende Kalender ausw‰hlen")));
+    GUI.getView().addPanelButton(new PanelButton("document-properties.png",configure,i18n.tr("Anzuzeigende Kalender ausw√§hlen")));
     
     // Appointment-Provider der Plugins hinzufuegen 
     List<Plugin> plugins = Application.getPluginLoader().getInstalledPlugins();
@@ -73,7 +73,7 @@ public class Appointments extends AbstractView
     // Button zum Hinzufuegen eines Termins
     ButtonArea buttons = new ButtonArea();
     buttons.addButton(i18n.tr("Neuer Termin..."),new ReminderAppointmentDetails(),null,true,"document-new.png");
-    buttons.addButton(i18n.tr("Kalender ausw‰hlen..."),configure,null,false,"document-properties.png");
+    buttons.addButton(i18n.tr("Kalender ausw√§hlen..."),configure,null,false,"document-properties.png");
     buttons.paint(this.getParent());
   }
 

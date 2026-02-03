@@ -31,7 +31,7 @@ public class PanelButtonBack extends PanelButton
    */
   public PanelButtonBack()
   {
-    super("go-previous.png",new Back(),Application.getI18n().tr("Zurück") + " (" + backKeyStroke + ")");
+    super("go-previous.png",new Back(),Application.getI18n().tr("ZurÃ¼ck") + " (" + backKeyStroke + ")");
   }
   
   /**

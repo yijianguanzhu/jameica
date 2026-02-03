@@ -275,7 +275,7 @@ public class NewPasswordDialog extends AbstractDialog
 
     if (password != null && !password.equals(password2))
     {
-      setErrorText(i18n.tr("Die eingegebenen Passworte stimmen nicht überein."));
+      setErrorText(i18n.tr("Die eingegebenen Passworte stimmen nicht Ã¼berein."));
       return false;
     }
     return true;

@@ -39,7 +39,7 @@ public class CertificateDetailDialog extends AbstractCertificateDialog
    */
   protected void paintButtons(ButtonArea buttons)
   {
-    buttons.addButton("   " + i18n.tr("Schlieﬂen") + "   ", new Action()
+    buttons.addButton("   " + i18n.tr("Schlie√üen") + "   ", new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {

@@ -75,11 +75,11 @@ public class SearchOptionsDialog extends AbstractDialog
     final I18N i18n = Application.getI18n();
     
     Container container = new SimpleContainer(parent,true);
-    container.addText(i18n.tr("Bitte wählen Sie die Themen, in denen gesucht werden soll:"),true);
+    container.addText(i18n.tr("Bitte wÃ¤hlen Sie die Themen, in denen gesucht werden soll:"),true);
     
     final SearchPart searchPart = GUI.getView().getSearchPart();
     final ShortcutInput shortcut = new ShortcutInput(searchPart.getShortcut());
-    shortcut.setName(Application.getI18n().tr("Tastenkürzel für das Eingabefeld"));
+    shortcut.setName(Application.getI18n().tr("TastenkÃ¼rzel fÃ¼r das Eingabefeld"));
     container.addInput(shortcut);
     final SearchService service = (SearchService) Application.getBootLoader().getBootable(SearchService.class);
     final SearchProvider[] providers = service.getSearchProviders();
@@ -129,7 +129,7 @@ public class SearchOptionsDialog extends AbstractDialog
     container.addPart(table);
 
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Übernehmen"),new Action() {
+    buttons.addButton(i18n.tr("Ãœbernehmen"),new Action() {
     
       public void handleAction(Object context) throws ApplicationException
       {
@@ -157,7 +157,7 @@ public class SearchOptionsDialog extends AbstractDialog
         catch (Exception e)
         {
           Logger.error("error while applying options",e);
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Übernehmen der Einstellungen"), StatusBarMessage.TYPE_ERROR));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ãœbernehmen der Einstellungen"), StatusBarMessage.TYPE_ERROR));
         }
         Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Einstellungen gespeichert"), StatusBarMessage.TYPE_SUCCESS));
         close();

@@ -19,30 +19,30 @@ import de.willuhn.jameica.attachment.Attachment;
 import de.willuhn.jameica.attachment.Context;
 
 /**
- * Interface für einen Storage-Provider.
+ * Interface fÃ¼r einen Storage-Provider.
  */
 public interface StorageProvider
 {
   /**
-   * Liefert einen Identifier für den Storage-Provider.
+   * Liefert einen Identifier fÃ¼r den Storage-Provider.
    * @return ein Identifier.
    */
   public String getId();
   
   /**
-   * Liefert einen sprechenden Namen für den Storage-Provider.
-   * @return sprechender Name für den Storage-Provider.
+   * Liefert einen sprechenden Namen fÃ¼r den Storage-Provider.
+   * @return sprechender Name fÃ¼r den Storage-Provider.
    */
   public String getName();
   
   /**
-   * Liefert true, wenn der Storage-Provider verfügbar ist.
-   * @return true, wenn der Storage-Provider verfügbar ist.
+   * Liefert true, wenn der Storage-Provider verfÃ¼gbar ist.
+   * @return true, wenn der Storage-Provider verfÃ¼gbar ist.
    */
   public boolean isEnabled();
 
   /**
-   * Liefert die Attachments für den angegebenen Context.
+   * Liefert die Attachments fÃ¼r den angegebenen Context.
    * Hierbei werden nur die Informationen zu den Attachments geliefert, nicht der Datei-Inhalt.
    * Der kann per {@link StorageProvider#copy(Attachment, OutputStream)} geladen werden. 
    * @param ctx der Context.
@@ -76,8 +76,8 @@ public interface StorageProvider
   public void update(Attachment a, InputStream is) throws IOException;
   
   /**
-   * Löscht das Attachment.
-   * @param a das zu löschende Attachment.
+   * LÃ¶scht das Attachment.
+   * @param a das zu lÃ¶schende Attachment.
    * @throws IOException
    */
   public void delete(Attachment a) throws IOException;

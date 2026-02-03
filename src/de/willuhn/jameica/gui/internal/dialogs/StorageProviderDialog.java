@@ -28,7 +28,7 @@ import de.willuhn.util.ApplicationException;
 import de.willuhn.util.I18N;
 
 /**
- * Auswahldialog für den zu verwendenden Storage-Provider.
+ * Auswahldialog fÃ¼r den zu verwendenden Storage-Provider.
  */
 public class StorageProviderDialog extends AbstractDialog<StorageProvider>
 {
@@ -48,7 +48,7 @@ public class StorageProviderDialog extends AbstractDialog<StorageProvider>
   public StorageProviderDialog(int position)
   {
     super(position);
-    this.setTitle(i18n.tr("Speicherort für Dateianhänge"));
+    this.setTitle(i18n.tr("Speicherort fÃ¼r DateianhÃ¤nge"));
     this.setSize(WINDOW_WIDTH,SWT.DEFAULT);
     
     // Ggf. vorhandene Vorauswahl
@@ -62,18 +62,18 @@ public class StorageProviderDialog extends AbstractDialog<StorageProvider>
   protected void paint(Composite parent) throws Exception
   {
     SimpleContainer container = new SimpleContainer(parent,true);
-    container.addText(i18n.tr("Bitte wählen Sie den zu verwendenden Speicherort."),true);
+    container.addText(i18n.tr("Bitte wÃ¤hlen Sie den zu verwendenden Speicherort."),true);
     
     final SelectInput select = new SelectInput(this.service.getProviders(),this.selection);
     select.setAttribute("name");
     container.addInput(select);
     
     final CheckboxInput save = new CheckboxInput(false);
-    save.setName(i18n.tr("Diese Frage künftig nicht mehr anzeigen"));
+    save.setName(i18n.tr("Diese Frage kÃ¼nftig nicht mehr anzeigen"));
     container.addInput(save);
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Übernehmen"),new Action() {
+    buttons.addButton(i18n.tr("Ãœbernehmen"),new Action() {
       
       @Override
       public void handleAction(Object context) throws ApplicationException

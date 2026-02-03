@@ -75,7 +75,7 @@ public class PluginSourceUser extends AbstractPluginSource
    */
   public String getName()
   {
-    return Application.getI18n().tr("Benutzer-Ordner (nur für aktuellen Benutzer)");
+    return Application.getI18n().tr("Benutzer-Ordner (nur fÃ¼r aktuellen Benutzer)");
   }
 
   /**

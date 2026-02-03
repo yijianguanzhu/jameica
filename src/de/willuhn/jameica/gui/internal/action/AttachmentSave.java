@@ -50,10 +50,10 @@ public class AttachmentSave implements Action
       list = (Attachment[]) context;
     
     if (list == null || list.length == 0)
-      throw new ApplicationException(i18n.tr("Bitte w‰hlen Sie die zu speichernden Dateien."));
+      throw new ApplicationException(i18n.tr("Bitte w√§hlen Sie die zu speichernden Dateien."));
 
-    final String text = list.length == 1 ? "Bitte w‰hlen Sie den Ordner, in dem Sie die Datei speichern wollen."
-                                         : "Bitte w‰hlen Sie den Ordner, in dem Sie die Dateien speichern wollen.";
+    final String text = list.length == 1 ? "Bitte w√§hlen Sie den Ordner, in dem Sie die Datei speichern wollen."
+                                         : "Bitte w√§hlen Sie den Ordner, in dem Sie die Dateien speichern wollen.";
 
     DirectoryDialog d = new DirectoryDialog(GUI.getShell());
     d.setText(i18n.tr(text));
@@ -64,7 +64,7 @@ public class AttachmentSave implements Action
     
     final File dir = new File(s);
     if (!dir.exists() && !dir.canWrite())
-      throw new ApplicationException(i18n.tr("Sie besitzen keine Schreibrechte im ausgew‰hlten Ordner."));
+      throw new ApplicationException(i18n.tr("Sie besitzen keine Schreibrechte im ausgew√§hlten Ordner."));
     
     settings.setAttribute("lastdir",s);
 
@@ -79,7 +79,7 @@ public class AttachmentSave implements Action
         final File target = new File(dir,a.getFilename());
         if (target.exists())
         {
-          boolean overwrite = Application.getCallback().askUser(i18n.tr("Datei \"{0}\" existiert bereits. ‹berschreiben?"),new String[]{target.getName()},true);
+          boolean overwrite = Application.getCallback().askUser(i18n.tr("Datei \"{0}\" existiert bereits. √úberschreiben?"),new String[]{target.getName()},true);
           if (!overwrite)
             continue;
         }

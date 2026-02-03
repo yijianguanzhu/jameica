@@ -131,7 +131,7 @@ public class SelectInput extends AbstractInput
    *
    * <p>Als Default wird {@code null} zurueckgeliefert.
    *
-   * @param choose Anzuzeigender "Bitte w‰hlen..."-Text.
+   * @param choose Anzuzeigender "Bitte w√§hlen..."-Text.
    */
   public void setPleaseChoose(String choose)
   {

@@ -158,7 +158,7 @@ public class SearchPart implements Part
       // Checken, ob er sich parsen laesst.
       KeyStroke ks = SWTUtil.getKeyStroke(shortcut);
       if (ks == null)
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Tastenkombination ungültig: {0}",shortcut),StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Tastenkombination ungÃ¼ltig: {0}",shortcut),StatusBarMessage.TYPE_ERROR));
       
       settings.setAttribute("shortcut",ks != null ? ks.format() : null);
     }

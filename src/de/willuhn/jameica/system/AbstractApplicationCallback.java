@@ -74,7 +74,7 @@ public abstract class AbstractApplicationCallback implements ApplicationCallback
     String question =
       Application.getI18n().tr("Der Hostname Ihres Computers konnte nicht ermittelt werden.\n" +
                                "Bitte geben Sie ihn manuell ein. Sollten Sie ihn nicht kennen,\n" +
-                               "dann wählen Sie einen beliebigen Namen. Verwenden Sie bitte\n" +
+                               "dann wÃ¤hlen Sie einen beliebigen Namen. Verwenden Sie bitte\n" +
                                "ausschliesslich Buchstaben oder Zahlen und ggf. \".\" oder \"-\"");
     String label = Application.getI18n().tr("Hostname Ihres Computers");
     this.hostname = Application.getCallback().askUser(question,label);
@@ -118,7 +118,7 @@ public abstract class AbstractApplicationCallback implements ApplicationCallback
       hostnames.append(h);
     }
     
-    String s = Application.getI18n().tr("Der Hostname \"{0}\" stimmt mit keinem der Server-Zertifikate überein ({1}). " +
+    String s = Application.getI18n().tr("Der Hostname \"{0}\" stimmt mit keinem der Server-Zertifikate Ã¼berein ({1}). " +
                                         "Wollen Sie den Vorgang dennoch fortsetzen?",new String[]{hostname,hostnames.toString()});
     return askUser(s);
   }

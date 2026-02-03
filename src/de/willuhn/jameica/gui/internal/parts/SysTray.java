@@ -75,8 +75,8 @@ public class SysTray
   }
   
   /**
-   * Legt fest, ob das Symbol neue Aktivit‰t anzeigen soll.
-   * @param b true, wenn neue Aktivit‰t angezeigt werden soll.
+   * Legt fest, ob das Symbol neue Aktivit√§t anzeigen soll.
+   * @param b true, wenn neue Aktivit√§t angezeigt werden soll.
    */
   public void setNewActivity(boolean b)
   {
@@ -215,7 +215,7 @@ public class SysTray
         {
           String s = "Jameica";
           if (activity)
-            s += (": " + Application.getI18n().tr("Neue Aktivit‰t"));
+            s += (": " + Application.getI18n().tr("Neue Aktivit√§t"));
           
           item.setToolTipText(s);
           item.setImage(SWTUtil.getImage(activity ? "jameica-icon-notify.png" : "jameica-icon.png"));

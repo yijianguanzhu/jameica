@@ -44,7 +44,7 @@ public class AttachmentSettings implements Action
     catch (Exception e)
     {
       Logger.error("unable to configure attachments",e);
-      throw new ApplicationException(Application.getI18n().tr("Öffnen der Einstellungen fehlgeschlagen"));
+      throw new ApplicationException(Application.getI18n().tr("Ã–ffnen der Einstellungen fehlgeschlagen"));
     }
   }
 

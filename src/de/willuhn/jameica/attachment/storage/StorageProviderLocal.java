@@ -34,7 +34,7 @@ import de.willuhn.logging.Logger;
 import de.willuhn.util.I18N;
 
 /**
- * Storage-Provider, der die Speicherung in lokalen Dateien übernimmt.
+ * Storage-Provider, der die Speicherung in lokalen Dateien Ã¼bernimmt.
  */
 @Lifecycle(Type.CONTEXT)
 public class StorageProviderLocal implements StorageProvider
@@ -128,7 +128,7 @@ public class StorageProviderLocal implements StorageProvider
   @Override
   public void update(Attachment a, InputStream is) throws IOException
   {
-    // Wir können einfach erstellen. Dabei wird die Datei überschrieben
+    // Wir kÃ¶nnen einfach erstellen. Dabei wird die Datei Ã¼berschrieben
     this.create(a,is);
   }
   
@@ -165,7 +165,7 @@ public class StorageProviderLocal implements StorageProvider
     final File target = new File(dir,a.getFilename());
     Logger.info("delete attachment file " + target);
     if (!target.delete())
-      throw new IOException(i18n.tr("Datei {0} kann nicht gelöscht werden",target.getAbsolutePath()));
+      throw new IOException(i18n.tr("Datei {0} kann nicht gelÃ¶scht werden",target.getAbsolutePath()));
   }
   
   /**
@@ -187,8 +187,8 @@ public class StorageProviderLocal implements StorageProvider
   }
   
   /**
-   * Liefert das Basis-Verzeichnis für die Speicherung.
-   * @return das Basis-Verzeichnis für die Speicherung.
+   * Liefert das Basis-Verzeichnis fÃ¼r die Speicherung.
+   * @return das Basis-Verzeichnis fÃ¼r die Speicherung.
    */
   public File getBaseDir()
   {
@@ -211,8 +211,8 @@ public class StorageProviderLocal implements StorageProvider
   }
   
   /**
-   * Liefert das abweichende Basis-Verzeichnis für die Speicherung.
-   * @return das abweichende Basis-Verzeichnis für die Speicherung.
+   * Liefert das abweichende Basis-Verzeichnis fÃ¼r die Speicherung.
+   * @return das abweichende Basis-Verzeichnis fÃ¼r die Speicherung.
    */
   public String getCustomBaseDir()
   {
@@ -220,8 +220,8 @@ public class StorageProviderLocal implements StorageProvider
   }
 
   /**
-   * Speichert das Basis-Verzeichnis für die Speicherung.
-   * @param dir das Basis-Verzeichnis für die Speicherung.
+   * Speichert das Basis-Verzeichnis fÃ¼r die Speicherung.
+   * @param dir das Basis-Verzeichnis fÃ¼r die Speicherung.
    */
   public void setCustomBaseDir(String dir)
   {
@@ -229,8 +229,8 @@ public class StorageProviderLocal implements StorageProvider
   }
   
   /**
-   * Liefert true, wenn ein abweichendes Basis-Verzeichnis für die Sicherung verwendet werden soll.
-   * @return true, wenn ein abweichendes Basis-Verzeichnis für die Sicherung verwendet werden soll.
+   * Liefert true, wenn ein abweichendes Basis-Verzeichnis fÃ¼r die Sicherung verwendet werden soll.
+   * @return true, wenn ein abweichendes Basis-Verzeichnis fÃ¼r die Sicherung verwendet werden soll.
    */
   public boolean useCustomBaseDir()
   {
@@ -238,8 +238,8 @@ public class StorageProviderLocal implements StorageProvider
   }
   
   /**
-   * Legt fest, ob ein abweichendes Basis-Verzeichnis für die Sicherung verwendet werden soll.
-   * @param b true, wenn ein abweichendes Basis-Verzeichnis für die Sicherung verwendet werden soll.
+   * Legt fest, ob ein abweichendes Basis-Verzeichnis fÃ¼r die Sicherung verwendet werden soll.
+   * @param b true, wenn ein abweichendes Basis-Verzeichnis fÃ¼r die Sicherung verwendet werden soll.
    */
   public void useCustomBaseDir(boolean b)
   {

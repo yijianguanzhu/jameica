@@ -155,7 +155,7 @@ public class BookmarkService
     this.store();
     
     Application.getMessagingFactory().getMessagingQueue(QUEUE_DELETED).sendMessage(new QueryMessage(bookmark));
-    Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Lesezeichen gelöscht"),StatusBarMessage.TYPE_SUCCESS));
+    Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Lesezeichen gelÃ¶scht"),StatusBarMessage.TYPE_SUCCESS));
   }
   
   private Object mutex = new Object();

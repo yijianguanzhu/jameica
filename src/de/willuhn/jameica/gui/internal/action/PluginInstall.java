@@ -52,7 +52,7 @@ public class PluginInstall implements Action
     try
     {
       FileDialog d = new FileDialog(GUI.getShell(),SWT.OPEN);
-      d.setText(i18n.tr("Bitte w‰hlen Sie die ZIP-Datei mit dem zu installierenden Plugin aus."));
+      d.setText(i18n.tr("Bitte w√§hlen Sie die ZIP-Datei mit dem zu installierenden Plugin aus."));
       d.setFilterExtensions(new String[]{"*.zip"});
       d.setFilterPath(settings.getString("lastdir",System.getProperty("user.home")));
       

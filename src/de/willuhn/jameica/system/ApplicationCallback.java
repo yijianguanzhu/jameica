@@ -184,7 +184,7 @@ public interface ApplicationCallback
   /**
    * Wird von Jameica aufgerufen, wenn der Benutzer eine Frage mit Ja/Nein beantworten soll.
    * @param question Die anzuzeigende Frage.
-   * @param storeAnswer {@code true}, wenn die Option "Diese Frage künftig nicht mehr anzeigen" angezeigt werden soll.
+   * @param storeAnswer {@code true}, wenn die Option "Diese Frage kÃ¼nftig nicht mehr anzeigen" angezeigt werden soll.
    * @return {@code true} fuer ja, {@code false} fuer nein.
    * @throws Exception
    */
@@ -203,7 +203,7 @@ public interface ApplicationCallback
    *
    * @param question Die anzuzeigende Frage.
    * @param variables mittels MessageFormat einzutragende Variablen.
-   * @param storeAnswer {@code true}, wenn die Option "Diese Frage künftig nicht mehr anzeigen" angezeigt werden soll.
+   * @param storeAnswer {@code true}, wenn die Option "Diese Frage kÃ¼nftig nicht mehr anzeigen" angezeigt werden soll.
    * @return {@code true} fuer ja, {@code false} fuer nein.
    * @throws Exception
    */

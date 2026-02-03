@@ -256,7 +256,7 @@ public class RepositoryService implements Bootable
       if (missing.size() == 1)
       {
         String q = i18n.tr("Das Plugin \"{0}\" wurde vom Herausgeber nicht signiert.\n" +
-            "Möchten Sie es dennoch installieren?",missing.get(0));
+            "MÃ¶chten Sie es dennoch installieren?",missing.get(0));
         if (!Application.getCallback().askUser(q,false))
           throw new OperationCanceledException(i18n.tr("Vorgang abgebrochen"));
       }
@@ -264,7 +264,7 @@ public class RepositoryService implements Bootable
       if (missing.size() > 1)
       {
         String q = i18n.tr("Die Plugins \"{0}\" wurden vom Herausgeber nicht signiert.\n" +
-            "Möchten Sie sie dennoch installieren?",StringUtils.join(missing,", "));
+            "MÃ¶chten Sie sie dennoch installieren?",StringUtils.join(missing,", "));
         if (!Application.getCallback().askUser(q,false))
         throw new OperationCanceledException(i18n.tr("Vorgang abgebrochen"));
       }
@@ -280,7 +280,7 @@ public class RepositoryService implements Bootable
     catch (Exception e)
     {
       Logger.error("error while checking signatures",e);
-      throw new ApplicationException(i18n.tr("Fehler beim Prüfen der Signaturen: {0}",e.getMessage()));
+      throw new ApplicationException(i18n.tr("Fehler beim PrÃ¼fen der Signaturen: {0}",e.getMessage()));
     }
     //
     //////////////////////////////////////////////////////////////////////
@@ -382,7 +382,7 @@ public class RepositoryService implements Bootable
 
           monitor.setStatus(ProgressMonitor.STATUS_DONE);
 
-          TextMessage msg = new TextMessage(i18n.tr("{0} Plugins heruntergeladen",Integer.toString(plugins.length)),i18n.tr("Die Installation erfolgt beim nächsten Neustart von Jameica."));
+          TextMessage msg = new TextMessage(i18n.tr("{0} Plugins heruntergeladen",Integer.toString(plugins.length)),i18n.tr("Die Installation erfolgt beim nÃ¤chsten Neustart von Jameica."));
           Application.getMessagingFactory().getMessagingQueue("jameica.popup").sendMessage(msg);
         }
         catch (ApplicationException ae)
@@ -424,7 +424,7 @@ public class RepositoryService implements Bootable
     if (cert == null)
     {
       Logger.error("plugin " + plugin.getName() + " may be signed, but no certificate found for verification in repository group " + group.getName() + " of " + group.getRepository().getUrl());
-      throw new ApplicationException(Application.getI18n().tr("Repository enthält kein gültiges Zertifikat \"{0}\". Installation abgebrochen",plugin.getName()));
+      throw new ApplicationException(Application.getI18n().tr("Repository enthÃ¤lt kein gÃ¼ltiges Zertifikat \"{0}\". Installation abgebrochen",plugin.getName()));
     }
 
     InputStream is1 = null;
@@ -447,7 +447,7 @@ public class RepositoryService implements Bootable
       }
       
       // Signatur ungueltig!
-      throw new ApplicationException(Application.getI18n().tr("Signatur des Plugins \"{0}\" ungültig. Installation abgebrochen",plugin.getName()));
+      throw new ApplicationException(Application.getI18n().tr("Signatur des Plugins \"{0}\" ungÃ¼ltig. Installation abgebrochen",plugin.getName()));
     }
     finally
     {
@@ -497,7 +497,7 @@ public class RepositoryService implements Bootable
   private PluginData search(Dependency dep) throws ApplicationException
   {
     if (dep == null)
-      throw new ApplicationException(Application.getI18n().tr("Keine Abhängigkeit angegeben"));
+      throw new ApplicationException(Application.getI18n().tr("Keine AbhÃ¤ngigkeit angegeben"));
 
     final String key = dep.getName() + "." + dep.getVersion();
     
@@ -692,7 +692,7 @@ public class RepositoryService implements Bootable
     Logger.info("repository " + url + " added");
     
     Application.getMessagingFactory().getMessagingQueue("jameica.update.repository.add").sendMessage(new QueryMessage(url));
-    Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Repository-URL hinzugefügt"),StatusBarMessage.TYPE_SUCCESS));
+    Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Repository-URL hinzugefÃ¼gt"),StatusBarMessage.TYPE_SUCCESS));
   }
 
   /**
@@ -723,7 +723,7 @@ public class RepositoryService implements Bootable
     Logger.info("repository " + url + " removed");
 
     Application.getMessagingFactory().getMessagingQueue("jameica.update.repository.remove").sendMessage(new QueryMessage(url));
-    Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Repository-URL gelöscht"),StatusBarMessage.TYPE_SUCCESS));
+    Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Repository-URL gelÃ¶scht"),StatusBarMessage.TYPE_SUCCESS));
   }
   
   /**

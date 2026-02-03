@@ -115,7 +115,7 @@ public class PluginSourceSystem extends AbstractPluginSource
    */
   public String getName()
   {
-    return Application.getI18n().tr("Programm-Ordner (für alle Benutzer der Jameica-Installation)");
+    return Application.getI18n().tr("Programm-Ordner (fÃ¼r alle Benutzer der Jameica-Installation)");
   }
 
   /**

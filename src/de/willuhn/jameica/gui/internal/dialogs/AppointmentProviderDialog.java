@@ -63,7 +63,7 @@ public class AppointmentProviderDialog extends AbstractDialog<List<AppointmentPr
   protected void paint(Composite parent) throws Exception
   {
     Container c = new SimpleContainer(parent,true);
-    c.addText(i18n.tr("Wählen Sie die anzuzeigenden Kalender aus."),true);
+    c.addText(i18n.tr("WÃ¤hlen Sie die anzuzeigenden Kalender aus."),true);
 
     this.table = new TablePart(null);
     this.table.addColumn(i18n.tr("Bezeichnung"),"name");
@@ -110,7 +110,7 @@ public class AppointmentProviderDialog extends AbstractDialog<List<AppointmentPr
     }
 
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Übernehmen"), new Action() {
+    buttons.addButton(i18n.tr("Ãœbernehmen"), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         try

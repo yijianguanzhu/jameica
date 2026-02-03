@@ -242,7 +242,7 @@ public final class ServiceFactory
     if (host == null || host.length() == 0 || port == -1)
     {
       Logger.error("missing entry: " + serviceName + "=<hostname>:<port> in " + Application.getConfig().getConfigDir() + File.separator + ServiceFactory.class.getName() + ".properties");
-      throw new ApplicationException(Application.getI18n().tr("Für den Service \"{0}\" ist kein Server definiert",serviceName));
+      throw new ApplicationException(Application.getI18n().tr("FÃ¼r den Service \"{0}\" ist kein Server definiert",serviceName));
     }
     
     Logger.debug("searching for service at rmi://" + host + ":" + port + "/" + fullName);

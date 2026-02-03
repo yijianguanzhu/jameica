@@ -22,7 +22,7 @@ import de.willuhn.util.ApplicationException;
 import de.willuhn.util.I18N;
 
 /**
- * Action zum Öffnen eines Attachments.
+ * Action zum Ã–ffnen eines Attachments.
  */
 public class AttachmentOpen implements Action
 {
@@ -36,13 +36,13 @@ public class AttachmentOpen implements Action
   public void handleAction(Object context) throws ApplicationException
   {
     if (!(context instanceof Attachment))
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie die zu öffnende Datei."));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie die zu Ã¶ffnende Datei."));
 
     final Attachment a = (Attachment) context;
 
     try
     {
-      // Wir kopieren das Attachment in eine lokale Temp-Datei, damit wir sie öffnen können
+      // Wir kopieren das Attachment in eine lokale Temp-Datei, damit wir sie Ã¶ffnen kÃ¶nnen
       final String filename = a.getFilename();
       int dot = filename.lastIndexOf('.');
       final String name = dot > 0 ? filename.substring(0,dot) : null;
@@ -56,7 +56,7 @@ public class AttachmentOpen implements Action
     catch (IOException e)
     {
       Logger.error("unable to open file",e);
-      throw new ApplicationException(i18n.tr("Öffnen der Datei fehlgeschlagen"));
+      throw new ApplicationException(i18n.tr("Ã–ffnen der Datei fehlgeschlagen"));
     }
   }
 

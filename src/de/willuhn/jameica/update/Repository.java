@@ -202,7 +202,7 @@ public class Repository
           else if (interactive)
           {
             String q = i18n.tr("Das Plugin \"{0}\" wurde vom Herausgeber nicht signiert.\n" +
-            		               "Möchten Sie es dennoch installieren?",name);
+            		               "MÃ¶chten Sie es dennoch installieren?",name);
             if (!Application.getCallback().askUser(q,false))
               throw new OperationCanceledException(i18n.tr("Vorgang abgebrochen"));
           }
@@ -257,7 +257,7 @@ public class Repository
             String text = sigchecked ? i18n.tr("Digitale Signatur des Plugins \"{0}\" korrekt.",name) :
                                        i18n.tr("Plugin \"{0}\" enthielt keine digitale Signatur.",name);
             
-            text += "\n" + i18n.tr("Die Installation erfolgt beim nächsten Neustart von Jameica.");
+            text += "\n" + i18n.tr("Die Installation erfolgt beim nÃ¤chsten Neustart von Jameica.");
             TextMessage msg = new TextMessage(i18n.tr("Plugin \"{0}\" heruntergeladen",name),text);
             Application.getMessagingFactory().getMessagingQueue("jameica.popup").sendMessage(msg);
           }

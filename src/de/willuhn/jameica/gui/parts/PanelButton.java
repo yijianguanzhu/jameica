@@ -246,8 +246,8 @@ public class PanelButton implements Part
     if (s == null)
       return;
     
-    // Aus irgend einem Grund liefert "textExtent" 1px mehr Höhe beim MouseOver.
-    // Wir speichern daher die Höhe, damit sie sich nicht mehr ändert.
+    // Aus irgend einem Grund liefert "textExtent" 1px mehr HÃ¶he beim MouseOver.
+    // Wir speichern daher die HÃ¶he, damit sie sich nicht mehr Ã¤ndert.
     final Point size = gc.textExtent(s);
     if (this.textHeight == -1)
       this.textHeight = size.y;

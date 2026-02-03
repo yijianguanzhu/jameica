@@ -65,9 +65,9 @@ public class PluginSourceDialog extends AbstractDialog
     Container c = new SimpleContainer(parent,true);
     
     if (this.manifest != null)
-      c.addText(i18n.tr("Bitte w‰hlen Sie den Ordner, in dem das Plugin \"{0}\" installiert werden soll.",this.manifest.getName()),true);
+      c.addText(i18n.tr("Bitte w√§hlen Sie den Ordner, in dem das Plugin \"{0}\" installiert werden soll.",this.manifest.getName()),true);
     else
-      c.addText(i18n.tr("Bitte w‰hlen Sie den Ordner, in dem die Plugins installiert werden sollen."),true);
+      c.addText(i18n.tr("Bitte w√§hlen Sie den Ordner, in dem die Plugins installiert werden sollen."),true);
 
     final LabelInput dir = new LabelInput("");
     dir.setColor(Color.COMMENT);
@@ -94,7 +94,7 @@ public class PluginSourceDialog extends AbstractDialog
     c.addInput(dir);
 
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("‹bernehmen"), new Action() {
+    buttons.addButton(i18n.tr("√úbernehmen"), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         choosen = (PluginSource) select.getValue();

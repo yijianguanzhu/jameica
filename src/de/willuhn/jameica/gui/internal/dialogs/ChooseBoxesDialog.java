@@ -68,7 +68,7 @@ public class ChooseBoxesDialog extends AbstractDialog
     List<Box> boxes = BoxRegistry.getBoxes();
     
     Container c = new SimpleContainer(parent,true);
-    c.addText(i18n.tr("Wählen Sie die anzuzeigenden Elemente aus."),true);
+    c.addText(i18n.tr("WÃ¤hlen Sie die anzuzeigenden Elemente aus."),true);
 
     table = new TablePart(boxes,null)
     {
@@ -98,7 +98,7 @@ public class ChooseBoxesDialog extends AbstractDialog
       }
     };
     table.addColumn(i18n.tr("Bezeichnung"),"name");
-    table.addColumn(i18n.tr("Höhe des Elements"),"height",null,true,Column.ALIGN_RIGHT);
+    table.addColumn(i18n.tr("HÃ¶he des Elements"),"height",null,true,Column.ALIGN_RIGHT);
     table.setCheckable(true);
     table.setMulti(false);
     table.removeFeature(FeatureSummary.class);
@@ -226,7 +226,7 @@ public class ChooseBoxesDialog extends AbstractDialog
     
     buttons.addButton(up);
     buttons.addButton(down);
-    buttons.addButton(i18n.tr("Übernehmen"), new Action() {
+    buttons.addButton(i18n.tr("Ãœbernehmen"), new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         try

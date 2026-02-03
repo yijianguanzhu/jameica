@@ -117,7 +117,7 @@ public class PluginListPart implements Part
   {
     {
       Container container = new SimpleContainer(comp);
-      container.addText(i18n.tr("Nur Plugins im Benutzer-Ordner (oder im System-Ordner, wenn er beschreibbar ist) können aktualisiert oder deinstalliert werden.\n" +
+      container.addText(i18n.tr("Nur Plugins im Benutzer-Ordner (oder im System-Ordner, wenn er beschreibbar ist) kÃ¶nnen aktualisiert oder deinstalliert werden.\n" +
                                 "Bitte starten Sie Jameica nach der Installation bzw. Deinstallation eines Plugins neu."),true,Color.COMMENT);
       container.addText("",true);
     }
@@ -159,7 +159,7 @@ public class PluginListPart implements Part
     {
       itemAvailable.setShowClose(false);
       itemAvailable.setFont(Font.BOLD.getSWTFont());
-      itemAvailable.setText(toTabLabel("Verfügbare Plugins"));
+      itemAvailable.setText(toTabLabel("VerfÃ¼gbare Plugins"));
 
       if (this.focus != null && this.focus == Type.AVAILABLE)
         folder.setSelection(itemAvailable);
@@ -230,7 +230,7 @@ public class PluginListPart implements Part
         catch (RemoteException re)
         {
           Logger.error("unable to load available plugins",re);
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Laden der verfügbaren Plugins fehlgeschlagen"),StatusBarMessage.TYPE_ERROR));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Laden der verfÃ¼gbaren Plugins fehlgeschlagen"),StatusBarMessage.TYPE_ERROR));
         }
       }
     });
@@ -248,7 +248,7 @@ public class PluginListPart implements Part
       catch (RemoteException re)
       {
         Logger.error("unable to load available plugins",re);
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Laden der verfügbaren Plugins fehlgeschlagen"),StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Laden der verfÃ¼gbaren Plugins fehlgeschlagen"),StatusBarMessage.TYPE_ERROR));
       }
     }
     ////////////////////////////////////////////////////////////////////////////
@@ -340,7 +340,7 @@ public class PluginListPart implements Part
       catch (MalformedURLException e)
       {
         handleAvailableError(e);
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("URL ungültig: {0}",repo),StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("URL ungÃ¼ltig: {0}",repo),StatusBarMessage.TYPE_ERROR));
       }
     }
     
@@ -393,7 +393,7 @@ public class PluginListPart implements Part
                 {
                   Placeholder empty = new Placeholder(Style.EMPTY);
                   empty.setTitle(i18n.tr("Keine Plugins gefunden"));
-                  empty.setText(i18n.tr("Ändern oder entfernen Sie ggf. den Suchbegriff"));
+                  empty.setText(i18n.tr("Ã„ndern oder entfernen Sie ggf. den Suchbegriff"));
                   empty.paint(availableList.getComposite());
                   availableList.update();
                   return;
@@ -564,7 +564,7 @@ public class PluginListPart implements Part
                 {
                   Placeholder empty = new Placeholder(Style.DONE);
                   empty.setTitle(i18n.tr("Keine Updates gefunden"));
-                  empty.setText(i18n.tr("Schauen Sie doch später mal wieder vorbei ;)"));
+                  empty.setText(i18n.tr("Schauen Sie doch spÃ¤ter mal wieder vorbei ;)"));
                   empty.paint(updateList.getComposite());
                   updateList.update();
                   return;
@@ -711,7 +711,7 @@ public class PluginListPart implements Part
       dispose(installedList,null);
       Placeholder pl = new Placeholder(Style.EMPTY);
       pl.setTitle(i18n.tr("Noch keine Plugins installiert"));
-      pl.setText(i18n.tr("Klicken Sie auf \"Verfügbare Plugins\", um Plugins zu installieren."));
+      pl.setText(i18n.tr("Klicken Sie auf \"VerfÃ¼gbare Plugins\", um Plugins zu installieren."));
       pl.paint(installedList.getComposite());
     }
     installedList.update();

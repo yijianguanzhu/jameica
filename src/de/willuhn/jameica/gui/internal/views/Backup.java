@@ -41,7 +41,7 @@ public class Backup extends AbstractView
     Container container = new SimpleContainer(getParent());
     container.addHeadline(i18n.tr("Einstellungen"));
     container.addCheckbox(control.getState(),i18n.tr("Backups automatisch beim Beenden von Jameica erstellen"));
-    container.addLabelPair(i18n.tr("Zielverzeichnis für die Backups"),control.getTarget());
+    container.addLabelPair(i18n.tr("Zielverzeichnis fÃ¼r die Backups"),control.getTarget());
     container.addLabelPair(i18n.tr("Maximale Anzahl zu erstellender Backups"),control.getCount());
 
     ButtonArea buttons = new ButtonArea();
@@ -57,7 +57,7 @@ public class Backup extends AbstractView
     },null,false,"document-save.png");
     container.addButtonArea(buttons);
 
-    container.addHeadline(i18n.tr("Verfügbare Backups"));
+    container.addHeadline(i18n.tr("VerfÃ¼gbare Backups"));
     control.getBackups().paint(getParent());
 
     ButtonArea buttons2 = new ButtonArea();

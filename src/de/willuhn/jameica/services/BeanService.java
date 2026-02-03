@@ -210,7 +210,7 @@ public class BeanService implements Bootable
     catch (Exception e)
     {
       Logger.error("unable to inject dependencies into " + name,e);
-      throw new JameicaException(Application.getI18n().tr("Abhängigkeiten können nicht in {0} injiziert werden: {1}",name,e.getMessage()));
+      throw new JameicaException(Application.getI18n().tr("AbhÃ¤ngigkeiten kÃ¶nnen nicht in {0} injiziert werden: {1}",name,e.getMessage()));
     }
   }
 

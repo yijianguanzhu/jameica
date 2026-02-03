@@ -40,12 +40,12 @@ public class ZippedPlugin
     I18N i18n = Application.getI18n();
 
     if (zip == null)
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie das zu installierende Plugin"));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie das zu installierende Plugin"));
 
     if (!zip.getName().endsWith(".zip"))
-      throw new ApplicationException(i18n.tr("Keine gültige ZIP-Datei"));
+      throw new ApplicationException(i18n.tr("Keine gÃ¼ltige ZIP-Datei"));
 
-    ApplicationException ae = new ApplicationException(i18n.tr("Kein gültiges Jameica-Plugin"));
+    ApplicationException ae = new ApplicationException(i18n.tr("Kein gÃ¼ltiges Jameica-Plugin"));
     ZipFile zipFile         = null;
     
     try
@@ -138,7 +138,7 @@ public class ZippedPlugin
 
       this.manifest = new Manifest(is);
       if (this.manifest.isSystemManifest())
-        throw new ApplicationException(i18n.tr("Die Datei enthält kein Plugin sondern Jameica selbst"));
+        throw new ApplicationException(i18n.tr("Die Datei enthÃ¤lt kein Plugin sondern Jameica selbst"));
       //
       ////////////////////////////////////////////////////////////////////////////
 

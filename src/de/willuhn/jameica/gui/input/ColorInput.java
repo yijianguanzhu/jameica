@@ -49,7 +49,7 @@ public class ColorInput extends ButtonInput
 				Logger.debug("starting color choose dialog");
 				ColorDialog cd = new ColorDialog(GUI.getShell());
         cd.setRGB(ColorInput.this.color.getRGB());
-        cd.setText(Application.getI18n().tr("Bitte w‰hlen Sie die Farbe aus"));
+        cd.setText(Application.getI18n().tr("Bitte w√§hlen Sie die Farbe aus"));
 				setValue(cd.open());
 				label.forceFocus(); // das muessen wir machen, damit der CommentListener ausgeloest wird
       }

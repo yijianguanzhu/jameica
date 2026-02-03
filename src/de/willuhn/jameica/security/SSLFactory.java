@@ -208,7 +208,7 @@ public class SSLFactory
 	{
 
 		Logger.info("init encryption system");
-    Application.getCallback().getStartupMonitor().setStatusText("init encryption system");
+    Application.getCallback().getStartupMonitor().setStatusText(Application.getI18n().tr("init encryption system"));
 
 		File keyStoreFile = getKeyStoreFile();
 
@@ -225,7 +225,7 @@ public class SSLFactory
 
 		////////////////////////////////////////////////////////////////////////////
 		// Keys erstellen
-		Application.getCallback().getStartupMonitor().setStatusText("generating new keys and certificates");
+		Application.getCallback().getStartupMonitor().setStatusText(Application.getI18n().tr("generating new keys and certificates"));
 
 		Logger.info("  generating rsa keypair");
 		KeyPairGenerator kp = KeyPairGenerator.getInstance("RSA",BouncyCastleProvider.PROVIDER_NAME);
@@ -442,7 +442,7 @@ public class SSLFactory
   {
     try
     {
-      X509Certificate cert     = this.loadCertificate(new ByteArrayInputStream(data.getBytes("ISO-8859-1")));
+      X509Certificate cert     = this.loadCertificate(new ByteArrayInputStream(data.getBytes("UTF-8")));
       String alias             = this.createAlias(cert);
       X509Certificate existing = this.getTrustedCertificate(alias);
       
@@ -703,8 +703,8 @@ public class SSLFactory
   /**
    * Liefert die Certificate-Factory.
    * @return die Certificate-Factory.
-   * @throws java.security.cert.CertificateException falls Algorithmus nicht unterstützt wird (siehe {@link CertificateFactory})
-   * @throws java.security.NoSuchProviderException falls Provider nicht unterstützt wird (siehe {@link CertificateFactory})
+   * @throws java.security.cert.CertificateException falls Algorithmus nicht unterstÃ¼tzt wird (siehe {@link CertificateFactory})
+   * @throws java.security.NoSuchProviderException falls Provider nicht unterstÃ¼tzt wird (siehe {@link CertificateFactory})
    */
   public synchronized CertificateFactory getCertificateFactory() throws Exception
   {
@@ -738,7 +738,7 @@ public class SSLFactory
     
     // Pruefen, dass nicht das System-Zertifikat ueberschrieben wird.
     if (getSystemCertificate().equals(cert))
-      throw new OperationCanceledException(Application.getI18n().tr("Das System-Zertifikat darf nicht überschrieben werden"));
+      throw new OperationCanceledException(Application.getI18n().tr("Das System-Zertifikat darf nicht Ã¼berschrieben werden"));
     
     // Pruefen, ob nicht ein anderes Zertifikat ueberschrieben wird
     // BUGZILLA 330
@@ -767,13 +767,13 @@ public class SSLFactory
     }
     catch (CertificateExpiredException exp)
     {
-      String s = Application.getI18n().tr("Zertifikat abgelaufen. Trotzdem vertrauen?\nGültigkeit: {0} - {1}",new String[]{validFrom,validTo});
+      String s = Application.getI18n().tr("Zertifikat abgelaufen. Trotzdem vertrauen?\nGÃ¼ltigkeit: {0} - {1}",new String[]{validFrom,validTo});
       if (!Application.getCallback().askUser(s))
         throw new OperationCanceledException(Application.getI18n().tr("Import des Zertifikats abgebrochen"));
     }
     catch (CertificateNotYetValidException not)
     {
-      String s = Application.getI18n().tr("Zertifikat noch nicht gültig. Trotzdem vertrauen?\nGültigkeit: {0} - {1}",new String[]{validFrom,validTo});
+      String s = Application.getI18n().tr("Zertifikat noch nicht gÃ¼ltig. Trotzdem vertrauen?\nGÃ¼ltigkeit: {0} - {1}",new String[]{validFrom,validTo});
       if (!Application.getCallback().askUser(s))
         throw new OperationCanceledException(Application.getI18n().tr("Import des Zertifikats abgebrochen"));
     }

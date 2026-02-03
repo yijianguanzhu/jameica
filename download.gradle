@@ -9,7 +9,7 @@ buildscript {
 }
 
 sourceCompatibility = 1.7
-compileJava.options.encoding = 'ISO-8859-1'
+compileJava.options.encoding = 'UTF-8'
 
 eclipse {
     classpath {

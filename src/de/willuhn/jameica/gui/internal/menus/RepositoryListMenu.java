@@ -35,12 +35,12 @@ public class RepositoryListMenu extends ContextMenu
    */
   public RepositoryListMenu()
   {
-    addItem(new SystemCheckedContextMenuItem(i18n.tr("Löschen..."),new RepositoryRemove(),"user-trash-full.png"));
+    addItem(new SystemCheckedContextMenuItem(i18n.tr("LÃ¶schen..."),new RepositoryRemove(),"user-trash-full.png"));
     addItem(ContextMenuItem.SEPARATOR);
     addItem(new ChangeStateCheckedContextMenuItem(i18n.tr("Deaktivieren..."),new RepositoryDisable(),"network-offline.png",false));
     addItem(new ChangeStateCheckedContextMenuItem(i18n.tr("Aktivieren..."),new RepositoryEnable(),"network-transmit-receive.png",true));
     addItem(ContextMenuItem.SEPARATOR);
-    addItem(new ContextMenuItem(i18n.tr("Neues Repository hinzufügen..."),new RepositoryAdd(),"document-new.png"));
+    addItem(new ContextMenuItem(i18n.tr("Neues Repository hinzufÃ¼gen..."),new RepositoryAdd(),"document-new.png"));
   }
   
   /**

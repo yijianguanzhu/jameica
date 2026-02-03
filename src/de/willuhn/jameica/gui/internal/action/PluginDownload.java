@@ -56,7 +56,7 @@ public class PluginDownload implements Action
       // Wenn es direkt installierbar ist, dann laden wir es sofort herunter
       if (data.isInstallable())
       {
-        if (!Application.getCallback().askUser(i18n.tr("Sind Sie sicher, daﬂ Sie {0} (Version {1})\nherunterladen und installieren mˆchten?",data.getName(),data.getAvailableVersion().toString()),false))
+        if (!Application.getCallback().askUser(i18n.tr("Sind Sie sicher, da√ü Sie {0} (Version {1})\nherunterladen und installieren m√∂chten?",data.getName(),data.getAvailableVersion().toString()),false))
           return;
 
         Repository repo = data.getPluginGroup().getRepository();
@@ -100,7 +100,7 @@ public class PluginDownload implements Action
       // Wir haben weder zu installierende noch fehlende Abhaengigkeiten
       if (!haveDeps && !haveMissing)
       {
-        if (!Application.getCallback().askUser(i18n.tr("Sind Sie sicher, daﬂ Sie das Plugin\nherunterladen und installieren mˆchten?"),false))
+        if (!Application.getCallback().askUser(i18n.tr("Sind Sie sicher, da√ü Sie das Plugin\nherunterladen und installieren m√∂chten?"),false))
           return;
 
         Repository repo = data.getPluginGroup().getRepository();

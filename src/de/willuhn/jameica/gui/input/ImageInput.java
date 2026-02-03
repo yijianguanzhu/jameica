@@ -168,7 +168,7 @@ public class ImageInput extends AbstractInput
       {
         FileDialog dialog = new FileDialog(GUI.getShell(), SWT.OPEN);
         dialog.setFilterExtensions(new String[]{"*.jpg;*.jpeg;*.png;*.gif;*.bmp"});
-        dialog.setText(i18n.tr("Bitte w‰hlen Sie die Bild-Datei aus"));
+        dialog.setText(i18n.tr("Bitte w√§hlen Sie die Bild-Datei aus"));
         String lastDir = settings.getString("lastdir",System.getProperty("user.home"));
         if (lastDir != null)
           dialog.setFilterPath(lastDir);

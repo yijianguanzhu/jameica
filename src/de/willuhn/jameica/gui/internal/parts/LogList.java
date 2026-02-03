@@ -68,7 +68,7 @@ public class LogList extends TablePart
     this.target = new LiveTarget();
     Logger.addTarget(this.target);
 
-    this.addColumn(Application.getI18n().tr("Priorit‰t"),"level");
+    this.addColumn(Application.getI18n().tr("Priorit√§t"),"level");
     this.addColumn(Application.getI18n().tr("Datum"),"date", new DateFormatter(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")));
     this.addColumn(Application.getI18n().tr("Text"),"text");
     this.setMulti(false);
@@ -97,7 +97,7 @@ public class LogList extends TablePart
     });
     
     ContextMenu menu = new ContextMenu();
-    menu.addItem(new CheckedContextMenuItem(Application.getI18n().tr("÷ffnen"),new DetailAction()));
+    menu.addItem(new CheckedContextMenuItem(Application.getI18n().tr("√ñffnen"),new DetailAction()));
     menu.addItem(new ContextMenuItem(Application.getI18n().tr("Speichern unter..."), new LogExport()));
     this.setContextMenu(menu);
   }

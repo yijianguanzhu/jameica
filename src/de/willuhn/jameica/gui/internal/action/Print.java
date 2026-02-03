@@ -38,7 +38,7 @@ public class Print implements Action
   {
     if (context == null || !(context instanceof PrintSupport))
     {
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Bitte w‰hlen Sie die zu druckenden Daten aus"),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Bitte w√§hlen Sie die zu druckenden Daten aus"),StatusBarMessage.TYPE_ERROR));
       return;
     }
 

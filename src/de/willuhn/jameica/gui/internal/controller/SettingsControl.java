@@ -138,7 +138,7 @@ public class SettingsControl extends AbstractControl
     this.proxyPort.setMaxLength(5);
     this.proxyPort.setName("");
     this.proxyPort.setHint("<" + i18n.tr("TCP-Port") + ">");
-    this.proxyPort.setComment(Application.getI18n().tr("freilassen, wenn nicht gewünscht"));
+    this.proxyPort.setComment(Application.getI18n().tr("freilassen, wenn nicht gewÃ¼nscht"));
     return this.proxyPort;
   }
   
@@ -170,7 +170,7 @@ public class SettingsControl extends AbstractControl
     this.httpsProxyPort.setMaxLength(5);
     this.httpsProxyPort.setName("");
     this.httpsProxyPort.setHint("<" + i18n.tr("TCP-Port") + ">");
-    this.httpsProxyPort.setComment(Application.getI18n().tr("freilassen, wenn nicht gewünscht"));
+    this.httpsProxyPort.setComment(Application.getI18n().tr("freilassen, wenn nicht gewÃ¼nscht"));
     return this.httpsProxyPort;
   }
 
@@ -198,7 +198,7 @@ public class SettingsControl extends AbstractControl
           catch (Exception e)
           {
             Logger.error("unable to apply settings",e);
-            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Übernehmen der Proxy-Einstellungen: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+            Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Ãœbernehmen der Proxy-Einstellungen: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
           }
         }
       };
@@ -223,7 +223,7 @@ public class SettingsControl extends AbstractControl
     if (this.askWorkDir == null)
     {
       this.askWorkDir = new CheckboxInput(BootstrapSettings.getAskWorkdir());
-      this.askWorkDir.setName(i18n.tr("Zu verwendenden Benutzer-Ordner bei Start auswählen"));
+      this.askWorkDir.setName(i18n.tr("Zu verwendenden Benutzer-Ordner bei Start auswÃ¤hlen"));
     }
     return this.askWorkDir;
   }
@@ -240,9 +240,10 @@ public class SettingsControl extends AbstractControl
     final List<Locale> list = new ArrayList<Locale>();
     list.add(Locale.GERMANY);
     list.add(Locale.ENGLISH);
-    
+    list.add(Locale.SIMPLIFIED_CHINESE);
+
     final Locale current = Application.getConfig().getLocale();
-    final Locale selected = Objects.equals(current.getLanguage(),Locale.ENGLISH.getLanguage()) ? Locale.ENGLISH : Locale.GERMAN;
+    final Locale selected = Objects.equals(current.getLanguage(),Locale.ENGLISH.getLanguage()) ? Locale.ENGLISH : current;
     this.locale = new SelectInput(list,selected);
     this.locale.setAttribute("displayName");
     
@@ -335,7 +336,7 @@ public class SettingsControl extends AbstractControl
 	  
 	  final SystrayService service = Application.getBootLoader().getBootable(SystrayService.class);
 	  this.minimizeToSystray = new CheckboxInput(service.isMinimizeToSystray());
-	  this.minimizeToSystray.setName(i18n.tr("Fenster beim Minimieren/Schließen in System-Tray verschieben"));
+	  this.minimizeToSystray.setName(i18n.tr("Fenster beim Minimieren/SchlieÃŸen in System-Tray verschieben"));
 	  return this.minimizeToSystray;
 	}
   
@@ -446,7 +447,7 @@ public class SettingsControl extends AbstractControl
       Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Einstellungen gespeichert."),StatusBarMessage.TYPE_SUCCESS));
 
       if (restartNeeded)
-        Application.getCallback().notifyUser(i18n.tr("Bitte starten Sie Jameica neu, damit alle Änderungen wirksam werden."));
+        Application.getCallback().notifyUser(i18n.tr("Bitte starten Sie Jameica neu, damit alle Ã„nderungen wirksam werden."));
     }
     catch (ApplicationException ae)
     {
@@ -468,7 +469,7 @@ public class SettingsControl extends AbstractControl
   	try {
   		YesNoDialog prompt = new YesNoDialog(YesNoDialog.POSITION_CENTER);
   		prompt.setTitle(i18n.tr("Sicher?"));
-  		prompt.setText(i18n.tr("Alle Einstellungen werden auf die Standard-Werte zurückgesetzt"));
+  		prompt.setText(i18n.tr("Alle Einstellungen werden auf die Standard-Werte zurÃ¼ckgesetzt"));
   		if (!((Boolean) prompt.open()).booleanValue())
   			return;
 
@@ -484,7 +485,7 @@ public class SettingsControl extends AbstractControl
       Application.getConfig().setProxyPort(-1);
 
       Application.getMessagingFactory().sendSyncMessage(new SettingsRestoredMessage());
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Einstellungen zurückgesetzt."),StatusBarMessage.TYPE_SUCCESS));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Einstellungen zurÃ¼ckgesetzt."),StatusBarMessage.TYPE_SUCCESS));
 			new de.willuhn.jameica.gui.internal.action.Settings().handleAction(null);
   	}
     catch (OperationCanceledException oce)
@@ -495,7 +496,7 @@ public class SettingsControl extends AbstractControl
   	catch (Exception e)
   	{
   		Logger.error("error while restoring settings",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Zurücksetzen der Einstellungen."),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim ZurÃ¼cksetzen der Einstellungen."),StatusBarMessage.TYPE_ERROR));
   	}
   	
   }

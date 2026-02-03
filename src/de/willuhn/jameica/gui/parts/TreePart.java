@@ -525,7 +525,7 @@ public class TreePart extends AbstractTablePart
     {
       TreeItem child = children[i];
       
-      //Wir sortieren nur die Blätter
+      //Wir sortieren nur die BlÃ¤tter
       if(child.getItemCount()>0){
         orderBy(child, comparator);
       }else{
@@ -536,7 +536,7 @@ public class TreePart extends AbstractTablePart
     if(!direction){
       Collections.reverse(itemsToSort);
     }
-    //Eine Sortierung ist nur durch Entfernen und Neueinfügen möglich
+    //Eine Sortierung ist nur durch Entfernen und NeueinfÃ¼gen mÃ¶glich
     for (TreeItem treeItemToReplace : itemsToSort)
     {
       Object data = treeItemToReplace.getData();
@@ -901,7 +901,7 @@ public class TreePart extends AbstractTablePart
 		}
   }
 
-  //Zur Sortierung verwenden wir wenn möglich die zugrunde liegenden Daten
+  //Zur Sortierung verwenden wir wenn mÃ¶glich die zugrunde liegenden Daten
   //Fallback ist der Spaltentext
   private class GenericTreeItemComparator implements Comparator<TreeItem>{
 

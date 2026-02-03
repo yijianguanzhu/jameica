@@ -38,7 +38,7 @@ public abstract class AbstractRepositoryChangeState implements Action
     String s = context.toString();
     
     if (RepositoryService.SYSTEM_REPOSITORY.equalsIgnoreCase(s))
-      throw new ApplicationException(i18n.tr("Status des System-Repository darf nicht geändert werden"));
+      throw new ApplicationException(i18n.tr("Status des System-Repository darf nicht geÃ¤ndert werden"));
     
     URL url = null;
     try
@@ -48,7 +48,7 @@ public abstract class AbstractRepositoryChangeState implements Action
     catch (Exception e)
     {
       Logger.error("invalid url: " + context,e);
-      throw new ApplicationException(i18n.tr("Keine gültige Repository-URL angegeben"));
+      throw new ApplicationException(i18n.tr("Keine gÃ¼ltige Repository-URL angegeben"));
     }
     
     RepositoryService service = Application.getBootLoader().getBootable(RepositoryService.class);

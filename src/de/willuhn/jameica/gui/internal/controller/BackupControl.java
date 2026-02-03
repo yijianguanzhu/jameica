@@ -174,7 +174,7 @@ public class BackupControl extends AbstractControl
     this.backups = new TablePart(PseudoIterator.fromArray(BackupEngine.getBackups((String)getTarget().getValue())),null);
     this.backups.addColumn(Application.getI18n().tr("Dateiname"),"name");
     this.backups.addColumn(Application.getI18n().tr("Erstellt am"),"created", new DateFormatter(null));
-    this.backups.addColumn(Application.getI18n().tr("Grˆﬂe"),"size", new Formatter() {
+    this.backups.addColumn(Application.getI18n().tr("Gr√∂√üe"),"size", new Formatter() {
 
       /**
        * @see de.willuhn.jameica.gui.formatter.Formatter#format(java.lang.Object)
@@ -228,7 +228,7 @@ public class BackupControl extends AbstractControl
       {
         FileDialog dialog = new FileDialog(GUI.getShell(),SWT.OPEN);
         dialog.setFilterExtensions(new String[]{"*.zip"});
-        dialog.setText(Application.getI18n().tr("Bitte w‰hlen Sie die Datei aus"));
+        dialog.setText(Application.getI18n().tr("Bitte w√§hlen Sie die Datei aus"));
 
         String f = dialog.open();
         if (StringUtils.isEmpty(f))
@@ -254,7 +254,7 @@ public class BackupControl extends AbstractControl
     if (this.selectedRestore != null)
       return this.selectedRestore;
     
-    this.selectedRestore = new Button(Application.getI18n().tr("Ausgew‰hltes Backup wiederherstellen..."),new Action() {
+    this.selectedRestore = new Button(Application.getI18n().tr("Ausgew√§hltes Backup wiederherstellen..."),new Action() {
       
       public void handleAction(Object context) throws ApplicationException
       {
@@ -318,7 +318,7 @@ public class BackupControl extends AbstractControl
   {
     if (file == null)
     {
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Bitte w‰hlen Sie das wiederherzustellende Backup aus"), StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Bitte w√§hlen Sie das wiederherzustellende Backup aus"), StatusBarMessage.TYPE_ERROR));
       return;
     }
     

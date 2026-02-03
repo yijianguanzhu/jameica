@@ -60,15 +60,15 @@ public class UpdateEditDialog extends AbstractDialog<Void>
   protected void paint(Composite parent) throws Exception
   {
     SimpleContainer c = new SimpleContainer(parent);
-    c.addText(i18n.tr("Aktivieren Sie die automatische Suche nach Updates, wenn Jameica regelm‰ﬂig pr¸fen soll, " +
-                      "ob zu den installierten Plugins neue Updates verf¸gbar sind."),true);
+    c.addText(i18n.tr("Aktivieren Sie die automatische Suche nach Updates, wenn Jameica regelm√§√üig pr√ºfen soll, " +
+                      "ob zu den installierten Plugins neue Updates verf√ºgbar sind."),true);
 
     c.addInput(this.getUpdateCheck());
     c.addInput(this.getUpdateInterval());
     c.addInput(this.getUpdateInstall());
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("‹bernehmen"),new Action() {
+    buttons.addButton(i18n.tr("√úbernehmen"),new Action() {
       
       public void handleAction(Object context) throws ApplicationException
       {
@@ -76,7 +76,7 @@ public class UpdateEditDialog extends AbstractDialog<Void>
         close();
       }
     },null,false,"document-save.png");
-    buttons.addButton(i18n.tr("Schlieﬂen"), new Action()
+    buttons.addButton(i18n.tr("Schlie√üen"), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {

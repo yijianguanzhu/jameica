@@ -131,7 +131,7 @@ public class ListDialog extends AbstractDialog
     table.paint(parent);
     
     ButtonArea b = new ButtonArea();
-    b.addButton(i18n.tr("Übernehmen"), new Action()
+    b.addButton(i18n.tr("Ãœbernehmen"), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {

@@ -64,7 +64,7 @@ public class LogDetailDialog extends AbstractDialog
     else if (level.getValue() == Level.WARN.getValue()) l.setColor(Color.LINK_ACTIVE);
     else if (level.getValue() >= Level.ERROR.getValue()) l.setColor(Color.ERROR);
 
-    container.addLabelPair(Application.getI18n().tr("Priorit‰t"), l);
+    container.addLabelPair(Application.getI18n().tr("Priorit√§t"), l);
     container.addLabelPair(Application.getI18n().tr("Quelle"), new LabelInput(message.getLoggingClass() + "." + message.getLoggingMethod()));
     
     container.addHeadline(Application.getI18n().tr("Nachricht"));
@@ -78,7 +78,7 @@ public class LogDetailDialog extends AbstractDialog
 
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(Application.getI18n().tr("Schlieﬂen"),new Action() {
+    buttons.addButton(Application.getI18n().tr("Schlie√üen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         close();

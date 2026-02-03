@@ -39,7 +39,7 @@ public class DateUtil
 {
   /**
    * Das Default-Dateformat von Jameica.
-   * Wird als DateTimeFormatter-Pattern über i18n angegeben.
+   * Wird als DateTimeFormatter-Pattern Ã¼ber i18n angegeben.
    * z. B. deutsch: dd.MM.uuuu / englisch: dd/MM/uuuu
    * {@see <a href="https://docs.oracle.com/javase/8/docs/api/index.html?java/time/format/DateTimeFormatter.html">Java Docs: DateTimeFormatter</a>}
    */
@@ -59,14 +59,14 @@ public class DateUtil
 
   /**
    * Wird diese Klasse getestet, existiert die Application-Instanz nicht
-   * und wir können das Locale nicht aus der Config lesen.
+   * und wir kÃ¶nnen das Locale nicht aus der Config lesen.
    */
   private static void initializeLocale(Locale locale, String defaultDatePattern, String shortDatePattern) {
     if (locale == null) {
       try {
         locale = Application.getConfig().getLocale();
       } catch (NullPointerException e) {
-        // Fallback, falls Application noch nicht initialisiert wurde (für Tests)
+        // Fallback, falls Application noch nicht initialisiert wurde (fÃ¼r Tests)
         locale = Locale.GERMANY;
       }
     }
@@ -94,20 +94,20 @@ public class DateUtil
   }
 
   /**
-   * Überschreibt das von der Config vorgegebene Locale (für Tests)
-   * @implNote Diese Methode sollte nur für Tests verwendet werden und ist nicht für den Produktions-Betrieb gedacht.
-   * @param locale Das Locale, das beim Parsen und Formatieren berücksichtigt wird
-   * @param defaultDatePattern Das DateTimeFormatter-Pattern, das für die Standardformatierung verwendet wird
-   * @param shortDatePattern Das DateTimeFormatter-Pattern, das für die kurze Formatierung verwendet wird
+   * Ãœberschreibt das von der Config vorgegebene Locale (fÃ¼r Tests)
+   * @implNote Diese Methode sollte nur fÃ¼r Tests verwendet werden und ist nicht fÃ¼r den Produktions-Betrieb gedacht.
+   * @param locale Das Locale, das beim Parsen und Formatieren berÃ¼cksichtigt wird
+   * @param defaultDatePattern Das DateTimeFormatter-Pattern, das fÃ¼r die Standardformatierung verwendet wird
+   * @param shortDatePattern Das DateTimeFormatter-Pattern, das fÃ¼r die kurze Formatierung verwendet wird
    */
   public static void setLocaleForTesting(Locale locale, String defaultDatePattern, String shortDatePattern) {
     initializeLocale(locale, defaultDatePattern, shortDatePattern);
   }
 
   /**
-   * Eingabehilfe für Datumsfelder.<br>
+   * Eingabehilfe fÃ¼r Datumsfelder.<br>
    * Wie {@link #parseUserInput(String, DateTimeFormatter)}, nur dass ein String
-   * zurückgegeben wird. Verwendet immer das {@link #DEFAULT_FORMAT}.
+   * zurÃ¼ckgegeben wird. Verwendet immer das {@link #DEFAULT_FORMAT}.
    * @param text zu parsender Text.
    * @return das vervollstaendigte Datum oder der Originalwert, wenn es nicht
    * geparst werden konnter.
@@ -121,8 +121,8 @@ public class DateUtil
   }
 
   /**
-   * Eingabehilfe für Datumsfelder.<br>
-   * Unterstützte Formate:<br>
+   * Eingabehilfe fÃ¼r Datumsfelder.<br>
+   * UnterstÃ¼tzte Formate:<br>
    * - Das per defaultFormatter angegebene Format<br>
    * - d | dd | ddMM | ddMMyy | ddMMyyyy<br>
    * - dd. | dd.MM. | dd.MM.yy | dd.MM.yyyy (dd und MM auch einstellig)<br>
@@ -252,13 +252,13 @@ public class DateUtil
    * @return das SimpleDateFormat-Pattern
    */
   private static String createSimpleDateFormatPattern(String dateTimeFormatterPattern) {
-    // u (Jahr ohne Ära) im DateTimeFormatter entspricht y im SimpleDateFormat
+    // u (Jahr ohne Ã„ra) im DateTimeFormatter entspricht y im SimpleDateFormat
     return dateTimeFormatterPattern.replace("u", "y");
   }
   
   /**
    * Versucht aus einem java.text.DateFormat einen java.time.format.DateTimeFormatter zu erstellen.
-   * @param dFormat Das DateFormat. Eine Konvertierung ist nur möglich, wenn es
+   * @param dFormat Das DateFormat. Eine Konvertierung ist nur mÃ¶glich, wenn es
    *                instanceof java.text.SimpleDateFormat ist. Andernfalls wird
    *                das {@link DEFAULT_FORMAT} verwendet.
    * @return der DateTimeFormatter
@@ -292,14 +292,14 @@ public class DateUtil
   }
 
   /**
-   * Fügt eine Anzahl von Monaten zu einem LocalDate hinzu. Ist das Eingabedatum
+   * FÃ¼gt eine Anzahl von Monaten zu einem LocalDate hinzu. Ist das Eingabedatum
    * der letzte Tag eines Monats, wird das Ausgabedatum ebenfalls der letzte
    * Tag des Monats sein.<br>
    * Beispiele:<br>
    * 30.04. + 1 Monat = 31.05.<br>
    * 31.05. - 1 Monat = 30.04.
    * @param date das Eingabedatum
-   * @param months die Anzahl der Monate, die hinzugefügt werden soll (auch negativ möglich)
+   * @param months die Anzahl der Monate, die hinzugefÃ¼gt werden soll (auch negativ mÃ¶glich)
    * @return das Ausgabedatum
    */
   public static LocalDate addMonthsMaintainingEndOfMonth(LocalDate date, long months) {
@@ -315,14 +315,14 @@ public class DateUtil
   }
   
   /**
-   * Gibt Index und Länge von Tag, Monat und Jahr in einem formatierten Datums-String
-   * für den angegebenen DateTimeFormatter zurück.<br>
+   * Gibt Index und LÃ¤nge von Tag, Monat und Jahr in einem formatierten Datums-String
+   * fÃ¼r den angegebenen DateTimeFormatter zurÃ¼ck.<br>
    * Limitationen:<br>
-   * - Der DateTimeFormatter darf Tag/Monat/Jahr nur als Zahlen erzeugen, keine Monatsnamen o. Ä.<br>
-   * - Tag- und Monatsfelder müssen 2-stellig sein<br>
+   * - Der DateTimeFormatter darf Tag/Monat/Jahr nur als Zahlen erzeugen, keine Monatsnamen o. Ã„.<br>
+   * - Tag- und Monatsfelder mÃ¼ssen 2-stellig sein<br>
    * - Die Reihenfolge Tag - Monat - Jahr muss eingehalten werden, siehe auch: {@link #parseUserInput(String, DateTimeFormatter)}
    * @param dtFormatter der DateTimeFormatter
-   * @return alle Positionen für diesen DateTimeFormatter
+   * @return alle Positionen fÃ¼r diesen DateTimeFormatter
    */
   public static DatePositions getDatePositions(DateTimeFormatter dtFormatter) {
     LocalDate testDate = LocalDate.of(3333, 11, 22);

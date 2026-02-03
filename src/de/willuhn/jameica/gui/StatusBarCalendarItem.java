@@ -43,7 +43,7 @@ public class StatusBarCalendarItem implements StatusBarItem
    */
   public StatusBarCalendarItem()
   {
-    this.df = new SimpleDateFormat("EEEE, dd.MM.yyyy HH:mm", Application.getConfig().getLocale());
+    this.df = new SimpleDateFormat("EEEE, yyyy-MM-dd HH:mm", Application.getConfig().getLocale());
     new Worker().start();
   }
 

@@ -69,13 +69,13 @@ public class BackupService implements Bootable
     catch (Exception e)
     {
       Logger.error("unable to restore backup",e);
-      Application.getMessagingFactory().getMessagingQueue("jameica.boot").queueMessage(new BootMessage(Application.getI18n().tr("Fehler beim Wiederherstellen des Backups. Bitte prüfen Sie das System-Log")));
+      Application.getMessagingFactory().getMessagingQueue("jameica.boot").queueMessage(new BootMessage(Application.getI18n().tr("Fehler beim Wiederherstellen des Backups. Bitte prÃ¼fen Sie das System-Log")));
     }
   }
   
   /**
-   * Liefert die Fehler der letzten Sitzung, die dazu führten, dass kein Backup durchgeführt wurde.
-   * @return die Fehler, die dazu führten, dass kein Backup durchgeführt wurde.
+   * Liefert die Fehler der letzten Sitzung, die dazu fÃ¼hrten, dass kein Backup durchgefÃ¼hrt wurde.
+   * @return die Fehler, die dazu fÃ¼hrten, dass kein Backup durchgefÃ¼hrt wurde.
    */
   public List<String> getLastErrors()
   {

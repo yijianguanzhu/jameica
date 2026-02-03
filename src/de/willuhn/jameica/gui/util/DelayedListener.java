@@ -85,8 +85,8 @@ public class DelayedListener implements Listener
       @Override
       public void run()
       {
-        // Wenn der aktuelle Counter größer ist, kam nach uns noch ein Aufruf. Dann
-        // muss der sich drum kümmern
+        // Wenn der aktuelle Counter grÃ¶ÃŸer ist, kam nach uns noch ein Aufruf. Dann
+        // muss der sich drum kÃ¼mmern
         if (myCount < count.get())
           return;
 

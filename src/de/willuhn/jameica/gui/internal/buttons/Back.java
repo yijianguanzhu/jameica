@@ -33,6 +33,6 @@ public class Back extends Button
    */
   public Back(boolean isDefault)
   {
-    super(Application.getI18n().tr("Zurück"),new de.willuhn.jameica.gui.internal.action.Back(),null,isDefault,"go-previous.png");
+    super(Application.getI18n().tr("ZurÃ¼ck"),new de.willuhn.jameica.gui.internal.action.Back(),null,isDefault,"go-previous.png");
   }
 }

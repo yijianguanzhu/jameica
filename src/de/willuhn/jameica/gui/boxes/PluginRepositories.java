@@ -27,7 +27,7 @@ import de.willuhn.logging.Logger;
 import de.willuhn.util.I18N;
 
 /**
- * Eine Box, die darauf hinweist, wenn zusätzliche Plugin-Repositories installiert sind.
+ * Eine Box, die darauf hinweist, wenn zusÃ¤tzliche Plugin-Repositories installiert sind.
  */
 public class PluginRepositories extends AbstractBox
 {
@@ -124,14 +124,14 @@ public class PluginRepositories extends AbstractBox
         return super.extend(state, comp, context);
       }
     };
-    panel.setTitle(i18n.tr(i18n.tr("Hinweis zu Plugin-Repositories von Drittanbietern")));
+    panel.setTitle(i18n.tr("Hinweis zu Plugin-Repositories von Drittanbietern"));
     panel.setIcon("dialog-question-large.png");
 
     panel.setText(i18n.tr("Derzeit sind Plugin-Repositories von Drittanbietern aktiviert. " +
-                          "Bei der Suche nach Updates wird Jameica diese kontaktieren und ggf. Sicherheitsabfragen für die Zertifikate " +
+                          "Bei der Suche nach Updates wird Jameica diese kontaktieren und ggf. Sicherheitsabfragen fÃ¼r die Zertifikate " +
                           "der Server anzeigen."));
     panel.setComment(i18n.tr("Klicken Sie auf \"Repositories bearbeiten...\", um Plugin-Repositories zu deaktivieren, " +
-                             "von denen Sie keine Plugins nutzen. Sie können diese später jederzeit wieder in \"Datei->Einstellungen->Plugins\" aktivieren"));
+                             "von denen Sie keine Plugins nutzen. Sie kÃ¶nnen diese spÃ¤ter jederzeit wieder in \"Datei->Einstellungen->Plugins\" aktivieren"));
     panel.setUrl("https://www.willuhn.de/wiki/doku.php?id=support:faq#sicherheitsabfrage_fuer_zertifikat");
     
     panel.addButton(new Button(i18n.tr("Repositories bearbeiten..."),new RepositoryEdit(),null,false,"document-properties.png"));

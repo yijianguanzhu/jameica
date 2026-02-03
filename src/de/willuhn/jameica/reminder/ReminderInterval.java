@@ -208,27 +208,27 @@ public class ReminderInterval implements Serializable
     
     if (this.unit == TimeUnit.HOURS)
     {
-      if (i == 1)  return i18n.tr("st¸ndlich");
-      if (i == 24) return i18n.tr("t‰glich");
+      if (i == 1)  return i18n.tr("st√ºndlich");
+      if (i == 24) return i18n.tr("t√§glich");
       return i18n.tr("alle {0} Stunden",Integer.toString(i));
     }
     if (this.unit == TimeUnit.DAYS)
     {
-      if (i == 1) return i18n.tr("t‰glich");
-      if (i == 7) return i18n.tr("wˆchentlich");
+      if (i == 1) return i18n.tr("t√§glich");
+      if (i == 7) return i18n.tr("w√∂chentlich");
       return i18n.tr("alle {0} Tage",Integer.toString(i));
     }
     if (this.unit == TimeUnit.WEEKS)
     {
-      if (i == 1) return i18n.tr("wˆchentlich");
+      if (i == 1) return i18n.tr("w√∂chentlich");
       return i18n.tr("alle {0} Wochen",Integer.toString(i));
     }
     if (this.unit == TimeUnit.MONTHS)
     {
       if (i == 1) return i18n.tr("monatlich");
-      if (i == 3) return i18n.tr("viertelj‰hrlich");
-      if (i == 6) return i18n.tr("halbj‰hrlich");
-      if (i == 12) return i18n.tr("j‰hrlich");
+      if (i == 3) return i18n.tr("viertelj√§hrlich");
+      if (i == 6) return i18n.tr("halbj√§hrlich");
+      if (i == 12) return i18n.tr("j√§hrlich");
       return i18n.tr("alle {0} Monate",Integer.toString(i));
     }
     

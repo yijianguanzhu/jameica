@@ -271,7 +271,7 @@ public class Navigation implements Part
   
   /**
    * Laed einen Navigationszweig neu. Dabei werden alle 
-   * existierenden Einträge durch die neu übergebenen ersetzt.
+   * existierenden EintrÃ¤ge durch die neu Ã¼bergebenen ersetzt.
    * 
    * @param item
    *          das neu zu ladende Navigations-Element.
@@ -354,7 +354,7 @@ public class Navigation implements Part
     
     
     //////////////////////////////////////////////////////////
-    // Wenn das Systray aktiv ist, dann Aktivität anzeigen, sobald irgendwo ungelesene Elemente sind
+    // Wenn das Systray aktiv ist, dann AktivitÃ¤t anzeigen, sobald irgendwo ungelesene Elemente sind
     final SystrayService systray = Application.getBootLoader().getBootable(SystrayService.class);
     if (!systray.isEnabled())
       return;
@@ -425,7 +425,7 @@ public class Navigation implements Part
     catch (RemoteException re)
     {
       Logger.error("unable to handle navigation action",re);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Ausführen des Menu-Eintrages"),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim AusfÃ¼hren des Menu-Eintrages"),StatusBarMessage.TYPE_ERROR));
     }
   }
   
@@ -518,7 +518,7 @@ public class Navigation implements Part
       catch (RemoteException re)
       {
         Logger.error("unable to handle navigation action",re);
-        Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Ausführen des Menu-Eintrages"),StatusBarMessage.TYPE_ERROR));
+        Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim AusfÃ¼hren des Menu-Eintrages"),StatusBarMessage.TYPE_ERROR));
       }
     }
   }

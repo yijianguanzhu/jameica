@@ -119,7 +119,7 @@ public class TransportService implements Bootable
     String p = url.getProtocol().toLowerCase();
     Class<? extends Transport> c = this.map.get(p);
     if (c == null)
-      throw new ApplicationException(i18n.tr("Protokoll \"{0}\" wird nicht unterstützt",p));
+      throw new ApplicationException(i18n.tr("Protokoll \"{0}\" wird nicht unterstÃ¼tzt",p));
     
     try
     {

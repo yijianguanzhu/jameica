@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 import de.willuhn.jameica.services.SystrayService;
 
 /**
- * Wird benachrichtigt, wenn neue Aktivit‰t vorhanden ist, die im Systray hervorgehoben werden soll.
+ * Wird benachrichtigt, wenn neue Aktivit√§t vorhanden ist, die im Systray hervorgehoben werden soll.
  */
 public class ActivityMessageConsumer implements MessageConsumer
 {

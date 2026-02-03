@@ -58,7 +58,7 @@ public class BookmarkAddDialog extends AbstractDialog
     container.addPart(text);
 
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(Application.getI18n().tr("Übernehmen"),new Action() {
+    buttons.addButton(Application.getI18n().tr("Ãœbernehmen"),new Action() {
       public void handleAction(Object context) throws ApplicationException
       {
         comment = (String) text.getValue();

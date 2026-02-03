@@ -46,8 +46,8 @@ public class RepositoryEditDialog extends AbstractDialog<Void>
   protected void paint(Composite parent) throws Exception
   {
     SimpleContainer container = new SimpleContainer(parent,true);
-    container.addText(i18n.tr("Sie können ein Repository löschen, indem Sie mit der rechten Maustaste auf das betreffende Repository klicken und \"Löschen...\" " +
-                              "bzw. \"Deaktivieren...\" wählen."),true);
+    container.addText(i18n.tr("Sie kÃ¶nnen ein Repository lÃ¶schen, indem Sie mit der rechten Maustaste auf das betreffende Repository klicken und \"LÃ¶schen...\" " +
+                              "bzw. \"Deaktivieren...\" wÃ¤hlen."),true);
     
     final RepositoryList list = new RepositoryList();
     
@@ -66,8 +66,8 @@ public class RepositoryEditDialog extends AbstractDialog<Void>
     ButtonArea buttons = new ButtonArea();
     buttons.addButton(enable);
     buttons.addButton(disable);
-    buttons.addButton(i18n.tr("Neues Repository hinzufügen..."),new RepositoryAdd(),null,false,"document-new.png");
-    buttons.addButton(i18n.tr("Schließen"), new Action()
+    buttons.addButton(i18n.tr("Neues Repository hinzufÃ¼gen..."),new RepositoryAdd(),null,false,"document-new.png");
+    buttons.addButton(i18n.tr("SchlieÃŸen"), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {

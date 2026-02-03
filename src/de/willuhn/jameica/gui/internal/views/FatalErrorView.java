@@ -63,7 +63,10 @@ public class FatalErrorView extends AbstractView
 	    Container group = new SimpleContainer(getParent());
 	    group.addHeadline(i18n.tr("Unerwarteter Fehler"));
 	    group.addText(i18n.tr("Es ist ein unerwarteter Fehler aufgetreten."),true,Color.ERROR);
-	    group.addText(i18n.tr("Wenn Sie sich aktiv an der Verbesserung dieser Software beteiligen möchten, " +                    	      "dann klicken Sie einfach auf \"Diagnose-Protokoll speichern\" und senden " +                    	      "Sie die Datei zusammen mit einer kurzen Beschreibung per Mail an den Autor des Plugins.\n\n" +                    	      "Vielen Dank."),true);
+	    group.addText(i18n.tr("Wenn Sie sich aktiv an der Verbesserung dieser Software beteiligen mÃ¶chten, " +
+                    	      "dann klicken Sie einfach auf \"Diagnose-Protokoll speichern\" und senden " +
+                    	      "Sie die Datei zusammen mit einer kurzen Beschreibung per Mail an den Autor des Plugins.\n\n" +
+                    	      "Vielen Dank."),true);
 	
 	    final String s = toString(t);
 
@@ -94,7 +97,7 @@ public class FatalErrorView extends AbstractView
           Writer writer = null;
           try
           {
-            writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(f)),"iso-8859-1"));
+            writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(f)),"UTF-8"));
 
             writer.write("*** " + i18n.tr("System-Informationen") + " ***\n\n");
             writer.write(getSystemStats() + "\n\n");

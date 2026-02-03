@@ -52,8 +52,8 @@ public class ShortcutInput extends TextInput
   {
     super("");
     this.setValue(value);
-    this.setHint(Application.getI18n().tr("<Hier klicken und Tastekürzel drücken>"));
-    this.setName(Application.getI18n().tr("Tastenkürzel"));
+    this.setHint(Application.getI18n().tr("<Hier klicken und TastekÃ¼rzel drÃ¼cken>"));
+    this.setName(Application.getI18n().tr("TastenkÃ¼rzel"));
   }
 
   /**

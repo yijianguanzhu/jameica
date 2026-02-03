@@ -94,7 +94,7 @@ public final class Application {
   {
 
     Logger.info("starting jameica...");
-    getCallback().getStartupMonitor().setStatusText("starting jameica");
+    getCallback().getStartupMonitor().setStatusText(Application.getI18n().tr("starting jameica"));
 
     try
     {

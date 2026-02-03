@@ -40,7 +40,7 @@ public class RepositoryRemove implements Action
     String s = context.toString();
     
     if (RepositoryService.SYSTEM_REPOSITORY.equalsIgnoreCase(s))
-      throw new ApplicationException(i18n.tr("System-Repository darf nicht gelöscht werden"));
+      throw new ApplicationException(i18n.tr("System-Repository darf nicht gelÃ¶scht werden"));
     
     URL url = null;
     try
@@ -50,10 +50,10 @@ public class RepositoryRemove implements Action
     catch (Exception e)
     {
       Logger.error("invalid url: " + context,e);
-      throw new ApplicationException(i18n.tr("Keine gültige Repository-URL angegeben"));
+      throw new ApplicationException(i18n.tr("Keine gÃ¼ltige Repository-URL angegeben"));
     }
     
-    String q = i18n.tr("Sind Sie sicher, daß Sie diese URL löschen möchten?\n\n{0}",url.toString());
+    String q = i18n.tr("Sind Sie sicher, daÃŸ Sie diese URL lÃ¶schen mÃ¶chten?\n\n{0}",url.toString());
     
     try
     {
@@ -74,7 +74,7 @@ public class RepositoryRemove implements Action
     catch (Exception e)
     {
       Logger.error("error while deleting url " + context,e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim Löschen der Repository-URL"),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Fehler beim LÃ¶schen der Repository-URL"),StatusBarMessage.TYPE_ERROR));
     }
   }
 }

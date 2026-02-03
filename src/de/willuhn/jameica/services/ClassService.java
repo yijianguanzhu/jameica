@@ -94,7 +94,7 @@ public class ClassService implements Bootable
 
     File dir = new File(manifest.getPluginDir());
     Logger.info("checking directory " + dir.getAbsolutePath());
-    Application.getCallback().getStartupMonitor().setStatusText("checking directory " + dir.getAbsolutePath());
+    Application.getCallback().getStartupMonitor().setStatusText(Application.getI18n().tr("checking directory ") + dir.getAbsolutePath());
 
     ////////////////////////////////////////////////////////////////////////////
     // Classpath befuellen

@@ -116,7 +116,7 @@ public class Dependency implements Serializable
   }
   
   /**
-   * Prüft, ob es sich um eine obligatorische Abhaengigkeit handelt.
+   * PrÃ¼ft, ob es sich um eine obligatorische Abhaengigkeit handelt.
    * <p>Default: {@code true}
    * @return {@code true}, wenn es sich um eine obligatorische Abhaengigkeit handelt.
    */

@@ -68,12 +68,12 @@ public class BackupRestoreDialog extends AbstractDialog
     {
       container.addText(Application.getI18n().tr("Die Benutzerdaten des Backup passen nicht exakt " +
           "zu den Versionen der installierten Plugins. " +
-          "Unter Umst‰nden werden nicht alle Daten aus dem Backup wiederhergestellt."),true,Color.ERROR);
+          "Unter Umst√§nden werden nicht alle Daten aus dem Backup wiederhergestellt."),true,Color.ERROR);
     }
 
     container.addHeadline(Application.getI18n().tr("Achtung"));
-    container.addText(Application.getI18n().tr("Sind Sie sicher, dass Sie dieses Backup wiederherstellen mˆchten?\n" +
-          "Die Anwendung wird daraufhin beendet, die Wiederherstellung erfolgt automatisch beim n‰chsten Start."),true);
+    container.addText(Application.getI18n().tr("Sind Sie sicher, dass Sie dieses Backup wiederherstellen m√∂chten?\n" +
+          "Die Anwendung wird daraufhin beendet, die Wiederherstellung erfolgt automatisch beim n√§chsten Start."),true);
 
     ButtonArea buttons = container.createButtonArea(2);
     buttons.addButton(Application.getI18n().tr("Ja, Backup wiederherstellen"),new Action() {

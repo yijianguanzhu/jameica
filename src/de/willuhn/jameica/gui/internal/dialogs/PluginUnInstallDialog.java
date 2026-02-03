@@ -68,7 +68,7 @@ public class PluginUnInstallDialog extends AbstractDialog
 
     // Checkbox fuer die Userdaten
     final CheckboxInput check = new CheckboxInput(false);
-    check.setName(i18n.tr("Benutzerdaten des Plugins ebenfalls löschen"));
+    check.setName(i18n.tr("Benutzerdaten des Plugins ebenfalls lÃ¶schen"));
     check.addListener(new Listener() {
       public void handleEvent(Event event)
       {
@@ -96,7 +96,7 @@ public class PluginUnInstallDialog extends AbstractDialog
           
           // Sicherheitshalber noch eine Abfrage, wenn die User-Daten geloescht werden sollen
           if (b && !Application.getCallback().askUser(i18n.tr("Sind Sie wirklich sicher, dass Sie auch die Benutzerdaten\n" +
-          		                                                "des Plugins löschen möchten?")))
+          		                                                "des Plugins lÃ¶schen mÃ¶chten?")))
           {
             check.setValue(false);
             warning.setValue("\n\n");

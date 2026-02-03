@@ -351,7 +351,7 @@ public class SearchInput extends AbstractInput
         if (event.keyCode == SWT.ESC)
           return;
         
-        // Bei Enter lösen wir auch nicht aus - das kriegen wir sonst doppelt
+        // Bei Enter lÃ¶sen wir auch nicht aus - das kriegen wir sonst doppelt
         if (event.keyCode == 13)
           return;
         

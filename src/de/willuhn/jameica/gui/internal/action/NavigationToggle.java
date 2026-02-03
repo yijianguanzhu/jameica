@@ -35,7 +35,7 @@ public class NavigationToggle implements Action
     Customizing.SETTINGS.setAttribute("application.hidenavigation",!hide);
     if (!hide)
     {
-      String text = "Wählen Sie \"Datei->Navigation ein-/ausblenden\" zum Wiedereinblenden der Navigation";
+      String text = "WÃ¤hlen Sie \"Datei->Navigation ein-/ausblenden\" zum Wiedereinblenden der Navigation";
       Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr(text),StatusBarMessage.TYPE_INFO));
     }
     GUI.toggleNavigation();

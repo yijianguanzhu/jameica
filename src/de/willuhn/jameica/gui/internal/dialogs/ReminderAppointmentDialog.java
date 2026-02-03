@@ -121,7 +121,7 @@ public class ReminderAppointmentDialog extends AbstractDialog<ReminderAppointmen
 
 
     ButtonArea buttons = new ButtonArea();
-    Button apply = new Button(Application.getI18n().tr("Übernehmen"), new Action()
+    Button apply = new Button(Application.getI18n().tr("Ãœbernehmen"), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {
@@ -151,13 +151,13 @@ public class ReminderAppointmentDialog extends AbstractDialog<ReminderAppointmen
     apply.setEnabled(canChange);
     buttons.addButton(apply);
     
-    Button delete = new Button(Application.getI18n().tr("Termin löschen"), new Action()
+    Button delete = new Button(Application.getI18n().tr("Termin lÃ¶schen"), new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {
         try
         {
-          if (!Application.getCallback().askUser(i18n.tr("Sind Sie sicher, dass Sie die Erinnerung löschen möchten?")))
+          if (!Application.getCallback().askUser(i18n.tr("Sind Sie sicher, dass Sie die Erinnerung lÃ¶schen mÃ¶chten?")))
             return;
           
           ReminderService service = Application.getBootLoader().getBootable(ReminderService.class);
@@ -165,7 +165,7 @@ public class ReminderAppointmentDialog extends AbstractDialog<ReminderAppointmen
           provider.delete(appointment.getUid());
           appointment = null;
           close();
-          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Erinnerung gelöscht"),StatusBarMessage.TYPE_SUCCESS));
+          Application.getMessagingFactory().sendMessage(new StatusBarMessage(i18n.tr("Erinnerung gelÃ¶scht"),StatusBarMessage.TYPE_SUCCESS));
         }
         catch (ApplicationException ae)
         {

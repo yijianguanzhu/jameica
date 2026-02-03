@@ -22,7 +22,7 @@ import de.willuhn.util.ApplicationException;
 import de.willuhn.util.I18N;
 
 /**
- * Action zum Löschen von Attachments.
+ * Action zum LÃ¶schen von Attachments.
  */
 public class AttachmentDelete implements Action
 {
@@ -43,10 +43,10 @@ public class AttachmentDelete implements Action
       list = (Attachment[]) context;
     
     if (list == null || list.length == 0)
-      throw new ApplicationException(i18n.tr("Bitte wählen Sie die zu löschenden Dateien."));
+      throw new ApplicationException(i18n.tr("Bitte wÃ¤hlen Sie die zu lÃ¶schenden Dateien."));
 
-    final String text = list.length == 1 ? "Sind Sie sicher, dass Sie den Dateianhang löschen wollen?"
-                                         : "Sind Sie sicher, dass Sie die Dateianhänge löschen wollen?";
+    final String text = list.length == 1 ? "Sind Sie sicher, dass Sie den Dateianhang lÃ¶schen wollen?"
+                                         : "Sind Sie sicher, dass Sie die DateianhÃ¤nge lÃ¶schen wollen?";
     
     try
     {
@@ -79,7 +79,7 @@ public class AttachmentDelete implements Action
     catch (Exception e)
     {
       Logger.error("unable to delete attachments",e);
-      throw new ApplicationException(i18n.tr("Löschen der Dateianhänge fehlgeschlagen"));
+      throw new ApplicationException(i18n.tr("LÃ¶schen der DateianhÃ¤nge fehlgeschlagen"));
     }
     
   }

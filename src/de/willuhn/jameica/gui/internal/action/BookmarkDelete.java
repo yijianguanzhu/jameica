@@ -52,11 +52,11 @@ public class BookmarkDelete implements Action
       this.bookmark = (Bookmark) context;
     
     if (this.bookmark == null)
-      throw new ApplicationException(Application.getI18n().tr("Bitte wählen Sie das zu löschende Lesezeichen"));
+      throw new ApplicationException(Application.getI18n().tr("Bitte wÃ¤hlen Sie das zu lÃ¶schende Lesezeichen"));
     
     try
     {
-      if (!(Application.getCallback().askUser(Application.getI18n().tr("Lesezeichen löschen?"))))
+      if (!(Application.getCallback().askUser(Application.getI18n().tr("Lesezeichen lÃ¶schen?"))))
         throw new OperationCanceledException();
       
       BeanService beanService = Application.getBootLoader().getBootable(BeanService.class);
@@ -74,7 +74,7 @@ public class BookmarkDelete implements Action
     catch (Exception e)
     {
       Logger.error("unable to delete bookmark",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Löschen des Lesezeichens fehlgeschlagen: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("LÃ¶schen des Lesezeichens fehlgeschlagen: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
     }
   }
 

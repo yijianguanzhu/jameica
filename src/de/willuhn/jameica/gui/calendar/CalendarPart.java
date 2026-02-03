@@ -139,7 +139,7 @@ public class CalendarPart implements Part
     GridData gd = new GridData(GridData.FILL_HORIZONTAL);
     gd.horizontalSpan = 3;
     this.text.setLayoutData(gd);
-    this.text.setToolTipText(Application.getI18n().tr("Klicken Sie hier, um zum aktuellen Monat zurückzukehren."));
+    this.text.setToolTipText(Application.getI18n().tr("Klicken Sie hier, um zum aktuellen Monat zurÃ¼ckzukehren."));
     this.text.addMouseListener(new MouseAdapter() {
       public void mouseUp(MouseEvent e)
       {

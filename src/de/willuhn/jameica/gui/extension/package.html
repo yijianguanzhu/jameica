@@ -24,44 +24,44 @@
 
     <p>
       Jameica kann zwar beliebig mit Plugins erweitert werden.
-      Diese Plugins teilen auch einen ClassPath und können
-      über die ServiceFactory sowie das Messaging-System
-      miteinander kommunizieren. Sie können jedoch nicht
-      die GUI eines anderen Plugins ändern. So kann z.Bsp.
-      Plugin A nicht die Context-Menus von Plugin B ändern
+      Diese Plugins teilen auch einen ClassPath und kÃ¶nnen
+      Ã¼ber die ServiceFactory sowie das Messaging-System
+      miteinander kommunizieren. Sie kÃ¶nnen jedoch nicht
+      die GUI eines anderen Plugins Ã¤ndern. So kann z.Bsp.
+      Plugin A nicht die Context-Menus von Plugin B Ã¤ndern
       oder die Navigation eines anderen Plugins erweitern.
       Dies ist jedoch sinnvoll, wenn ein Plugin durch ein
-      weiteres möglichst nahtlos um Funktionalität erweitert
+      weiteres mÃ¶glichst nahtlos um FunktionalitÃ¤t erweitert
       werden soll. Sprich: Das erweiternde Plugin soll
       keine eigene Navigation oder eigene Menus mitbringen
       sondern stattdessen die existierenden um Funktionen
       erweitern.
       <br>
-      Genau für diesen Zweck existiert das Extension-System.
+      Genau fÃ¼r diesen Zweck existiert das Extension-System.
 	</p>
 	
 	<p>
       Auf der einen Seite befinden sich Komponenten, die
       sich erweitern lassen (werden durch das Interface
-      <code>Extandable</code> repräsentiert). Auf der anderen
-      Seite existieren Erweiterungen (müssen das Interface
+      <code>Extandable</code> reprÃ¤sentiert). Auf der anderen
+      Seite existieren Erweiterungen (mÃ¼ssen das Interface
       <code>Extension</code> implementieren), welche die
-      Extendables um zusätzliche Funktionalität erweitern.
+      Extendables um zusÃ¤tzliche FunktionalitÃ¤t erweitern.
 	</p>
 
     <h3>Schritt 1 (Registrierung der Erweiterungen):</h3>
     <p>
 	  Bevor eine erweiterbare Komponente (also ein Extendable) erweitert
-	  werden kann, muss Jameica herausfinden, welche Erweiterungen überhaupt
+	  werden kann, muss Jameica herausfinden, welche Erweiterungen Ã¼berhaupt
 	  existieren.
 	  <br>
 	  Bsp.: Bevor der Navigations-Baum (linkes Frame in Jameica)
-	  gezeichnet wird, prüft Jameica für jedes Element des Baumes, ob Erweiterungen
+	  gezeichnet wird, prÃ¼ft Jameica fÃ¼r jedes Element des Baumes, ob Erweiterungen
 	  vorliegen. Ist dies der Fall, wird jeweils deren Methode
 	  <code>extend(Extendable)</code> aufgerufen.
 	  <br>
 	  Eine Extension muss im System registriert sein, um angesprochen
-	  werden zu können. Dies geschieht wiederrum automatisch (durch Definition
+	  werden zu kÃ¶nnen. Dies geschieht wiederrum automatisch (durch Definition
 	  der Erweiterungen in der Manifest-Datei (plugin.xml)) oder manuell
 	  durch Aufruf von <code>ExtensionRegistry#register(Extension e, String[] extendableIDs)</code>).
       <br>
@@ -91,10 +91,10 @@
 &lt;/plugin&gt;
     </code></pre>
 
-    <h3>Schritt 2 (Durchführung der Erweiterung):</h3>
+    <h3>Schritt 2 (DurchfÃ¼hrung der Erweiterung):</h3>
 	<p>
       Jedes Extendable besitzt eine ID (Funktion <code>getExtendableID()</code>),
-      über die es in ganz Jameica eindeutig identifizierbar ist.
+      Ã¼ber die es in ganz Jameica eindeutig identifizierbar ist.
       Bevor die erweiterbare Komponente nun aktiviert wird (bei Context-Menus
       ist das z.Bsp. der Moment unmittelbar vor dem Zeichnen auf dem Bildschirm)
       muss sie der ExtensionRegistry Bescheid geben, dass sie nun noch erweitert
@@ -105,9 +105,9 @@ public class AddressList extends ContextMenu implements Extendable
 {
   public AddressList()
   {
-    addItem(new CheckedContextMenuItem(i18n.tr("Öffnen"),new AddressNew()));
+    addItem(new CheckedContextMenuItem(i18n.tr("Ã–ffnen"),new AddressNew()));
     addItem(ContextMenuItem.SEPARATOR);
-    addItem(new CheckedContextMenuItem(i18n.tr("Löschen..."), new AddressDelete()));
+    addItem(new CheckedContextMenuItem(i18n.tr("LÃ¶schen..."), new AddressDelete()));
     addItem(ContextMenuItem.SEPARATOR);
     addItem(new ContextMenuItem(i18n.tr("Neue Adresse..."), new AddressNeu()));
     

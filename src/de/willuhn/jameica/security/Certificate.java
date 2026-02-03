@@ -191,7 +191,7 @@ public class Certificate
             if (value == null)
               continue;
 
-            // Wir übernehmen nur die vom Typ DNS-Name und IP-Addresse
+            // Wir Ã¼bernehmen nur die vom Typ DNS-Name und IP-Addresse
             final Integer t = (Integer) type;
             if (!t.equals(GeneralName.dNSName) && !t.equals(GeneralName.iPAddress))
               continue;

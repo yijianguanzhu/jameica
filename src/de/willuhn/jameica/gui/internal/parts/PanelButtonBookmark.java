@@ -40,7 +40,7 @@ public class PanelButtonBookmark extends PanelButton
   private final static String ICON_STARRED    = "starred.png";
   private final static String ICON_NONSTARRED = "non-starred.png";
   private final static String TEXT_CREATE     = Application.getI18n().tr("Lesezeichen erstellen");
-  private final static String TEXT_DELETE     = Application.getI18n().tr("(Zum Löschen erneut klicken)");
+  private final static String TEXT_DELETE     = Application.getI18n().tr("(Zum LÃ¶schen erneut klicken)");
       
   /**
    * ct.

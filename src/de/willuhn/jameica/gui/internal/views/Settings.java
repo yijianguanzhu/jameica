@@ -135,7 +135,7 @@ public class Settings extends AbstractView implements Extendable
 		/////////////////////////////////////////////////////////////////
 
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Zurücksetzen"),new Action()
+    buttons.addButton(i18n.tr("ZurÃ¼cksetzen"),new Action()
     {
       public void handleAction(Object context) throws ApplicationException
       {

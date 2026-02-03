@@ -48,12 +48,12 @@ public class AttachmentService implements Bootable
   private Map<String,StorageProvider> providers = new HashMap<>();
   
   /**
-   * Queue, die beim Löschen eines Attachments benachrichtigt wird.
+   * Queue, die beim LÃ¶schen eines Attachments benachrichtigt wird.
    */
   public final static String QUEUE_DELETED = "jameica.attachment.deleted";
 
   /**
-   * Queue, die beim Hinzufügen eines Attachments benachrichtigt wird.
+   * Queue, die beim HinzufÃ¼gen eines Attachments benachrichtigt wird.
    */
   public final static String QUEUE_ADDED = "jameica.attachment.added";
 
@@ -131,7 +131,7 @@ public class AttachmentService implements Bootable
   }
   
   /**
-   * Liefert die Attachments für die aktuelle View mit dem aktuellen Objekt.
+   * Liefert die Attachments fÃ¼r die aktuelle View mit dem aktuellen Objekt.
    * @return die Liste der Attachments.
    * @throws IOException
    */
@@ -150,8 +150,8 @@ public class AttachmentService implements Bootable
   }
   
   /**
-   * Löscht das Attachment.
-   * @param a das zu löschende Attachment.
+   * LÃ¶scht das Attachment.
+   * @param a das zu lÃ¶schende Attachment.
    * @throws IOException
    */
   public void delete(Attachment a) throws IOException
@@ -166,7 +166,7 @@ public class AttachmentService implements Bootable
   }
   
   /**
-   * Fügt ein Attachment zum aktuellen Dialog hinzu.
+   * FÃ¼gt ein Attachment zum aktuellen Dialog hinzu.
    * @param file die Datei.
    * @param storageId die ID des Storage-Backends.
    * @return das erzeugte Attachment.
@@ -266,7 +266,7 @@ public class AttachmentService implements Bootable
   }
   
   /**
-   * Liefert den Attachment-Provider für das angegebene Attachment.
+   * Liefert den Attachment-Provider fÃ¼r das angegebene Attachment.
    * @param a das Attachment.
    * @return der Provider, von dem das Attachment stammt.
    * @throws IOException
@@ -279,7 +279,7 @@ public class AttachmentService implements Bootable
   }
 
   /**
-   * Liefert den Storage-Provider für die angegebene Storage-ID.
+   * Liefert den Storage-Provider fÃ¼r die angegebene Storage-ID.
    * @param storageId die Storage-ID.
    * @return der Provider oder NULL, wenn er niht existiert.
    */

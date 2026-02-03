@@ -42,7 +42,7 @@ public class DependencyMissingDialog extends AbstractDialog
   {
     super(position);
     this.missing = missing;
-    this.setTitle(i18n.tr("Fehlende Abhängigkeiten"));
+    this.setTitle(i18n.tr("Fehlende AbhÃ¤ngigkeiten"));
     this.setSize(360,300);
   }
 
@@ -60,13 +60,13 @@ public class DependencyMissingDialog extends AbstractDialog
   protected void paint(Composite parent) throws Exception
   {
     SimpleContainer container = new SimpleContainer(parent,true);
-    container.addText(i18n.tr("Das Plugin kann nicht installiert werden, da noch weitere Plugins benötigt werden, " +
+    container.addText(i18n.tr("Das Plugin kann nicht installiert werden, da noch weitere Plugins benÃ¶tigt werden, " +
     		                      "die nicht (oder nicht in der passenden Version) installiert sind und auch in " +
-    		                      "keinem der Plugin-Repositories verfügbar sind."),true);
+    		                      "keinem der Plugin-Repositories verfÃ¼gbar sind."),true);
     
     TablePart deps = new TablePart(this.missing,null);
     deps.addColumn(i18n.tr("Name des Plugins"), "name");
-    deps.addColumn(i18n.tr("Benötigte Version"),"version");
+    deps.addColumn(i18n.tr("BenÃ¶tigte Version"),"version");
     deps.setMulti(false);
     deps.setRememberColWidths(false);
     deps.setRememberOrder(true);
@@ -75,7 +75,7 @@ public class DependencyMissingDialog extends AbstractDialog
     container.addPart(deps);
     
     ButtonArea buttons = new ButtonArea();
-    buttons.addButton(i18n.tr("Schließen"),new Action() {
+    buttons.addButton(i18n.tr("SchlieÃŸen"),new Action() {
     
       public void handleAction(Object context) throws ApplicationException
       {

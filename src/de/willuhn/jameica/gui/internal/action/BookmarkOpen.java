@@ -32,7 +32,7 @@ public class BookmarkOpen implements Action
   public void handleAction(Object context) throws ApplicationException
   {
     if (!(context instanceof Bookmark))
-      throw new ApplicationException(Application.getI18n().tr("Bitte wählen Sie das zu öffnende Lesezeichen aus"));
+      throw new ApplicationException(Application.getI18n().tr("Bitte wÃ¤hlen Sie das zu Ã¶ffnende Lesezeichen aus"));
 
     try
     {
@@ -51,7 +51,7 @@ public class BookmarkOpen implements Action
     catch (Exception e)
     {
       Logger.error("unable to open bookmark",e);
-      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Öffnen des Lesezeichens: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
+      Application.getMessagingFactory().sendMessage(new StatusBarMessage(Application.getI18n().tr("Fehler beim Ã–ffnen des Lesezeichens: {0}",e.getMessage()),StatusBarMessage.TYPE_ERROR));
     }
   }
 

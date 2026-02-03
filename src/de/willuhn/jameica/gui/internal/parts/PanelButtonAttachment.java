@@ -44,7 +44,7 @@ public class PanelButtonAttachment extends PanelButton
    */
   public PanelButtonAttachment()
   {
-    super("mail-attachment.png",new AttachmentManage(),Application.getI18n().tr("Datei-Anhänge"));
+    super("mail-attachment.png",new AttachmentManage(),Application.getI18n().tr("Datei-AnhÃ¤nge"));
     
     // Anzahl der Attachments ermitteln
     this.service = Application.getBootLoader().getBootable(AttachmentService.class);
@@ -87,11 +87,11 @@ public class PanelButtonAttachment extends PanelButton
     try
     {
       if (this.count == 0)
-        this.setTooltip(Application.getI18n().tr("Keine Dateianhänge"));
+        this.setTooltip(Application.getI18n().tr("Keine DateianhÃ¤nge"));
       else if (this.count == 1)
         this.setTooltip(Application.getI18n().tr("1 Dateianhang"));
       else
-        this.setTooltip(Application.getI18n().tr("{0} Dateianhänge",Integer.toString(this.count)));
+        this.setTooltip(Application.getI18n().tr("{0} DateianhÃ¤nge",Integer.toString(this.count)));
       
       this.setText(this.count > 0 ? Integer.toString(this.count) : "");
     }
@@ -111,7 +111,7 @@ public class PanelButtonAttachment extends PanelButton
   }
   
   /**
-   * Wird benachrichtigt, wenn neue Attachments hinzugefügt wurden.
+   * Wird benachrichtigt, wenn neue Attachments hinzugefÃ¼gt wurden.
    */
   private class OnAdd implements MessageConsumer
   {
@@ -152,7 +152,7 @@ public class PanelButtonAttachment extends PanelButton
   }
   
   /**
-   * Wird benachrichtigt, wenn neue Attachments gelöscht wurden.
+   * Wird benachrichtigt, wenn neue Attachments gelÃ¶scht wurden.
    */
   private class OnDel implements MessageConsumer
   {

@@ -26,7 +26,7 @@ import de.willuhn.jameica.system.Application;
 import de.willuhn.logging.Logger;
 
 /**
- * Service, der sich um das Systay kümmert.
+ * Service, der sich um das Systay kÃ¼mmert.
  */
 public class SystrayService implements Bootable
 {
@@ -57,8 +57,8 @@ public class SystrayService implements Bootable
   }
   
   /**
-   * Legt fest, ob das Symbol neue Aktivität anzeigen soll.
-   * @param b true, wenn neue Aktivität angezeigt werden soll.
+   * Legt fest, ob das Symbol neue AktivitÃ¤t anzeigen soll.
+   * @param b true, wenn neue AktivitÃ¤t angezeigt werden soll.
    */
   public void setNewActivity(boolean b)
   {
@@ -123,7 +123,7 @@ public class SystrayService implements Bootable
   }
   
   /**
-   * Registriert den Listener für das Minimieren der GUI.
+   * Registriert den Listener fÃ¼r das Minimieren der GUI.
    */
   private void init()
   {
